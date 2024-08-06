@@ -12,6 +12,7 @@ function Header() {
     return (
         <header>
             <div className='wrapper'>
+                <h1>leman zaydi ahaaaaaaaaaaaaaahaaaaaaaaaaaaaaaaaa</h1>
                 <div className='flex my-[10px] justify-between items-center gap-[3vw] p-[10px] '>
                     <div className='w-[40vw] md:w-[20vw] '>
                         <svg
