@@ -2,13 +2,13 @@ import React from "react";
 
 function Footer() {
     return (
-        <footer className='bg-[#FF8300] px-[2vw] text-white'>
+        <footer className='bg-[#FF8300] px-[2vw] text-white h-screen relative overflow-hidden'>
             <div className='text-[.8em] font-bold flex items-center text-center py-[20px] gap-[4vw]'>
                 <div className='w-[30%]'>
                     <img
                         src='./src/assets/delivery.svg'
                         alt='neptun delivery'
-                        className=' mx-auto'
+                        className='mx-auto'
                     />
                     <h4>Pulsuz çatdırılma 50 azn-dən yuxarı</h4>
                 </div>
@@ -29,11 +29,11 @@ function Footer() {
                     <h4>Nağd və ya kartla ödəniş</h4>
                 </div>
             </div>
-            <div className='w-[50vw]'>
+            <div className=' w-[100%] absolute left-[60%] top-[10%] z-0'>
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='100%'
-                    height='565'
+                    height='100%'
                     viewBox='0 0 442.03 565'
                     fill='#fff'
                 >
