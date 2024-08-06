@@ -32,6 +32,19 @@
     transform: translateY(0);
     opacity: 1;
 }
+.swiper-pagination-bullet-active {
+    background-color: #FF8300 !important;
+    width: 20px !important;
+    border-radius: 5px !important;
+    transition: .8s;
+}
+:root{
+    --swiper-theme-color: #FF8300 !important; 
+    --swiper-navigation-size: 20px !important;
+}
+/* .txt{
+    font-size: clamp(12px, 2vw, 13px);
+} */
 
 @media only screen and (min-width: 500px) {
     .wrapper {

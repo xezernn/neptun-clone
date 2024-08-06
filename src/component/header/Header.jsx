@@ -12,7 +12,6 @@ function Header() {
     return (
         <header>
             <div className='wrapper'>
-                <h1>zay ozunsen</h1>
                 <div className='flex my-[10px] justify-between items-center gap-[3vw] p-[10px] '>
                     <div className='w-[40vw] md:w-[20vw] '>
                         <svg
@@ -238,7 +237,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                 <div className='wrapper flex justify-between items-center w-[100%]'>
                     <FiBarChart className='rotate-90 h-[30px] w-[30px] lg:hidden' />
                     <div className='desktop-nav  flex items-center gap-[30px] justify-between '>
-                        <div className='hidden lg:inline py-[6px] px-[10px] text-[#FF8300] bg-white rounded-[5px] w-[19vw]'>
+                        <div className='hidden lg:inline py-[6px] px-[10px] text-[#FF8300] bg-white rounded-[5px] w-[22vw]'>
                             <HiMiniBars4 className='text-[1.4em] inline mr-[2vw] ' />
                             <span className='text-[.8em] font-bold '>
                                 Kateqoriyalar
@@ -354,7 +353,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                         <LuRefreshCcw className='text-[1.3em] hover:rotate-[270deg] transition cursor-pointer' />
                         <div className='relative p-[2vw] sm:p-[1vw] lg:p-[10px]'>
                             <SlBasket className='text-[1.3em]' />
-                            <span className='bg-[#00FF00] absolute top-0 right-0 rounded-[50%] px-[3px] text-[.7em] text-black '>
+                            <span className='bg-[#00FF00] absolute top-0 right-0 rounded-[50%] px-[5px] text-[.7em] text-black '>
                                 0
                             </span>
                         </div>
