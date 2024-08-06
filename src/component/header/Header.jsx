@@ -233,11 +233,14 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                     </div>
                 </div>
             </div>
-            <nav className='bg-[#FF8300] text-white py-[10px] flex justify-between items-center lg:py-[0]'>
+            <nav className='bg-[#FF8300] text-white py-[10px] flex justify-between items-center lg:p-[0] px-[1.5vw]'>
                 <div className='wrapper flex justify-between items-center w-[100%]'>
                     <FiBarChart className='rotate-90 h-[30px] w-[30px] lg:hidden' />
                     <div className='desktop-nav  flex items-center gap-[30px] justify-between '>
-                        <div className='hidden lg:inline py-[6px] px-[10px] text-[#FF8300] bg-white rounded-[5px] w-[22vw]'>
+                        <div
+                            id='category-button'
+                            className='hidden lg:inline py-[8px] px-[10px] text-[#FF8300] bg-white w-[22vw]'
+                        >
                             <HiMiniBars4 className='text-[1.4em] inline mr-[2vw] ' />
                             <span className='text-[.8em] font-bold '>
                                 Kateqoriyalar
