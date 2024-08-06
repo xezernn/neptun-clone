@@ -8,7 +8,7 @@ import { useContext } from 'react';
 import { Cntx } from '../../context/DataContext';
 
 function CardsSlider() {
-    const {data} = useContext(Cntx)
+    const {data, wishList, setWishList} = useContext(Cntx)
     
     return (
         <>
