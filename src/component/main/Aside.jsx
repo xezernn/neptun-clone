@@ -10,7 +10,7 @@ function Aside() {
                             alt='meyve-terevez'
                         />
                         <div className='flex justify-between items-center w-full'>
-                            <p className='font-semibold text-[13px]'>
+                            <p className='font-semibold text-[12px]'>
                                 Meyvə, tərəvəz, quru meyvə
                             </p>
                             <GoChevronRight className='w-[13px]' />
@@ -22,7 +22,7 @@ function Aside() {
                             alt='et'
                         />
                         <div className='flex justify-between items-center w-full'>
-                            <p className='font-semibold text-[13px]'>
+                            <p className='font-semibold text-[12px]'>
                                 Ət, toyuq, dəniz məhsulları
                             </p>
                             <GoChevronRight className='w-[13px]' />
@@ -31,7 +31,7 @@ function Aside() {
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e]'>
                         <img src='./src/assets/Qastronom.svg' alt='qastronom' />
                         <div className='flex justify-between items-center w-full'>
-                            <p className='font-semibold text-[13px]'>
+                            <p className='font-semibold text-[12px]'>
                                 Qastronom
                             </p>
                             <GoChevronRight className='w-[13px]' />
@@ -40,7 +40,7 @@ function Aside() {
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e]'>
                         <img src='./src/assets/ərzaq məhsulları.svg' alt='' />
                         <div className='flex justify-between items-center w-full'>
-                            <p className='font-semibold text-[13px]'>
+                            <p className='font-semibold text-[12px]'>
                                 Ərzaq məhsulları
                             </p>
                             <GoChevronRight className='w-[13px]' />
@@ -52,7 +52,7 @@ function Aside() {
                             alt='shirniyyat'
                         />
                         <div className='flex justify-between items-center w-full'>
-                            <p className='font-semibold text-[13px]'>
+                            <p className='font-semibold text-[12px]'>
                                 Şirniyyat, çay, kofe, biabetik
                             </p>
                             <GoChevronRight className='w-[13px]' />
@@ -61,14 +61,14 @@ function Aside() {
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e]'>
                         <img src='./src/assets/İçkilər.svg' alt='ichki' />
                         <div className='flex justify-between items-center w-full'>
-                            <p className='font-semibold text-[13px]'>İçkilər</p>
+                            <p className='font-semibold text-[12px]'>İçkilər</p>
                             <GoChevronRight className='w-[13px]' />
                         </div>
                     </li>
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e]'>
                         <img src='./src/assets/Süd-məhsulları.svg' alt='sud' />
                         <div className='flex justify-between items-center w-full'>
-                            <p className='font-semibold text-[13px]'>
+                            <p className='font-semibold text-[12px]'>
                                 Süd məhsulları
                             </p>
                             <GoChevronRight className='w-[13px]' />
@@ -76,20 +76,20 @@ function Aside() {
                     </li>
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e]'>
                         <img
-                            src='./src/assets/Meyvə-və-tərəvəz.svg'
+                            src='./src/assets/Uşaq-məhsulları.svg'
                             alt='ushaq'
                         />
                         <div className='flex justify-between items-center w-full'>
-                            <p className='font-semibold text-[13px]'>
+                            <p className='font-semibold text-[12px]'>
                                 Uşaq məhsulları
                             </p>
                             <GoChevronRight className='w-[13px]' />
                         </div>
                     </li>
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e]'>
-                        <img src='./src/assets/Meyvə-və-tərəvəz.svg' alt='' />
+                        <img src='./src/assets/Yuyucu-vasitələr.svg' alt='yuyucu' />
                         <div className='flex justify-between items-center w-full'>
-                            <p className='font-semibold text-[13px]'>
+                            <p className='font-semibold text-[12px]'>
                                 Yuyucu, təmizləyici vasitələr
                             </p>
                             <GoChevronRight className='w-[13px]' />
@@ -101,7 +101,7 @@ function Aside() {
                             alt='kosmetik'
                         />
                         <div className='flex justify-between items-center w-full'>
-                            <p className='font-semibold text-[13px]'>
+                            <p className='font-semibold text-[12px]'>
                                 Kosmetik və gigiyenik
                             </p>
                             <GoChevronRight className='w-[13px]' />
@@ -113,7 +113,7 @@ function Aside() {
                             alt='meiset'
                         />
                         <div className='flex justify-between items-center w-full'>
-                            <p className='font-semibold text-[13px]'>
+                            <p className='font-semibold text-[12px]'>
                                 Məişət, mətbəx, tekstil
                             </p>
                             <GoChevronRight className='w-[13px]' />
@@ -125,7 +125,7 @@ function Aside() {
                             alt='konselyariya'
                         />
                         <div className='flex justify-between items-center w-full'>
-                            <p className='font-semibold text-[13px]'>
+                            <p className='font-semibold text-[12px]'>
                                 Konselyariya
                             </p>
                             <GoChevronRight className='w-[13px]' />
@@ -137,7 +137,7 @@ function Aside() {
                             alt='heyvan'
                         />
                         <div className='flex justify-between items-center w-full'>
-                            <p className='font-semibold text-[13px]'>
+                            <p className='font-semibold text-[12px]'>
                                 Heyvan yemləri
                             </p>
                             <GoChevronRight className='w-[13px]' />
@@ -148,7 +148,7 @@ function Aside() {
                             src='./src/assets/neptun-icon.svg'
                             alt='neptunda'
                         />
-                        <p className='font-semibold text-[13px]'>
+                        <p className='font-semibold text-[12px]'>
                             Yalnız Neptunda
                         </p>
                     </li>
@@ -158,7 +158,7 @@ function Aside() {
                             alt='elektronika'
                         />
                         <div className='flex justify-between items-center w-full'>
-                            <p className='font-semibold text-[13px]'>
+                            <p className='font-semibold text-[12px]'>
                                 Elektronika & Mebel
                             </p>
                             <GoChevronRight className='w-[13px]' />
@@ -166,7 +166,7 @@ function Aside() {
                     </li>
                     <li className='flex px-3 gap-3 items-center py-2 bg-[#FF8300] text-white'>
                         <img src='./src/assets/Aksiyalar.svg' alt='kampaniya' />
-                        <p className='font-semibold text-[13px]'>
+                        <p className='font-semibold text-[12px]'>
                             Kampaniyalar
                         </p>
                     </li>

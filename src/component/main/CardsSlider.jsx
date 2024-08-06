@@ -4,7 +4,12 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import { FreeMode, Navigation } from 'swiper/modules';
 import { GoHeart } from "react-icons/go";
+import { useContext } from 'react';
+import { Cntx } from '../../context/DataContext';
+
 function CardsSlider() {
+    const {data} = useContext(Cntx)
+    
     return (
         <>
             <Swiper
