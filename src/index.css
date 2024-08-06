@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shadow {
+    box-shadow: 0 10px 0 10px 20px #2f2e2e;
+}
+
+.about:hover .about-open {
+    display: initial;
+}
+
+.aksia:hover .aksia-open {
+    display: initial;
+}
+
+.supermarket:hover .supermarket-open {
+    display: initial;
+}
+
+.karyera:hover .karyera-open {
+    display: initial;
+}
+
+.hesab-open {
+    transform: translateY(10%);
+    opacity: 0;
+    transition: .2s;
+}
+
+.hesab:hover .hesab-open {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media only screen and (min-width: 500px) {
+    .wrapper {
+        width: 80%;
+        margin: auto;
+    }
+}
