@@ -216,7 +216,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                             type='search'
                             name='Search'
                             placeholder='Məhsulu axtar'
-                            className='py-[4px] sm:py-[10px] w-[100%] pl-10 text-sm bg-white rounded-[30px]  focus:outline-none border-[1px] border-[#FF8300]'
+                            className='py-[4px] sm:py-[10px] w-[100%] pl-10 text-sm bg-white rounded-[30px] text-[.7rem] focus:outline-none border-[1px] border-[#FF8300]'
                         />
                         <button className='text-white text-[.9em] bg-[#FF8300] rounded-[30px] py-[4px] sm:py-[10px] px-[15px]  absolute right-0 '>
                             Axtar
