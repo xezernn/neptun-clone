@@ -9,7 +9,7 @@ function Slider() {
     return (
         <>
             <Swiper
-                className="mySwiper h-[55vh] py-4 w-[60vw]"
+                className="mySwiper h-[55vh] py-2 w-[60vw]"
                 navigation={true}
                 pagination={true}
                 effect={'fade'}
@@ -20,13 +20,13 @@ function Slider() {
                 modules={[Navigation, Pagination, Autoplay, EffectFade]}
             >
                 <SwiperSlide>
-                    <a href=""><img className='object-contain h-full w-full' src="https://neptun.az/image/cache/webp/catalog/06.12.2024/esasbanner-1130x413.webp?v=9" alt="banner1" /></a>
+                    <a href=""><img className='object-contain h-full w-full' src="./src/assets/banner1.webp" alt="banner1" /></a>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <a href=""><img className='object-contain h-full w-full' src="https://neptun.az/image/cache/webp/catalog/2.2024/esas-1130x413.webp?v=9" alt="banner2" /></a>
+                    <a href=""><img className='object-contain h-full w-full' src="./src/assets/banner2.webp" alt="banner2" /></a>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <a href=""><img className='object-contain h-full w-full' src="https://neptun.az/image/cache/webp/catalog/2.2024/heftesonu-banner-cover2-1130x413.webp?v=9" alt="banner3" /></a>
+                    <a href=""><img className='object-contain h-full w-full' src="./src/assets/banner3.webp" alt="banner3" /></a>
                 </SwiperSlide>
             </Swiper>
         </>
