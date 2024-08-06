@@ -32,23 +32,46 @@
     transform: translateY(0);
     opacity: 1;
 }
+
 .swiper-pagination-bullet-active {
     background-color: #FF8300 !important;
     width: 20px !important;
     border-radius: 5px !important;
     transition: .8s;
 }
-:root{
-    --swiper-theme-color: #FF8300 !important; 
+
+:root {
+    --swiper-theme-color: #FF8300 !important;
     --swiper-navigation-size: 20px !important;
 }
+
 /* .txt{
     font-size: clamp(12px, 2vw, 13px);
 } */
+#amiroff-img {
+
+    filter: brightness(0) invert(1)
+}
 
 @media only screen and (min-width: 500px) {
     .wrapper {
         width: 80%;
         margin: auto;
+    }
+
+    #footer-logo {
+        transition: .5s;
+    }
+
+    footer:hover #footer-logo {
+        left: 81%;
+    }
+
+    .footer-list ul {
+        list-style: ">";
+    }
+
+    .footer-list ul li {
+        padding: 0 5px;
     }
 }
