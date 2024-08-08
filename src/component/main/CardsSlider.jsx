@@ -13,6 +13,7 @@ function CardsSlider() {
     const { data, wishList, setWishList } = useContext(Cntx);
     const { category } = useParams();
     const [count, setCount] = useState(12);
+    
     console.log(category);
 
     // if (data) {
