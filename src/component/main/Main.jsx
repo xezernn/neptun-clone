@@ -69,7 +69,7 @@ function Main() {
                 <section>
                     <div className='flex justify-between items-center p-4'>
                         <h3 className='font-bold'>Ən çox satılanlar</h3>
-                        <p className='text-[#FF8300]'>Hamısına bax</p>
+                        <a href="#" className='text-[#FF8300]'>Hamısına bax</a>
                     </div>
                     <CardsSlider />
                 </section>

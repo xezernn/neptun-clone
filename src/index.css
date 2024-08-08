@@ -48,7 +48,6 @@
     width: 100%;
     border-radius: 10px 10px 0 0;
     left: 0;
-
 }
 
 .swiper-pagination-bullet-active {
@@ -62,19 +61,12 @@
     --swiper-theme-color: #FF8300 !important;
     --swiper-navigation-size: 20px !important;
 }
-
-/* .txt{
-    font-size: clamp(12px, 2vw, 13px);
-} */
 #amiroff-img {
-
     filter: brightness(0) invert(1)
 }
-
 .swiper-button-prev,
 .swiper-button-next,
 .swiper-button-disabled {
-    /* background: rgb(248 250 252 / var(--tw-bg-opacity)) !important; */
     background-color: #8080801a;
     border-radius: 50%;
     padding: 20px;
