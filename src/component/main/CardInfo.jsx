@@ -7,7 +7,7 @@ function CardInfo() {
         <section className="wrapper">
             <div className="text-gray-500 font-semibold py-10">
                 <Link to='/'>Ana səhifə /</Link>
-                <span> ANKARA 500GR MAKARON BURGU</span>
+                <span className="text-[.9em]"> ANKARA 500GR MAKARON BURGU</span>
             </div>
             <div class="flex flex-col items-center bg-white md:flex-row md:max-w-4xl mb-5">
                 <img class="object-contain w-full rounded-t-lg h-96 md:h-auto md:w-[450px] md:rounded-none md:rounded-s-lg" src="https://neptun.az/image/cache/webp/catalog/ANKARA500GRMAKARONBURGU-1000x1000.webp?v=9" alt="mekeron" />
