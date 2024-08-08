@@ -108,10 +108,7 @@ function Aside() {
                         </div>
                     </li>
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e] dropdown relative'>
-                        <img
-                            src='./src/assets/Şirniyyat-çay-və qəhvə.svg'
-                            alt='shirniyyat'
-                        />
+                        <img src='./src/assets/Şirniyyat-çay-və qəhvə.svg' alt='shirniyyat'/>
                         <div className='flex justify-between items-center w-full relative'>
                             <p className='font-semibold text-[12px]'>
                                 Şirniyyat, çay, kofe, biabetik
@@ -171,10 +168,7 @@ function Aside() {
                         </div>
                     </li>
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e] dropdown relative'>
-                        <img
-                            src='./src/assets/Uşaq-məhsulları.svg'
-                            alt='ushaq'
-                        />
+                        <img src='./src/assets/Uşaq-məhsulları.svg' alt='ushaq'/>
                         <div className='flex justify-between items-center w-full relative'>
                             <p className='font-semibold text-[12px]'>
                                 Uşaq məhsulları
@@ -196,10 +190,7 @@ function Aside() {
                         </div>
                     </li>
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e] dropdown relative'>
-                        <img
-                            src='./src/assets/Yuyucu-vasitələr.svg'
-                            alt='yuyucu'
-                        />
+                        <img src='./src/assets/Yuyucu-vasitələr.svg' alt='yuyucu'/>
                         <div className='flex justify-between items-center w-full relative'>
                             <p className='font-semibold text-[12px]'>
                                 Yuyucu, təmizləyici vasitələr
@@ -225,10 +216,7 @@ function Aside() {
                         </div>
                     </li>
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e] dropdown relative'>
-                        <img
-                            src='./src/assets/Kosmetik-və-gigiyenik.svg'
-                            alt='kosmetik'
-                        />
+                        <img src='./src/assets/Kosmetik-və-gigiyenik.svg' alt='kosmetik'/>
                         <div className='flex justify-between items-center w-full relative'>
                             <p className='font-semibold text-[12px]'>
                                 Kosmetik və gigiyenik
@@ -248,10 +236,7 @@ function Aside() {
                         </div>
                     </li>
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e]'>
-                        <img
-                            src='./src/assets/Məişət-mətbəx-və-tekstil.svg'
-                            alt='meiset'
-                        />
+                        <img src='./src/assets/Məişət-mətbəx-və-tekstil.svg' alt='meiset' />
                         <div className='flex justify-between items-center w-full'>
                             <p className='font-semibold text-[12px]'>
                                 Məişət, mətbəx, tekstil
@@ -260,10 +245,7 @@ function Aside() {
                         </div>
                     </li>
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e]'>
-                        <img
-                            src='./src/assets/Konselyariya.svg'
-                            alt='konselyariya'
-                        />
+                        <img src='./src/assets/Konselyariya.svg' alt='konselyariya'/>
                         <div className='flex justify-between items-center w-full'>
                             <p className='font-semibold text-[12px]'>
                                 Konselyariya
@@ -272,10 +254,7 @@ function Aside() {
                         </div>
                     </li>
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e]'>
-                        <img
-                            src='./src/assets/Heyvan-yemləri.svg'
-                            alt='heyvan'
-                        />
+                        <img  src='./src/assets/Heyvan-yemləri.svg' alt='heyvan'/>
                         <div className='flex justify-between items-center w-full'>
                             <p className='font-semibold text-[12px]'>
                                 Heyvan yemləri
@@ -284,19 +263,13 @@ function Aside() {
                         </div>
                     </li>
                     <li className='flex px-3 gap-3 items-center py-2 hover:bg-[#ff84004e]'>
-                        <img
-                            src='./src/assets/neptun-icon.svg'
-                            alt='neptunda'
-                        />
+                        <img src='./src/assets/neptun-icon.svg' alt='neptunda'/>
                         <p className='font-semibold text-[12px]'>
                             Yalnız Neptunda
                         </p>
                     </li>
                     <li className='flex px-3 gap-3 items-center py-2 hover:bg-[#ff84004e]'>
-                        <img
-                            src='./src/assets/elektronika-və-mebel.svg'
-                            alt='elektronika'
-                        />
+                        <img src='./src/assets/elektronika-və-mebel.svg' alt='elektronika' />
                         <div className='flex justify-between items-center w-full'>
                             <p className='font-semibold text-[12px]'>
                                 Elektronika & Mebel

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaBars } from "react-icons/fa6";
 import { FiBarChart } from "react-icons/fi";
 import { FaLock } from "react-icons/fa";
@@ -7,10 +7,15 @@ import { LuRefreshCcw } from "react-icons/lu";
 import { SlBasket } from "react-icons/sl";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { HiMiniBars4 } from "react-icons/hi2";
+import Sidebar from "./Sidebar";
 
 function Header() {
+
+    const [sideSt, setSideSt] = useState(false)
+
     return (
         <header>
+            <Sidebar sideSt={sideSt} setSideSt={setSideSt}/>
             <div className='wrapper'>
                 <div className='flex my-[10px] justify-between items-center gap-[3vw] p-[10px] '>
                     <div className='w-[40vw] md:w-[20vw] '>
@@ -235,7 +240,9 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
             </div>
             <nav className='bg-[#FF8300] text-white py-[10px] flex justify-between items-center lg:p-[0] px-[1.5vw]'>
                 <div className='wrapper flex justify-between items-center w-[100%]'>
-                    <FiBarChart className='rotate-90 h-[30px] w-[30px] lg:hidden' />
+                    <FiBarChart 
+                    onClick={()=> setSideSt(!sideSt)}
+                    className='rotate-90 h-[30px] w-[30px] lg:hidden' />
                     <div className='desktop-nav  flex items-center gap-[30px] justify-between '>
                         <div
                             id='category-button'
