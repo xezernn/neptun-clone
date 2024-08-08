@@ -9,7 +9,6 @@ import { TiArrowSortedDown } from "react-icons/ti";
 import { HiMiniBars4 } from "react-icons/hi2";
 
 function Header() {
-    
     return (
         <header>
             <div className='wrapper'>

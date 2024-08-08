@@ -18,7 +18,8 @@
 
 }
 
-.supermarket:hover .supermarket-open, .dropdown:hover .dropdown-open {
+.supermarket:hover .supermarket-open,
+.dropdown:hover .dropdown-open {
     display: initial;
     z-index: 999;
 
@@ -36,6 +37,7 @@
     opacity: 0;
     transition: .2s;
 }
+
 
 .hesab:hover .hesab-open {
     transform: translateY(0);

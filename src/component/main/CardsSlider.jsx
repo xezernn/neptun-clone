@@ -7,29 +7,29 @@ import { GoHeart } from "react-icons/go";
 import { useContext, useState } from "react";
 import { Cntx } from "../../context/DataContext";
 import { Link, useParams } from "react-router-dom";
-// import Error404 from '../error/Error404';
+import Aside from "./Aside";
 
 function CardsSlider() {
     const { data, wishList, setWishList } = useContext(Cntx);
     const { subCategory } = useParams();
     const [count, setCount] = useState(12);
-
     const category = Object.keys(data);
 
     // if (data) {
-    //     const x =  Object.keys(data).findIndex((item => item == category))
-    //     if (x == -1) return <Error404 />
+    //     const x = Object.keys(data).findIndex((item) => item == category);
+    //     if (x == -1) return <Error404 />;
     // }
 
     return (
-        <main>
+        <main className='wrapper flex justify-center items-start gap-[15px]'>
+            <Aside />
             <Swiper
                 slidesPerView={6}
                 spaceBetween={0}
                 freeMode={true}
                 navigation={true}
                 modules={[FreeMode, Navigation]}
-                className='mySwiper my-4 lg:mx-0 mx-3'
+                className='mySwiper my-4 lg:mx-0 mx-3 w-[100%]'
                 breakpoints={{
                     320: {
                         slidesPerView: 2,
