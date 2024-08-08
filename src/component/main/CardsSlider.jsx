@@ -7,7 +7,7 @@ import { GoHeart } from "react-icons/go";
 import { useContext, useState } from 'react';
 import { Cntx } from '../../context/DataContext';
 import { Link, useParams } from 'react-router-dom';
-import Error404 from '../error/Error404';
+// import Error404 from '../error/Error404';
 
 function CardsSlider() {
     const { data, wishList, setWishList } = useContext(Cntx);
@@ -46,7 +46,7 @@ function CardsSlider() {
                     }
                 }}
             >
-                {
+                {/* {
                     data ?  data[category]
                         .slice(0, count)
                         .map((item, i) => (
@@ -65,7 +65,7 @@ function CardsSlider() {
                                 </Link>
                             </SwiperSlide>
                         )) : 'men yoxam'
-                }
+                } */}
             </Swiper>
         </>
     );
