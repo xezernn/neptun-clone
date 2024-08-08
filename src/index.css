@@ -8,24 +8,33 @@
 
 .about:hover .about-open {
     display: initial;
+    z-index: 999;
+
 }
 
 .aksia:hover .aksia-open {
     display: initial;
+    z-index: 999;
+
 }
 
 .supermarket:hover .supermarket-open {
     display: initial;
+    z-index: 999;
+
 }
 
 .karyera:hover .karyera-open {
     display: initial;
+    z-index: 999;
+
 }
 
 .hesab-open {
     transform: translateY(10%);
-    /* opacity: 0; */
-    display: none;
+    z-index: 999;
+    /* display: none; */
+    opacity: 0;
     transition: .2s;
 }
 
