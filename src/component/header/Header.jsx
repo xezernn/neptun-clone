@@ -254,7 +254,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                             <li className='text-[.8em] font-medium relative about'>
                                 <a href=''>Haqqımızda</a>
                                 <TiArrowSortedDown className='inline' />
-                                <ul className='bg-[#fff] hidden border-t-[2px] about-open border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+10px)] w-[12vw]'>
+                                <ul className='bg-[#fff] z-10 hidden border-t-[2px] about-open border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+10px)] w-[12vw]'>
                                     <li>
                                         <a href=''>Siyasətimiz</a>
                                     </li>
@@ -266,7 +266,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                             <li className='text-[.8em] font-medium aksia relative'>
                                 <a href=''>Aksiyalar</a>
                                 <TiArrowSortedDown className='inline' />
-                                <ul className='bg-[#fff] hidden border-t-[2px] aksia-open border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+10px)] w-[12vw]'>
+                                <ul className='bg-[#fff] z-10 hidden border-t-[2px] aksia-open border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+10px)] w-[12vw]'>
                                     <li>
                                         <a href=''>Kampaniyalar</a>
                                     </li>
@@ -281,7 +281,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                             <li className='text-[.8em] font-medium relative supermarket'>
                                 <a href=''>Supermarketlər</a>
                                 <TiArrowSortedDown className='inline' />
-                                <ul className='bg-[#fff] hidden supermarket-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+10px)] w-[12vw]'>
+                                <ul className='bg-[#fff] z-10 hidden supermarket-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+10px)] w-[12vw]'>
                                     <li>
                                         <a href=''>Mağazalarımız</a>
                                     </li>
@@ -305,7 +305,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                             <li className='text-[.8em] font-medium relative karyera'>
                                 <a href=''>Kariyera</a>
                                 <TiArrowSortedDown className='inline' />
-                                <ul className='bg-[#fff] hidden karyera-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+10px)] w-[12vw]'>
+                                <ul className='bg-[#fff] z-10 hidden karyera-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+10px)] w-[12vw]'>
                                     <li>
                                         <a href=''>İşə qəbul proseduru</a>
                                     </li>
