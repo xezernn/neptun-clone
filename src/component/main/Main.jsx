@@ -4,6 +4,7 @@ import Slider from "./Slider";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 function Main() {
+    
     return (
         <main className='bg-slate-50'>
             <div className='wrapper-md'>

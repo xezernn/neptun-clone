@@ -1,4 +1,5 @@
 import { GoChevronRight } from "react-icons/go";
+import { Link } from "react-router-dom";
 function Aside() {
     return (
         <aside className='pt-6 mb-5 sm:w-60 bg-white shadow-lg lg:block lg:w-[19vw] hidden'>
@@ -16,10 +17,18 @@ function Aside() {
                             <GoChevronRight className='w-[13px]' />
                         </div>
                         <ul className='bg-[#fff] z-20 hidden dropdown-open border-l-[2px] border-l-[#FF8300] rounded-sm py-2 absolute right-[-153px] top-[calc(100%-40px)] w-[10vw]'>
-                            <li className="text-[.8em] py-2 px-3 hover:bg-[#ff84001c]"><a href='#'>Meyvə</a></li>
-                            <li className="text-[.8em] py-2 px-3 hover:bg-[#ff84001c]"><a href='#'>Tərəvəz</a></li>
-                            <li className="text-[.8em] py-2 px-3 hover:bg-[#ff84001c]"><a href='#'>Göyərti</a></li>
-                            <li className="text-[.8em] py-2 px-3 hover:bg-[#ff84001c]"><a href='#'>Quru meyvələr</a></li>
+                            <li className='text-[.8em] py-2 px-3 hover:bg-[#ff84001c]'>
+                                <Link to='Meyvə'>Meyvə</Link>
+                            </li>
+                            <li className='text-[.8em] py-2 px-3 hover:bg-[#ff84001c]'>
+                                <Link to='Tərəvəz'>Tərəvəz</Link>
+                            </li>
+                            <li className='text-[.8em] py-2 px-3 hover:bg-[#ff84001c]'>
+                                <Link to='Göyərti'>Göyərti</Link>
+                            </li>
+                            <li className='text-[.8em] py-2 px-3 hover:bg-[#ff84001c]'>
+                                <Link to='Quru meyvələr'>Quru meyvələr</Link>
+                            </li>
                         </ul>
                     </li>
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e] relative dropdown'>
@@ -34,10 +43,20 @@ function Aside() {
                             <GoChevronRight className='w-[13px]' />
                         </div>
                         <ul className='bg-[#fff] z-20 hidden dropdown-open border-l-[2px] border-l-[#FF8300] py-2 rounded-sm  absolute right-[-153px] top-[calc(100%-40px)] w-[10vw]'>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Ət</a></li>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Toyuq</a></li>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Dəniz məhsulları</a></li>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Yumurta</a></li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='Ət'>Ət</Link>
+                            </li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='Toyuq'>Toyuq</Link>
+                            </li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='Dəniz Məhsulları'>
+                                    Dəniz məhsulları
+                                </Link>
+                            </li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='Yumurta'>Yumurta</Link>
+                            </li>
                         </ul>
                     </li>
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e] dropdown relative'>
@@ -49,9 +68,19 @@ function Aside() {
                             <GoChevronRight className='w-[13px]' />
                         </div>
                         <ul className='bg-[#fff] z-20 hidden dropdown-open border-l-[2px] border-l-[#FF8300] py-2 rounded-sm  absolute right-[-153px] top-[calc(100%-40px)] w-[10vw]'>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Kolbasa və sosislər</a></li>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Donmuş məshullar</a></li>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Dondurma</a></li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='Kolbasa və sosislər'>
+                                    Kolbasa və sosislər
+                                </Link>
+                            </li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='Donmuş məshullar'>
+                                    Donmuş məshullar
+                                </Link>
+                            </li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='Dondurma'>Dondurma</Link>
+                            </li>
                         </ul>
                     </li>
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e] dropdown relative'>
@@ -63,10 +92,18 @@ function Aside() {
                             <GoChevronRight className='w-[13px]' />
                         </div>
                         <ul className='bg-[#fff] z-20 hidden dropdown-open border-l-[2px] border-l-[#FF8300] py-2 rounded-sm  absolute right-[-153px] top-[calc(100%-40px)] w-[10vw]'>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Dənlilər</a></li>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Unlar</a></li>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Ədviyyatlar</a></li>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Souslar</a></li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='denliler'>Dənlilər</Link>
+                            </li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='unlar'>Unlar</Link>
+                            </li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='edviyyatlar'>Ədviyyatlar</Link>
+                            </li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='souslar'>Souslar</Link>
+                            </li>
                         </ul>
                     </li>
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e] dropdown relative'>
@@ -81,9 +118,15 @@ function Aside() {
                             <GoChevronRight className='w-[13px]' />
                         </div>
                         <ul className='bg-[#fff] z-20 hidden dropdown-open border-l-[2px] border-l-[#FF8300] py-2 rounded-sm absolute right-[-153px] top-[calc(100%-40px)] w-[10vw]'>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Çörək</a></li>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Saqqızlar</a></li>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Şirniyyat</a></li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='corek'>Çörək</Link>
+                            </li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='saqqizlar'>Saqqızlar</Link>
+                            </li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='sirniyyat'>Şirniyyat</Link>
+                            </li>
                         </ul>
                     </li>
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e] dropdown relative'>
@@ -93,9 +136,15 @@ function Aside() {
                             <GoChevronRight className='w-[13px]' />
                         </div>
                         <ul className='bg-[#fff] z-20 hidden dropdown-open border-l-[2px] border-l-[#FF8300] py-2 rounded-sm  absolute right-[-153px] top-[calc(100%-40px)] w-[10vw]'>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Çay</a></li>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Kofe, kakao və s.</a></li>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Meyvə suları</a></li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='cay'>Çay</Link>
+                            </li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='kofe-kakao'>Kofe, kakao və s.</Link>
+                            </li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='meyve-sulari'>Meyvə suları</Link>
+                            </li>
                         </ul>
                     </li>
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e] dropdown relative'>
@@ -107,9 +156,15 @@ function Aside() {
                             <GoChevronRight className='w-[13px]' />
                         </div>
                         <ul className='bg-[#fff] z-20 hidden dropdown-open border-l-[2px] border-l-[#FF8300] py-2 rounded-sm  absolute right-[-153px] top-[calc(100%-40px)] w-[10vw]'>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Yağlar</a></li>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Ayran</a></li>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Südlər</a></li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='yaglar'>Yağlar</Link>
+                            </li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='ayran'>Ayran</Link>
+                            </li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='sud'>Südlər</Link>
+                            </li>
                         </ul>
                     </li>
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e] dropdown relative'>
@@ -124,13 +179,24 @@ function Aside() {
                             <GoChevronRight className='w-[13px]' />
                         </div>
                         <ul className='bg-[#fff] z-20 hidden dropdown-open border-l-[2px] border-l-[#FF8300] py-2 rounded-sm  absolute right-[-153px] top-[calc(100%-40px)] w-[10vw]'>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Oyuncaqlar</a></li>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Uşaq bezləri</a></li>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Uşaq ləvazimatları</a></li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='oyuncaq'>Oyuncaqlar</Link>
+                            </li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='usaq-bezleri'>Uşaq bezləri</Link>
+                            </li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='usaq-levazimatlar'>
+                                    Uşaq ləvazimatları
+                                </Link>
+                            </li>
                         </ul>
                     </li>
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e] dropdown relative'>
-                        <img src='./src/assets/Yuyucu-vasitələr.svg' alt='yuyucu' />
+                        <img
+                            src='./src/assets/Yuyucu-vasitələr.svg'
+                            alt='yuyucu'
+                        />
                         <div className='flex justify-between items-center w-full'>
                             <p className='font-semibold text-[12px]'>
                                 Yuyucu, təmizləyici vasitələr
@@ -138,9 +204,17 @@ function Aside() {
                             <GoChevronRight className='w-[13px]' />
                         </div>
                         <ul className='bg-[#fff] z-20 hidden dropdown-open border-l-[2px] border-l-[#FF8300] py-2 rounded-sm  absolute right-[-153px] top-[calc(100%-40px)] w-[10vw]'>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Paltarlar üçün</a></li>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Qab yumaq üçün</a></li>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Yuyucu, təmizləyicilər</a></li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='paltarlar-ucun'>Paltarlar üçün</Link>
+                            </li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='qab-yumaq-ucun'>Qab yumaq üçün</Link>
+                            </li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='yuyucu-temizleyiciler'>
+                                    Yuyucu, təmizləyicilər
+                                </Link>
+                            </li>
                         </ul>
                     </li>
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e] dropdown relative'>
@@ -155,9 +229,15 @@ function Aside() {
                             <GoChevronRight className='w-[13px]' />
                         </div>
                         <ul className='bg-[#fff] z-20 hidden dropdown-open border-l-[2px] border-l-[#FF8300] py-2 rounded-sm  absolute right-[-153px] top-[calc(100%-40px)] w-[10vw]'>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Ətirlər</a></li>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Ağız baxımı</a></li>
-                            <li className="py-2 px-3 hover:bg-[#ff84001c] text-[.8em]"><a href='#'>Antiperspirant</a></li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='#'>Ətirlər</Link>
+                            </li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='#'>Ağız baxımı</Link>
+                            </li>
+                            <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
+                                <Link to='#'>Antiperspirant</Link>
+                            </li>
                         </ul>
                     </li>
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e]'>
