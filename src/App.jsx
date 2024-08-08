@@ -11,8 +11,8 @@ function App() {
             <Route path="/" element={<Layout />}>
                 <Route path="/" element={<Main />}/>
                 <Route path="/cardInfo" element={<CardInfo />}/>
-                <Route path="*" element={<Error404 />}/>
             </Route>
+            <Route path="*" element={<Error404 />}/>
         </Routes>
         </>
     );

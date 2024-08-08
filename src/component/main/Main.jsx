@@ -1,5 +1,4 @@
 import Aside from "./Aside";
-import CardInfo from "./CardInfo";
 import CardsSlider from "./CardsSlider";
 import Slider from "./Slider";
 import { FaArrowRightLong } from "react-icons/fa6";
