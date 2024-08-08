@@ -9,6 +9,7 @@ import { TiArrowSortedDown } from "react-icons/ti";
 import { HiMiniBars4 } from "react-icons/hi2";
 
 function Header() {
+    
     return (
         <header>
             <div className='wrapper'>
@@ -239,7 +240,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                     <div className='desktop-nav  flex items-center gap-[30px] justify-between '>
                         <div
                             id='category-button'
-                            className='hidden lg:inline py-[8px] px-[10px] text-[#FF8300] bg-white w-[22vw]'
+                            className='hidden lg:inline py-[12px] px-[10px] text-[#FF8300] bg-white w-[22vw]'
                         >
                             <HiMiniBars4 className='text-[1.4em] inline mr-[2vw] ' />
                             <span className='text-[.8em] font-bold '>

@@ -14,7 +14,6 @@ function CardsSlider() {
     const { subCategory } = useParams();
     const [count, setCount] = useState(12);
 
-
     const category = Object.keys(data);
 
     // if (data) {
@@ -23,7 +22,7 @@ function CardsSlider() {
     // }
 
     return (
-        <>
+        <main>
             <Swiper
                 slidesPerView={6}
                 spaceBetween={0}
@@ -94,7 +93,7 @@ function CardsSlider() {
                       })
                     : "men yoxam"}
             </Swiper>
-        </>
+        </main>
     );
 }
 

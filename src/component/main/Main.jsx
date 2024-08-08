@@ -4,7 +4,6 @@ import Slider from "./Slider";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 function Main() {
-    
     return (
         <main className='bg-slate-50'>
             <div className='wrapper-md'>
@@ -70,9 +69,10 @@ function Main() {
                 <section>
                     <div className='flex justify-between items-center p-4'>
                         <h3 className='font-bold'>Ən çox satılanlar</h3>
-                        <a href="#" className='text-[#FF8300]'>Hamısına bax</a>
+                        <a href='#' className='text-[#FF8300]'>
+                            Hamısına bax
+                        </a>
                     </div>
-                    <CardsSlider />
                 </section>
             </div>
         </main>
