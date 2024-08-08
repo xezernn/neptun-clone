@@ -11,7 +11,7 @@ function App() {
             <Routes>
                 <Route path='/' element={<Layout />}>
                     <Route path='/' element={<Main />} />
-                    <Route path='/:category' element={<CardsSlider />} />
+                    <Route path='/:subCategory' element={<CardsSlider />} />
                     <Route path='/cardInfo' element={<CardInfo />} />
                 </Route>
                 <Route path='*' element={<Error404 />} />
