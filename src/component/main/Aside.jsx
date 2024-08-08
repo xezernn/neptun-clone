@@ -27,9 +27,7 @@ function Aside() {
                                     <Link to='goyerti'>Göyərti</Link>
                                 </li>
                                 <li className='text-[.8em] py-2 px-3 hover:bg-[#ff84001c]'>
-                                    <Link to='quru-meyveler'>
-                                        Quru meyvələr
-                                    </Link>
+                                    <Link to='quru-meyve'>Quru meyvələr</Link>
                                 </li>
                             </ul>
                         </div>
@@ -76,7 +74,7 @@ function Aside() {
                                     </Link>
                                 </li>
                                 <li className='py-2 px-3 hover:bg-[#ff84001c] text-[.8em]'>
-                                    <Link to='donmus-meshullar'>
+                                    <Link to='donmus-mehsullar'>
                                         Donmuş məshullar
                                     </Link>
                                 </li>

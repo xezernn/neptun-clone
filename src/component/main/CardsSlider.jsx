@@ -14,6 +14,7 @@ function CardsSlider() {
     const { subCategory } = useParams();
     const [count, setCount] = useState(12);
     const category = Object.keys(data);
+    console.log(data);
 
     // if (data) {
     //     const x = Object.keys(data).findIndex((item) => item == category);
