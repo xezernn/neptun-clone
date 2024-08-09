@@ -8,6 +8,7 @@ import { SlBasket } from "react-icons/sl";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { HiMiniBars4 } from "react-icons/hi2";
 import Sidebar from "./Sidebar";
+import { Link } from "react-router-dom";
 
 function Header() {
 
@@ -18,7 +19,7 @@ function Header() {
             <Sidebar sideSt={sideSt} setSideSt={setSideSt}/>
             <div className='wrapper'>
                 <div className='flex my-[10px] justify-between items-center gap-[3vw] p-[10px] '>
-                    <div className='w-[40vw] md:w-[20vw] '>
+                    <Link to='/' className='w-[40vw] md:w-[20vw] '>
                         <svg
                             version='1.1'
                             id='neptun_logo_svg'
@@ -199,7 +200,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                 </g>
                             </g>
                         </svg>
-                    </div>
+                    </Link>
                     <div className='relative w-[40vw] lg:w-[30vw]'>
                         <span className='absolute inset-y-0 left-0 flex items-center pl-2'>
                             <button

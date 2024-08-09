@@ -8,7 +8,7 @@ function Aside() {
                 <ul className='flex flex-col space-y-1'>
                     <li className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e] relative dropdown'>
                         <img
-                            src='../../assets/meyve-ve-terevez.svg'
+                            src='src/assets/meyve-ve-terevez.svg'
                             alt='meyve-terevez'
                         />
                         <div className='flex justify-between items-center w-full relative'>

@@ -4,14 +4,13 @@ import { Link } from "react-router-dom";
 function Sidebar({ sideSt }) {
     sideSt
         ? ((document.documentElement.style.overflow = "hidden"),
-          (document.body.style.overflow = "hidden"))
+            (document.body.style.overflow = "hidden"))
         : ((document.documentElement.style.overflow = ""),
-          (document.body.style.overflow = ""));
+            (document.body.style.overflow = ""));
     return (
         <div
-            className={`${
-                sideSt ? "translate-x-0" : "translate-x-[-120%]"
-            } p-[2vw] fixed bg-white z-[1000] w-[80vw] h-[80vh] bottom-0 transition `}
+            className={`${sideSt ? "translate-x-0" : "translate-x-[-120%]"
+                } p-[2vw] fixed bg-white z-[1000] w-[80vw] h-[80vh] bottom-0 transition `}
         >
             <ul>
                 <li>

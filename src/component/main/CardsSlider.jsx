@@ -52,46 +52,46 @@ function CardsSlider() {
             >
                 {data
                     ? category.map((item) => {
-                          const product = data[item][subCategory];
-                          //   console.log(product);
+                        const product = data[item][subCategory];
+                        //   console.log(product);
 
-                          return product?.map((item, i) => (
-                              <SwiperSlide key={i}>
-                                  <Link
-                                      //   to={`${i + 1}`}
-                                      className='text-center w-[180px] border rounded-md p-3 bg-white relative'
-                                  >
-                                      <GoHeart
-                                          onClick={() => {
-                                              setWishList();
-                                          }}
-                                          className='absolute cursor-pointer top-3 right-3 text-[1.3em] text-[#FF8300]'
-                                      />
-                                      <img src={item.img} alt={item.title} />
-                                      <h5 className='py-4 hover:text-[#FF8300] h-16 text-[.7em] font-semibold'>
-                                          {item.title}
-                                      </h5>
-                                      <p className='font-bold text-[1.3em]'>
-                                          {item.price} ₼
-                                      </p>
-                                      <div className='py-3'>
-                                          <button className='font-bold text-[1.2em] text-[#FF8300]'>
-                                              ‒
-                                          </button>
-                                          <span className='px-2'>1 ədəd</span>
-                                          <button className='font-bold text-[1.2em] text-[#FF8300]'>
-                                              ＋
-                                          </button>
-                                      </div>
-                                      <button className='rounded-3xl bg-[#FF8300] text-white px-4 py-2 font-semibold mb-3'>
-                                          Səbətə at
-                                      </button>
-                                  </Link>
-                              </SwiperSlide>
-                          ));
+                        return product?.map((item, i) => (
+                            <SwiperSlide key={i}>
+                                <Link
+                                    //   to={`${i + 1}`}
+                                    className='text-center w-[180px] border rounded-md p-3 bg-white relative'
+                                >
+                                    <GoHeart
+                                        onClick={() => {
+                                            setWishList();
+                                        }}
+                                        className='absolute cursor-pointer top-3 right-3 text-[1.3em] text-[#FF8300]'
+                                    />
+                                    <img src={item.img} alt={item.title} />
+                                    <h5 className='py-4 hover:text-[#FF8300] h-16 text-[.7em] font-semibold'>
+                                        {item.title}
+                                    </h5>
+                                    <p className='font-bold text-[1.3em]'>
+                                        {item.price} ₼
+                                    </p>
+                                    <div className='py-3'>
+                                        <button className='font-bold text-[1.2em] text-[#FF8300]'>
+                                            ‒
+                                        </button>
+                                        <span className='px-2'>1 ədəd</span>
+                                        <button className='font-bold text-[1.2em] text-[#FF8300]'>
+                                            ＋
+                                        </button>
+                                    </div>
+                                    <button className='rounded-3xl bg-[#FF8300] text-white px-4 py-2 font-semibold mb-3'>
+                                        Səbətə at
+                                    </button>
+                                </Link>
+                            </SwiperSlide>
+                        ));
 
-                          console.log(data[item][0]);
-                      })
+                        console.log(data[item][0]);
+                    })
                     : "men yoxam"}
             </Swiper>
         </main>
