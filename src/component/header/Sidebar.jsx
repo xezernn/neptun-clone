@@ -53,7 +53,7 @@ function Sidebar({ sideSt }) {
                         className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
                     >
                         <img
-                            src='./src/assets/erzaq-mehsullari.svg'
+                            src='src/assets/erzaq-mehsullari.svg'
                             alt='erzaq mehsullari'
                         />
                         Ərzaq məhsulları
