@@ -11,8 +11,10 @@ function DataContex({ children }) {
     //     return savedWish ? JSON.parse(savedWish) : []
     // }
     useEffect(() => {
-        axios.get("../data/data.json").then((res) => setData(res.data));
+        axios.get("mirafgan.me/neptun/catalog").then((res) => console.log(res));
     }, []);
+
+    // console.log(data);
 
     // useEffect(() => {
     //     localStorage.setItem('wishList', JSON.stringify(wishList))

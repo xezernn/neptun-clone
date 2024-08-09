@@ -5,8 +5,8 @@ function Sidebar({ sideSt }) {
     sideSt
         ? ((document.documentElement.style.overflow = "hidden"),
           (document.body.style.overflow = "hidden"))
-        : (  document.documentElement.style.overflow = '',
-            document.body.style.overflow = '');
+        : ((document.documentElement.style.overflow = ""),
+          (document.body.style.overflow = ""));
     return (
         <div
             className={`${
@@ -20,7 +20,7 @@ function Sidebar({ sideSt }) {
                         className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
                     >
                         <img
-                            src='./src/assets/Meyvə-və-tərəvəz.svg'
+                            src='./src/assets/meyve-ve-terevez.svg'
                             alt='meyve-terevez'
                         />
                         Meyvə, tərəvəz, quru meyvə
@@ -32,7 +32,7 @@ function Sidebar({ sideSt }) {
                         className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
                     >
                         <img
-                            src='./src/assets/ət-və-toyuq məhsulları.svg'
+                            src='./src/assets/et-ve-toyuq-mehsullari.svg'
                             alt='et'
                         />
                         Ət, toyuq, dəniz məhsulları
@@ -53,7 +53,7 @@ function Sidebar({ sideSt }) {
                         className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
                     >
                         <img
-                            src='./src/assets/ərzaq məhsulları.svg'
+                            src='./src/assets/erzaq-mehsullari.svg'
                             alt='erzaq mehsullari'
                         />
                         Ərzaq məhsulları
