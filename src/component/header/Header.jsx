@@ -362,12 +362,12 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                         </div>
                         <FaRegHeart className='text-[1.3em] ' />
                         <LuRefreshCcw className='text-[1.3em] hover:rotate-[270deg] transition cursor-pointer' />
-                        <div className='relative p-[2vw] sm:p-[1vw] lg:p-[10px]'>
+                        <Link to='/basket' className='relative p-[2vw] sm:p-[1vw] lg:p-[10px]'>
                             <SlBasket className='text-[1.3em]' />
                             <span className='bg-[#00FF00] absolute top-0 right-0 rounded-[50%] px-[5px] text-[.7em] text-black '>
                                 0
                             </span>
-                        </div>
+                        </Link>
                     </div>
                     <button className='md:hidden  p-[1.7vw] text-[#FF8300] bg-white rounded-[5px] text-[1.4em] '>
                         <FaBars />

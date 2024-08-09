@@ -24,7 +24,7 @@ function Slider() {
                     <a href=''>
                         <img
                             className='object-contain h-full w-full'
-                            src='./src/assets/banner1.webp'
+                            src='/public/banner1.webp'
                             alt='banner1'
                         />
                     </a>
