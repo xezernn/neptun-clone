@@ -1,11 +1,9 @@
-
 import Aside from "./Aside";
 import CardsSlider from "./CardsSlider";
 import Slider from "./Slider";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 function Main() {
-
     return (
         <main className='bg-slate-50'>
             <div className='wrapper-md'>
@@ -19,7 +17,7 @@ function Main() {
                                     <a href=''>
                                         <img
                                             className='object-cover w-full'
-                                            src='./src/assets/50-azn-50.png'
+                                            src='./src/assets/azn-50.png'
                                             alt='50to50'
                                         />
                                     </a>

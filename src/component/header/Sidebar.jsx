@@ -53,7 +53,7 @@ function Sidebar({ sideSt }) {
                         className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
                     >
                         <img
-                            src='.\src\assets\erzaq-mehsullari.svg'
+                            src='./src/assets/erzaq-mehsullari.svg'
                             alt='erzaq mehsullari'
                         />
                         Ərzaq məhsulları
@@ -65,7 +65,7 @@ function Sidebar({ sideSt }) {
                         className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
                     >
                         <img
-                            src='./src/assets/Şirniyyat-çay-və qəhvə.svg'
+                            src='./src/assets/sirniyyat-cay-ve-qehve.svg'
                             alt='shirniyyat'
                         />
                         Şirniyyat, çay, kofe, biabetik
@@ -76,7 +76,7 @@ function Sidebar({ sideSt }) {
                         to=''
                         className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
                     >
-                        <img src='./src/assets/İçkilər.svg' alt='ichki' />
+                        <img src='./src/assets/ickiler.svg' alt='ichki' />
                         İçkilər
                     </Link>
                 </li>
@@ -85,7 +85,7 @@ function Sidebar({ sideSt }) {
                         to=''
                         className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
                     >
-                        <img src='./src/assets/Süd-məhsulları.svg' alt='sud' />
+                        <img src='./src/assets/sud-mehsullari.svg' alt='sud' />
                         Süd məhsulları
                     </Link>
                 </li>
@@ -95,7 +95,7 @@ function Sidebar({ sideSt }) {
                         className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
                     >
                         <img
-                            src='./src/assets/Uşaq-məhsulları.svg'
+                            src='./src/assets/usaq-mehsullari.svg'
                             alt='ushaq'
                         />
                         Uşaq məhsulları
@@ -107,7 +107,7 @@ function Sidebar({ sideSt }) {
                         className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
                     >
                         <img
-                            src='./src/assets/Yuyucu-vasitələr.svg'
+                            src='./src/assets/yuyucu-vasiteler.svg'
                             alt='yuyucu'
                         />
                         Yuyucu, təmizləyici vasitələr
@@ -119,7 +119,7 @@ function Sidebar({ sideSt }) {
                         className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
                     >
                         <img
-                            src='./src/assets/Kosmetik-və-gigiyenik.svg'
+                            src='./src/assets/kosmetik-ve-gigiyenik.svg'
                             alt='kosmetik'
                         />
                         Kosmetik və gigiyenik
@@ -131,7 +131,7 @@ function Sidebar({ sideSt }) {
                         className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
                     >
                         <img
-                            src='./src/assets/Məişət-mətbəx-və-tekstil.svg'
+                            src='./src/assets/meiset-metbex-ve-tekstil.svg'
                             alt='meiset'
                         />
                         Məişət, mətbəx, tekstil
@@ -155,7 +155,7 @@ function Sidebar({ sideSt }) {
                         className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
                     >
                         <img
-                            src='./src/assets/Heyvan-yemləri.svg'
+                            src='./src/assets/heyvan-yemleri.svg'
                             alt='heyvan'
                         />
                         Heyvan yemləri
@@ -179,7 +179,7 @@ function Sidebar({ sideSt }) {
                         className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
                     >
                         <img
-                            src='./src/assets/elektronika-və-mebel.svg'
+                            src='./src/assets/elektronika-ve-mebel.svg'
                             alt='elektronika'
                         />
                         Elektronika & Mebel
