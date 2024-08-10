@@ -12,6 +12,9 @@ spiral.register();
 
 function Endirim() {
     const { data } = useContext(Cntx);
+    function rand(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 
     return (
         <div className='flex justify-center items-start'>
@@ -43,7 +46,9 @@ function Endirim() {
             >
                 {data
                     ? data.map((item, i) => {
-                        const { img, title, price, id } = item
+                        const { img, title, price, id } = item;
+                        const endirimliQiymet = (price * (100 - rand(10, 40))) / 100;
+
                         return <SwiperSlide key={i}>
                             <Link
                                 to={`/product/${id}`}
@@ -53,10 +58,10 @@ function Endirim() {
                                 <img src={img} alt={title} />
                                 <h5 className='py-4 hover:text-[#FF8300] h-16 text-[.7em] font-semibold'>{title}</h5>
                                 <div className="flex items-center justify-center gap-2">
-                                    <span className="bg-[#ff840040] endirim rounded-[50%] w-[40px] h-[40px] flex justify-center items-center text-[.8em] font-semibold">-21%</span>
+                                    <span className="bg-[#ff840040] endirim rounded-[50%] w-[40px] h-[40px] flex justify-center items-center text-[.8em] font-semibold">-{rand(10,40)}%</span>
                                     <div>
                                         <p className='line-through text-gray-400'>{price} ₼</p>
-                                        <p className='font-bold text-[1.3em]'>{price} ₼</p>
+                                        <p className='font-bold text-[1.3em]'>{endirimliQiymet.toFixed(2)} ₼</p>
                                     </div>
                                 </div>
                                 <div className='py-3'>
@@ -70,7 +75,7 @@ function Endirim() {
                             </Link>
                         </SwiperSlide>
                     })
-                    : <l-spiral size="40" speed="0.9" color="#FF8300" ></l-spiral>}
+                    : <Spiral size="40" speed="0.9" color="#FF8300" />}
             </Swiper>
         </div>
     );
