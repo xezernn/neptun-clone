@@ -6,12 +6,8 @@ export const Cntx = createContext();
 function DataContext({ children }) {
     const [data, setData] = useState([]);
     const [catalog, setCatalog] = useState();
-    const [wishList, setWishList] = useState();
+    // const [wishList, setWishList] = useState();
 
-    // function handleWish() {
-    //     const savedWish = localStorage.getItem('wishList')
-    //     return savedWish ? JSON.parse(savedWish) : []
-    // }
     useEffect(() => {
         axios
             .get("https://mirafgan.me/neptun/products")
@@ -24,13 +20,9 @@ function DataContext({ children }) {
             .then((res) => setCatalog(res.data));
     }, []);
 
-    // useEffect(() => {
-    //     localStorage.setItem('wishList', JSON.stringify(wishList))
-    // }, [wishList])
-
     return (
         <Cntx.Provider
-            value={{ data, wishList, setWishList, catalog, setCatalog }}
+            value={{ data, catalog, setCatalog }}
         >
             {children}
         </Cntx.Provider>
