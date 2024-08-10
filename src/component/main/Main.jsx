@@ -73,6 +73,7 @@ function Main() {
                             Hamısına bax
                         </a>
                     </div>
+                    <CardsSlider />
                 </section>
             </div>
         </main>
