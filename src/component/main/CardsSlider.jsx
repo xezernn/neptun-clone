@@ -14,7 +14,7 @@ function CardsSlider() {
     // const { subCategory } = useParams();
     const [count, setCount] = useState(12);
     // const category = Object.keys(data);
-    console.log(data);
+
 
     // if (data) {
     //     const x = Object.keys(data).findIndex((item) => item == category);
@@ -54,7 +54,7 @@ function CardsSlider() {
                        { const {img, title, price} = item
                           return <SwiperSlide key={i}>
                               <Link
-                                  //   to={`${i + 1}`}
+                                  to={`${i + 1}`}
                                   className='text-center border rounded-md p-3 bg-white relative inline-block'
                               >
                                   <GoHeart
