@@ -11,10 +11,11 @@ function DataContex({ children }) {
     //     return savedWish ? JSON.parse(savedWish) : []
     // }
     useEffect(() => {
-        axios.get("mirafgan.me/neptun/catalog").then((res) => console.log(res));
+        axios
+            .get("https://mirafgan.me/neptun/products")
+            .then((res) => setData(res.data.data));
     }, []);
 
-    // console.log(data);
 
     // useEffect(() => {
     //     localStorage.setItem('wishList', JSON.stringify(wishList))

@@ -2,6 +2,7 @@ import { GoChevronRight } from "react-icons/go";
 import { Link } from "react-router-dom";
 
 function Aside() {
+    
     return (
         <aside className='pt-6 mb-5 sm:w-60 bg-white shadow-lg lg:block lg:w-[19vw] hidden'>
             <nav>

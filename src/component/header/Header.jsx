@@ -8,17 +8,17 @@ import { SlBasket } from "react-icons/sl";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { HiMiniBars4 } from "react-icons/hi2";
 import Sidebar from "./Sidebar";
+import { Link } from "react-router-dom";
 
 function Header() {
-
-    const [sideSt, setSideSt] = useState(false)
+    const [sideSt, setSideSt] = useState(false);
 
     return (
         <header>
-            <Sidebar sideSt={sideSt} setSideSt={setSideSt}/>
+            <Sidebar sideSt={sideSt} setSideSt={setSideSt} />
             <div className='wrapper'>
                 <div className='flex my-[10px] justify-between items-center gap-[3vw] p-[10px] '>
-                    <div className='w-[40vw] md:w-[20vw] '>
+                    <Link to='/' className='w-[40vw] md:w-[20vw] '>
                         <svg
                             version='1.1'
                             id='neptun_logo_svg'
@@ -199,7 +199,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                 </g>
                             </g>
                         </svg>
-                    </div>
+                    </Link>
                     <div className='relative w-[40vw] lg:w-[30vw]'>
                         <span className='absolute inset-y-0 left-0 flex items-center pl-2'>
                             <button
@@ -240,9 +240,10 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
             </div>
             <nav className='bg-[#FF8300] text-white py-[10px] flex justify-between items-center lg:p-[0] px-[1.5vw]'>
                 <div className='wrapper flex justify-between items-center w-[100%]'>
-                    <FiBarChart 
-                    onClick={()=> setSideSt(!sideSt)}
-                    className='rotate-90 h-[30px] w-[30px] lg:hidden' />
+                    <FiBarChart
+                        onClick={() => setSideSt(!sideSt)}
+                        className='rotate-90 h-[30px] w-[30px] lg:hidden'
+                    />
                     <div className='desktop-nav  flex items-center gap-[30px] justify-between '>
                         <div
                             id='category-button'
@@ -256,17 +257,19 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
 
                         <ul className='xl:flex gap-[15px] w-[100%] hidden '>
                             <li className='text-[.8em] font-medium '>
-                                <a href=''>Ana Səhifə</a>
+                                <Link to='/'>Ana Səhifə</Link>
                             </li>
-                            <li className='text-[.8em] font-medium relative about'>
-                                <a href=''>Haqqımızda</a>
+                            <li className='text-[.8em] font-medium relative about block'>
+                                <Link to='haqqimizda'>Haqqımızda</Link>
                                 <TiArrowSortedDown className='inline' />
-                                <ul className='bg-[#fff] z-10 hidden border-t-[2px] about-open border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+10px)] w-[12vw]'>
+                                <ul className='bg-[#fff] z-10 hidden border-t-[2px] about-open border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black text-[1em] absolute left-0 top-[calc(100%+10px)] w-[12vw]'>
                                     <li>
-                                        <a href=''>Siyasətimiz</a>
+                                        <Link to='siyasetimiz'>
+                                            Siyasətimiz
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href=''>Yeniliklər</a>
+                                        <Link to=''>Yeniliklər</Link>
                                     </li>
                                 </ul>
                             </li>
@@ -336,37 +339,40 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                 Giriş
                             </span>
                         </div>
-                        <div className='relative hesab'>
-                            <span className='hidden md:inline text-[.9em]'>
+                        <ul className='relative'>
+                            <li className='hidden md:inline text-[.9em] hesab'>
                                 Hesabım
-                            </span>
-                            <FaChevronDown className='text-[.7em] inline mx-[2vw] cursor-pointer lg:mx-[1vw]' />
-                            <ul className='bg-[#fff] hesab-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[.9em] absolute left-0 top-[calc(100%+8px)] w-[12vw]'>
-                                <li className='hover:text-[#FF8300]'>
-                                    <a href=''>Hesabım</a>
-                                </li>
-                                <li className='hover:text-[#FF8300]'>
-                                    <a href=''>Ödəniş tarixçəsi</a>
-                                </li>
-                                <li className='hover:text-[#FF8300]'>
-                                    <a href=''>Əməliyyatlar</a>
-                                </li>
-                                <li className='hover:text-[#FF8300]'>
-                                    <a href=''>Yükləmələr</a>
-                                </li>
-                                <li className='hover:text-[#FF8300]'>
-                                    <a href=''>Sifarişi rəsmiləşdir</a>
-                                </li>
-                            </ul>
-                        </div>
+                                <FaChevronDown className='text-[.7em] inline mx-[2vw] cursor-pointer lg:mx-[1vw]' />
+                                <ul className='bg-[#fff] hesab-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[.9em] absolute left-0 top-[calc(100%+8px)] w-[12vw]'>
+                                    <li className='hover:text-[#FF8300]'>
+                                        <a href=''>Hesabım</a>
+                                    </li>
+                                    <li className='hover:text-[#FF8300]'>
+                                        <a href=''>Ödəniş tarixçəsi</a>
+                                    </li>
+                                    <li className='hover:text-[#FF8300]'>
+                                        <a href=''>Əməliyyatlar</a>
+                                    </li>
+                                    <li className='hover:text-[#FF8300]'>
+                                        <a href=''>Yükləmələr</a>
+                                    </li>
+                                    <li className='hover:text-[#FF8300]'>
+                                        <a href=''>Sifarişi rəsmiləşdir</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                         <FaRegHeart className='text-[1.3em] ' />
                         <LuRefreshCcw className='text-[1.3em] hover:rotate-[270deg] transition cursor-pointer' />
-                        <div className='relative p-[2vw] sm:p-[1vw] lg:p-[10px]'>
+                        <Link
+                            to='/basket'
+                            className='relative p-[2vw] sm:p-[1vw] lg:p-[10px]'
+                        >
                             <SlBasket className='text-[1.3em]' />
                             <span className='bg-[#00FF00] absolute top-0 right-0 rounded-[50%] px-[5px] text-[.7em] text-black '>
                                 0
                             </span>
-                        </div>
+                        </Link>
                     </div>
                     <button className='md:hidden  p-[1.7vw] text-[#FF8300] bg-white rounded-[5px] text-[1.4em] '>
                         <FaBars />

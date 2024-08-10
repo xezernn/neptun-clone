@@ -10,7 +10,7 @@ function Slider() {
     return (
         <>
             <Swiper
-                className='mySwiper mr-[0] py-2 w-[98vw] sm:w-[95vw]  md:w-[80vw] lg:w-[60vw]'
+                className='mySwiper lg:mr-[0] lg:m-0 py-2 w-[90vw] m-auto sm:w-[95vw] md:w-[80vw] lg:w-[60vw]'
                 navigation={true}
                 pagination={true}
                 effect={"fade"}
@@ -24,7 +24,7 @@ function Slider() {
                     <a href=''>
                         <img
                             className='object-contain h-full w-full'
-                            src='./src/assets/banner1.webp'
+                            src='/public/banner1.webp'
                             alt='banner1'
                         />
                     </a>
