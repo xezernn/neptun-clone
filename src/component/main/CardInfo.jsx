@@ -11,9 +11,9 @@ function CardInfo() {
     const item = data.find(item => item.id == id)
     return (
         <section className='wrapper'>
-            <div className='text-gray-500 font-semibold py-10 px-3'>
+            <div className='text-gray-600 font-semibold py-10 px-3'>
                 <Link to='/'>Ana səhifə /</Link>
-                <span className='text-[.9em]'> {item.title}</span>
+                <span className='text-[.8em]'> {item.title}</span>
             </div>
             <div className='flex flex-col items-center bg-white md:flex-row md:max-w-4xl mb-5'>
                 <img

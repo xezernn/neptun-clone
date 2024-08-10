@@ -5,6 +5,7 @@ import Error404 from "./component/error/Error404";
 import CardInfo from "./component/main/CardInfo";
 import CardsSlider from "./component/main/CardsSlider";
 import { useEffect } from "react";
+import SubCategory from "./component/main/SubCategory";
 
 function App() {
     const { pathname } = useLocation()
@@ -18,6 +19,7 @@ function App() {
                 <Route path='/' element={<Layout />}>
                     <Route path='/' element={<Main />} />
                     <Route path='/:subCategory' element={<CardsSlider />} />
+                    <Route path='/subCategory' element={<SubCategory />} />
                     <Route path='/product/:id' element={<CardInfo />} />
                 </Route>
                 <Route path='*' element={<Error404 />} />

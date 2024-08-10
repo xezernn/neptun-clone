@@ -7,7 +7,7 @@ function Aside() {
     const { catalog } = useContext(Cntx);
 
     return (
-        <aside className='pt-6 mb-5 sm:w-60 bg-white shadow-lg lg:block lg:w-[19vw] hidden'>
+        <aside className='pt-6 mb-5 sm:w-60 bg-white shadow-lg lg:block lg:w-[19.3vw] hidden'>
             <nav>
                 <ul className='flex flex-col space-y-1'>
                     {catalog &&

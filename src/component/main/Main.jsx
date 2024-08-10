@@ -1,5 +1,6 @@
 import Aside from "./Aside";
 import CardsSlider from "./CardsSlider";
+import Endirim from "./Endirim";
 import Slider from "./Slider";
 import { FaArrowRightLong } from "react-icons/fa6";
 
@@ -66,12 +67,17 @@ function Main() {
                         </div>
                     </div>
                 </div>
+                <section className="mb-8">
+                    <div className='flex justify-between items-center py-2'>
+                        <h3 className='font-bold'>Endirimli məshullar</h3>
+                        <a href='#' className='text-[#FF8300]'>Hamısına bax</a>
+                    </div>
+                    <Endirim />
+                </section>
                 <section>
-                    <div className='flex justify-between items-center p-4'>
+                    <div className='flex justify-between items-center py-2'>
                         <h3 className='font-bold'>Ən çox satılanlar</h3>
-                        <a href='#' className='text-[#FF8300]'>
-                            Hamısına bax
-                        </a>
+                        <a href='#' className='text-[#FF8300]'>Hamısına bax</a>
                     </div>
                     <CardsSlider />
                 </section>

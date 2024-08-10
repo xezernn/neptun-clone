@@ -16,6 +16,11 @@
     z-index: 999;
 
 }
+.card:hover .endirim {
+    background: #FF8300;
+    color: #fff;
+    transition: .4s;
+}
 
 .supermarket:hover .supermarket-open,
 .dropdown:hover .dropdown-open {
