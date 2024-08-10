@@ -13,10 +13,15 @@ import { Link } from "react-router-dom";
 function Header() {
 
     const [sideSt, setSideSt] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
+
+    function toggleSideBar() {
+        setIsOpen(!isOpen)
+    }
 
     return (
         <header>
-            <Sidebar sideSt={sideSt} setSideSt={setSideSt}/>
+            <Sidebar sideSt={sideSt} setSideSt={setSideSt} />
             <div className='wrapper'>
                 <div className='flex my-[10px] justify-between items-center gap-[3vw] p-[10px] '>
                     <Link to='/' className='w-[40vw] md:w-[20vw] '>
@@ -227,7 +232,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                             Axtar
                         </button>
                     </div>
-                    <button className='hidden md:block lg:hidden p-[10px] bg-[#FF8300] text-white rounded-[5px] text-[1.4em] '>
+                    <button onClick={toggleSideBar} className='hidden md:block lg:hidden p-[10px] bg-[#FF8300] text-white rounded-[5px] text-[1.4em] '>
                         <FaBars />
                     </button>
                     <div className='hidden lg:flex justify-end w-[40vw]'>
@@ -241,9 +246,9 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
             </div>
             <nav className='bg-[#FF8300] text-white py-[10px] flex justify-between items-center lg:p-[0] px-[1.5vw]'>
                 <div className='wrapper flex justify-between items-center w-[100%]'>
-                    <FiBarChart 
-                    onClick={()=> setSideSt(!sideSt)}
-                    className='rotate-90 h-[30px] w-[30px] lg:hidden' />
+                    <FiBarChart
+                        onClick={() => setSideSt(!sideSt)}
+                        className='rotate-90 h-[30px] w-[30px] lg:hidden' />
                     <div className='desktop-nav  flex items-center gap-[30px] justify-between '>
                         <div
                             id='category-button'
@@ -369,11 +374,62 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                             </span>
                         </Link>
                     </div>
-                    <button className='md:hidden  p-[1.7vw] text-[#FF8300] bg-white rounded-[5px] text-[1.4em] '>
+                    <button onClick={toggleSideBar} className='md:hidden  p-[1.7vw] text-[#FF8300] bg-white rounded-[5px] text-[1.4em] '>
                         <FaBars />
                     </button>
                 </div>
             </nav>
+            <div className="sidebar">
+                <div
+                    id="drawer-navigation"
+                    className={`fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform bg-white ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
+                    tabIndex="-1"
+                    aria-labelledby="drawer-navigation-label"
+                >
+                    <button
+                        type="button"
+                        onClick={toggleSideBar}
+                        aria-controls="drawer-navigation"
+                        className="text-black bg-transparent rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center"
+                    >
+                        <svg
+                            aria-hidden="true"
+                            className="w-5 h-5"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                fillRule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clipRule="evenodd"
+                            ></path>
+                        </svg>
+                    </button>
+                    <div className="py-4 overflow-y-auto">
+                        <ul className="space-y-2 py-8">
+                            <li className="border-b cursor-pointer">
+                                <p className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]">Ana Səhifə </p>
+                            </li>
+                            <li className="border-b cursor-pointer">
+                                <p className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]">Haqqımızda</p>
+                            </li>
+                            <li className="border-b cursor-pointer">
+                                <p className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]">Aksiyalar</p>
+                            </li>
+                            <li className="border-b cursor-pointer">
+                                <p className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]">Supermarketlər</p>
+                            </li>
+                            <li className="border-b cursor-pointer">
+                                <p className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]">Karyera</p>
+                            </li>
+                            <li className="border-b cursor-pointer">
+                                <p className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]">Əlaqə</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </header>
     );
 }

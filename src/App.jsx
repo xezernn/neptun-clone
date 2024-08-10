@@ -4,7 +4,6 @@ import Layout from "./component/layout/Layout";
 import Error404 from "./component/error/Error404";
 import CardInfo from "./component/main/CardInfo";
 import CardsSlider from "./component/main/CardsSlider";
-import { useState } from "react";
 
 function App() {
     
