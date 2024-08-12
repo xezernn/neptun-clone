@@ -8,7 +8,6 @@ import SubCategory from "./component/main/SubCategory";
 
 function App() {
     const { pathname } = useLocation();
-   
 
     useEffect(() => {
         window.scroll(0, 0);

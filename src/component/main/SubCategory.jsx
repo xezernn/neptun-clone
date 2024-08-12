@@ -10,6 +10,10 @@ function SubCategory() {
     const { countProduct, setCountProduct } = useContext(counter);
 
     const { data } = useContext(Cntx);
+
+    const filter = data.filter((item ) => item.categoryName == subcategory)
+    
+    
   
 
     return (

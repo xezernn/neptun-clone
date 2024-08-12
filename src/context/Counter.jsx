@@ -4,7 +4,7 @@ export const counter = createContext();
 
 export default function Counter({ children }) {
   
-    const [countProduct, setCountProduct] = useState(0);
+    const [countProduct, setCountProduct] = useState(1);
     
 
     return (
