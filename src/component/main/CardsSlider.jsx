@@ -8,10 +8,12 @@ import { useContext, useState } from "react";
 import { Cntx } from "../../context/DataContext";
 import { Link } from "react-router-dom";
 import { spiral } from "ldrs";
+import { counter } from "../../context/Counter";
 spiral.register();
 
 function CardsSlider() {
     const { data } = useContext(Cntx);
+    const {countProduct, setCountProduct} = useContext(counter)
     const [count, setCount] = useState(12);
 
     return (
@@ -60,11 +62,21 @@ function CardsSlider() {
                                         {price} ₼
                                     </p>
                                     <div className='py-3'>
-                                        <button className='font-bold text-[1.2em] text-[#FF8300]'>
+                                        <button 
+                                          onClick={(e) => {
+                                            e.preventDefault();
+                                            setCountProduct( countProduct > 0 ? countProduct - 1 : 0);
+                                        }}
+                                        className='font-bold text-[1.2em] text-[#FF8300]'>
                                             ‒
                                         </button>
-                                        <span className='px-2'>1 ədəd</span>
-                                        <button className='font-bold text-[1.2em] text-[#FF8300]'>
+                                        <span className='px-2'>{countProduct} ədəd</span>
+                                        <button 
+                                          onClick={(e) => {
+                                            e.preventDefault();
+                                            setCountProduct(  countProduct + 1 );
+                                        }}
+                                        className='font-bold text-[1.2em] text-[#FF8300]'>
                                             ＋
                                         </button>
                                     </div>

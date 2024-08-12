@@ -6,6 +6,8 @@ export const Cntx = createContext();
 function DataContext({ children }) {
     const [data, setData] = useState([]);
     const [catalog, setCatalog] = useState();
+    
+    
     // const [wishList, setWishList] = useState();
 
     useEffect(() => {

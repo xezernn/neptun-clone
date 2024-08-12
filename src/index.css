@@ -11,13 +11,44 @@
     z-index: 999;
 
 }
+
+.range-input {
+    appearance: none;
+    width: 80%;
+    background: #fff;
+    border-radius: 5px;
+    outline: none;
+}
+
+.range-input::-webkit-slider-runnable-track {
+
+    width: 80%;
+    height: 2px;
+    cursor: pointer;
+    background: var(--swiper-theme-color);
+    border-radius: 5px;
+}
+
+.range-input::-webkit-slider-thumb {
+    margin: -4px 0;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: var(--swiper-theme-color);
+    /* Thumb üçün rəng */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 .aksia:hover .aksia-open {
     display: initial;
     z-index: 999;
 
 }
+
+
 .card:hover .endirim {
-    background: #FF8300;
+    background: var(--swiper-theme-color);
     color: #fff;
     transition: .4s;
 }

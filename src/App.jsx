@@ -3,11 +3,12 @@ import Main from "./component/main/Main";
 import Layout from "./component/layout/Layout";
 import Error404 from "./component/error/Error404";
 import CardInfo from "./component/main/CardInfo";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import SubCategory from "./component/main/SubCategory";
 
 function App() {
     const { pathname } = useLocation();
+   
 
     useEffect(() => {
         window.scroll(0, 0);
