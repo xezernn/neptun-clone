@@ -21,9 +21,7 @@ function DataContext({ children }) {
     }, []);
 
     return (
-        <Cntx.Provider
-            value={{ data, catalog, setCatalog }}
-        >
+        <Cntx.Provider value={{ data, catalog, setCatalog }}>
             {children}
         </Cntx.Provider>
     );

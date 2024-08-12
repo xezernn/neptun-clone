@@ -3,6 +3,7 @@ import CardsSlider from "./CardsSlider";
 import Endirim from "./Endirim";
 import Slider from "./Slider";
 import { FaArrowRightLong } from "react-icons/fa6";
+import SubCategory from "./SubCategory";
 
 function Main() {
     return (

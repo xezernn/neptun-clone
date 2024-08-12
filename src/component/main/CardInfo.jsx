@@ -6,9 +6,13 @@ import { useContext } from "react";
 import { Cntx } from "../../context/DataContext";
 
 function CardInfo() {
+    
     const {data} = useContext(Cntx)
+
     const { id } = useParams()
+
     const item = data.find(item => item.id == id)
+
     return (
         <section className='wrapper'>
             <div className='text-gray-600 font-semibold py-10 px-3'>

@@ -3,23 +3,22 @@ import Main from "./component/main/Main";
 import Layout from "./component/layout/Layout";
 import Error404 from "./component/error/Error404";
 import CardInfo from "./component/main/CardInfo";
-import CardsSlider from "./component/main/CardsSlider";
 import { useEffect } from "react";
 import SubCategory from "./component/main/SubCategory";
 
 function App() {
-    const { pathname } = useLocation()
+    const { pathname } = useLocation();
+
     useEffect(() => {
-        window.scroll(0, 0)
-    }, [pathname])
+        window.scroll(0, 0);
+    }, [pathname]);
 
     return (
         <>
             <Routes>
                 <Route path='/' element={<Layout />}>
                     <Route path='/' element={<Main />} />
-                    <Route path='/:subCategory' element={<CardsSlider />} />
-                    <Route path='/subCategory' element={<SubCategory />} />
+                    <Route path='/:subcategory' element={<SubCategory />} />
                     <Route path='/product/:id' element={<CardInfo />} />
                 </Route>
                 <Route path='*' element={<Error404 />} />

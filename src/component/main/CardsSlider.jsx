@@ -7,13 +7,11 @@ import { GoHeart } from "react-icons/go";
 import { useContext, useState } from "react";
 import { Cntx } from "../../context/DataContext";
 import { Link } from "react-router-dom";
-import Aside from "./Aside";
-import { spiral } from 'ldrs';
+import { spiral } from "ldrs";
 spiral.register();
 
 function CardsSlider() {
     const { data } = useContext(Cntx);
-    // const { subCategory } = useParams();
     const [count, setCount] = useState(12);
 
     return (
@@ -44,40 +42,42 @@ function CardsSlider() {
                     },
                 }}
             >
-                {data
-                    ? data.map((item, i) => {
-                        const { img, title, price, id } = item
-                        return <SwiperSlide key={i}>
-                            <Link
-                                to={`/product/${id}`}
-                                className='text-center border rounded-md p-3 bg-white relative inline-block'
-                            >
-                                <GoHeart
-                                    className='absolute cursor-pointer top-3 right-3 text-[1.3em] text-[#FF8300]'
-                                />
-                                <img src={img} alt={title} />
-                                <h5 className='py-4 hover:text-[#FF8300] h-16 text-[.7em] font-semibold'>
-                                    {title}
-                                </h5>
-                                <p className='font-bold text-[1.3em]'>
-                                    {price} ₼
-                                </p>
-                                <div className='py-3'>
-                                    <button className='font-bold text-[1.2em] text-[#FF8300]'>
-                                        ‒
+                {data ? (
+                    data.map((item, i) => {
+                        const { img, title, price, id } = item;
+                        return (
+                            <SwiperSlide key={i}>
+                                <Link
+                                    to={`/product/${id}`}
+                                    className='text-center border rounded-md p-3 bg-white relative inline-block'
+                                >
+                                    <GoHeart className='absolute cursor-pointer top-3 right-3 text-[1.3em] text-[#FF8300]' />
+                                    <img src={img} alt={title} />
+                                    <h5 className='py-4 hover:text-[#FF8300] h-16 text-[.7em] font-semibold'>
+                                        {title}
+                                    </h5>
+                                    <p className='font-bold text-[1.3em]'>
+                                        {price} ₼
+                                    </p>
+                                    <div className='py-3'>
+                                        <button className='font-bold text-[1.2em] text-[#FF8300]'>
+                                            ‒
+                                        </button>
+                                        <span className='px-2'>1 ədəd</span>
+                                        <button className='font-bold text-[1.2em] text-[#FF8300]'>
+                                            ＋
+                                        </button>
+                                    </div>
+                                    <button className='rounded-3xl  text-[.85em] bg-[#FF8300] text-white px-4 py-2 font-semibold mb-3'>
+                                        Səbətə at
                                     </button>
-                                    <span className='px-2'>1 ədəd</span>
-                                    <button className='font-bold text-[1.2em] text-[#FF8300]'>
-                                        ＋
-                                    </button>
-                                </div>
-                                <button className='rounded-3xl  text-[.85em] bg-[#FF8300] text-white px-4 py-2 font-semibold mb-3'>
-                                    Səbətə at
-                                </button>
-                            </Link>
-                        </SwiperSlide>
+                                </Link>
+                            </SwiperSlide>
+                        );
                     })
-                    : <l-spiral size="40" speed="0.9"  color="#FF8300" ></l-spiral>}
+                ) : (
+                    <l-spiral size='40' speed='0.9' color='#FF8300'></l-spiral>
+                )}
             </Swiper>
         </div>
     );
