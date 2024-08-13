@@ -19,6 +19,8 @@ export default {
         },
     },
     plugins: [
-        require('preline/plugin'),
-    ],
+        require('tailwindcss'),
+        require('autoprefixer'),
+        require('preline/plugin') 
+      ]
 };

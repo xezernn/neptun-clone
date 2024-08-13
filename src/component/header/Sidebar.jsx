@@ -25,7 +25,7 @@ function Sidebar({ sideSt }) {
                                     <button className="hs-accordion-toggle p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex items-center gap-x-3 w-full" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-one">
                                         <img src={icon} alt={name} />
                                         <p>{name}</p>
-                                        <svg className="hs-accordion-active:block hidden size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <svg className="hs-accordion-active:block hidden size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                             <path d="M5 12h14"></path>
                                         </svg>
                                     </button>
@@ -58,11 +58,11 @@ function Sidebar({ sideSt }) {
                                             <div class="hs-accordion hs-accordion-active:border-gray-200 bg-white rounded-xl" id="hs-active-bordered-heading-one">
                                                 <button class="hs-accordion-toggle p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-one">
                                                     Kariyera
-                                                    <svg class="hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <svg class="hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                                         <path d="M5 12h14"></path>
                                                         <path d="M12 5v14"></path>
                                                     </svg>
-                                                    <svg class="hs-accordion-active:block hidden size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <svg class="hs-accordion-active:block hidden size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                                         <path d="M5 12h14"></path>
                                                     </svg>
                                                 </button>

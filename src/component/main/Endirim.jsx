@@ -8,12 +8,10 @@ import { useContext } from "react";
 import { Cntx } from "../../context/DataContext";
 import { Link } from "react-router-dom";
 import { spiral } from "ldrs";
-import { counter } from "../../context/Counter";
 spiral.register();
 
 function Endirim() {
     const { data, basket, setBasket,  setSebetSay , sebetSay } = useContext(Cntx);
-    const { countProduct, setCountProduct } = useContext(counter)
     function rand(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
@@ -80,16 +78,14 @@ function Endirim() {
                                         <button
                                             onClick={(e) => {
                                                 e.preventDefault();
-                                                setCountProduct(countProduct > 0 ? countProduct - 1 : 0);
                                             }}
                                             className='font-bold text-[1.2em] text-[#FF8300]'>
                                             ‒
                                         </button>
-                                        <span className='px-2'>{countProduct} ədəd</span>
+                                        <span className='px-2'> ədəd</span>
                                         <button
                                             onClick={(e) => {
                                                 e.preventDefault();
-                                                setCountProduct(countProduct + 1);
                                             }}
                                             className='font-bold text-[1.2em] text-[#FF8300]'>
                                             ＋

@@ -2,12 +2,14 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import Main from "./component/main/Main";
 import Error404 from "./component/error/Error404";
 import CardInfo from "./component/main/CardInfo";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import SubCategory from "./component/main/SubCategory";
 import Layout from "./layout/Layout";
 import { Basket } from "./component/header/Basket";
 
 function App() {
+    
+    const [catSt, setCatSt] = useState(false)
     const { pathname } = useLocation();
 
     useEffect(() => {
@@ -17,9 +19,9 @@ function App() {
     return (
         <>
             <Routes>
-                <Route path='/' element={<Layout />}>
+                <Route path='/' element={<Layout catSt={catSt} setCatSt={setCatSt} />}>
                     <Route path='/' element={<Main />} />
-                    <Route path='/:subcategory' element={<SubCategory />} />
+                    <Route path='/:category/:subCategory' element={<SubCategory catSt={catSt} />} />
                     <Route path='/product/:id' element={<CardInfo />} />
                     <Route path="/basket" element={<Basket />} />
                 </Route>

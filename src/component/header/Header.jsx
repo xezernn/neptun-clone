@@ -12,10 +12,14 @@ import { Link } from "react-router-dom";
 import { Cntx } from "../../context/DataContext";
 import azneptun from '../../assets/az-neptun.png';
 
-function Header() {
+function Header({catSt, setCatSt}) {
+
     const [sideSt, setSideSt] = useState(false)
     const [isOpen, setIsOpen] = useState(false);
     const { sebetSay } = useContext(Cntx)
+   
+    
+
     function toggleSideBar() {
         setIsOpen(!isOpen)
     }
@@ -252,6 +256,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                         className='rotate-90 h-[30px] w-[30px] lg:hidden' />
                     <div className='desktop-nav  flex items-center gap-[30px] justify-between '>
                         <div
+                            onClick={() => setCatSt(!catSt) }
                             id='category-button'
                             className='hidden lg:inline py-[12px] px-[10px] text-[#FF8300] bg-white w-[22vw]'
                         >
@@ -418,7 +423,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                 <p className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]">Ana Səhifə </p>
                             </li>
                             <li className="border-b cursor-pointer">
-                                <div Name="hs-accordion-group">
+                                <div name="hs-accordion-group">
                                     <div className="hs-accordion hs-accordion-active:border-gray-200 bg-white rounded-xl" id="hs-active-bordered-heading-one">
                                         <button className="hs-accordion-toggle p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-one">
                                             Haqqımızda

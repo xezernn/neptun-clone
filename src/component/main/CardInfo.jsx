@@ -4,12 +4,10 @@ import { FaRegHeart } from "react-icons/fa6";
 import { LuRefreshCcw } from "react-icons/lu";
 import { useContext } from "react";
 import { Cntx } from "../../context/DataContext";
-import { counter } from "../../context/Counter";
 
 function CardInfo() {
     
     const {data} = useContext(Cntx)
-    const {countProduct, setCountProduct} = useContext(counter)
     const { id } = useParams()
 
     const item = data.find(item => item.id == id)
@@ -43,22 +41,20 @@ function CardInfo() {
                         Mövcudluq: 🗹 Anbarda
                     </p>
                     <p className='mb-3 text-[2em] font-bold text-[#FF8300]'>
-                        {(item?.price *countProduct).toFixed(2)} ₼
+                        {(item?.price).toFixed(2)} ₼
                     </p>
                     <div className='py-3'>
                         <button 
                           onClick={(e) => {
                             e.preventDefault();
-                            setCountProduct( countProduct > 0 ? countProduct - 1 : 0);
                         }}
                         className='font-bold text-[1.2em] text-[#FF8300]'>
                             ‒
                         </button>
-                        <span className='px-4'>{countProduct} ədəd</span>
+                        <span className='px-4'> ədəd</span>
                         <button 
                           onClick={(e) => {
                             e.preventDefault();
-                            setCountProduct( countProduct + 1 );
                         }}
                         className='font-bold text-[1.2em] text-[#FF8300]'>
                             ＋

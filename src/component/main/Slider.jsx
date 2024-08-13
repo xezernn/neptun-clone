@@ -13,7 +13,7 @@ function Slider() {
     return (
         <>
             <Swiper
-                className='mySwiper lg:mr-[0] lg:m-0 py-2 w-[90vw] m-auto sm:w-[95vw] md:w-[80vw] lg:w-[60vw]'
+                className='mySwiper lg:mr-[0] lg:m-0 py-2 w-[90vw] m-auto sm:w-[95vw] md:w-[80vw] xl:w-[61vw] lg:w-[57vw]'
                 navigation={true}
                 pagination={true}
                 effect={"fade"}

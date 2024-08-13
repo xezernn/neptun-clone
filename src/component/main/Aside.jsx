@@ -4,15 +4,16 @@ import { Link } from "react-router-dom";
 import { Cntx } from "../../context/DataContext";
 
 function Aside() {
+
     const { catalog } = useContext(Cntx);
 
     return (
-        <aside className='pt-6 mb-5 sm:w-60 bg-white shadow-lg lg:block lg:w-[19.3vw] hidden'>
+        <aside className='pt-6 mb-5 sm:w-60 bg-white shadow-lg lg:block lg:w-[100%] hidden xl:w-[17vw]'>
             <nav>
                 <ul className='flex flex-col space-y-1'>
                     {catalog &&
                         catalog.map((item, i) => {
-                            const { name, submenu, icon, slug } = item;
+                            const { name, submenu, icon } = item;
                             return (
                                 <li
                                     key={i}
@@ -20,7 +21,7 @@ function Aside() {
                                 >
                                     <img src={icon} alt={name} />
                                     <div className='flex justify-between items-center w-full relative'>
-                                        <p className='font-semibold text-[12px]'>
+                                        <p className='font-semibold text-[10px] text-nowrap lg:text-[.8em]'>
                                             {name}
                                         </p>
                                         <GoChevronRight className='w-[13px]' />
@@ -28,16 +29,16 @@ function Aside() {
                                             {submenu.length != 0
                                                 ? submenu.map((elem, i) => {
                                                     return (
-                                                        <li
-                                                            key={i}
-                                                            className='text-[.8em] py-2 px-3 hover:bg-[#ff84001c]'
-                                                        >
-                                                            <Link
-                                                                to={`/${slug}`}
-                                                            >
-                                                                {elem.name}
-                                                            </Link>
-                                                        </li>
+
+                                                      <Link to={`/${elem.slug}`} key={i}>
+                                                          <li
+                                                              key={i}
+                                                              className='text-[.8em] py-2 px-3 hover:bg-[#ff84001c]'
+                                                          >
+                                                                  {elem.name}
+                                                              
+                                                          </li>
+                                                      </Link>
                                                     );
                                                 })
                                                 : null}

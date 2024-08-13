@@ -2,15 +2,13 @@ import React from "react";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { ImInstagram } from "react-icons/im";
 import { TfiYoutube } from "react-icons/tfi";
-<<<<<<< HEAD
-=======
 import delivery from '../../assets/delivery.svg';
 import cash from '../../assets/cash.svg';
 import gift from '../../assets/gift.svg';
 import mobile from '../../assets/mobile.svg';
 import online from '../../assets/online.svg';
 import amiroff_creative_agency from '../../assets/amiroff_creative_agency.png';
->>>>>>> 55cdfb618c7cc0c95dad52a3277d331db192813a
+
 
 function Footer() {
     
