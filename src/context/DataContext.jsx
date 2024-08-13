@@ -8,6 +8,7 @@ function DataContext({ children }) {
     const [data, setData] = useState([]);
     const [catalog, setCatalog] = useState();
     const [basket, setBasket] = useState([]);
+    const [sebetSay, setSebetSay] = useState(0);
 
     useEffect(() => {
         axios
@@ -20,7 +21,7 @@ function DataContext({ children }) {
 
 
     return (
-        <Cntx.Provider value={{ data, catalog, setCatalog, basket, setBasket }}>
+        <Cntx.Provider value={{ data, catalog, setCatalog, basket, setBasket, sebetSay, setSebetSay }}>
             {children}
         </Cntx.Provider>
     );

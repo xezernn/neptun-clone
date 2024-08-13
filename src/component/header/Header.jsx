@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FaBars } from "react-icons/fa6";
 import { FiBarChart } from "react-icons/fi";
 import { FaLock } from "react-icons/fa";
@@ -9,12 +9,12 @@ import { TiArrowSortedDown } from "react-icons/ti";
 import { HiMiniBars4 } from "react-icons/hi2";
 import Sidebar from "./Sidebar";
 import { Link } from "react-router-dom";
+import { Cntx } from "../../context/DataContext";
 
 function Header() {
-
     const [sideSt, setSideSt] = useState(false)
     const [isOpen, setIsOpen] = useState(false);
-
+    const {sebetSay} = useContext(Cntx)
     function toggleSideBar() {
         setIsOpen(!isOpen)
     }
@@ -375,7 +375,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                         >
                             <SlBasket className='text-[1.3em]' />
                             <span className='bg-[#00FF00] absolute top-0 right-0 rounded-[50%] px-[5px] text-[.7em] text-black '>
-                                0
+                                {sebetSay}
                             </span>
                         </Link>
                     </div>

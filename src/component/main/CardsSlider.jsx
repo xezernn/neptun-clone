@@ -12,7 +12,7 @@ import { counter } from "../../context/Counter";
 spiral.register();
 
 function CardsSlider() {
-    const { data, basket, setBasket } = useContext(Cntx);
+    const { data, basket, setBasket, setSebetSay, sebetSay } = useContext(Cntx);
     const { countProduct, setCountProduct } = useContext(counter)
     const [count, setCount] = useState(12);
 
@@ -82,6 +82,7 @@ function CardsSlider() {
                                     </div>
                                     <button onClick={(e) => {
                                                 e.preventDefault();
+                                                setSebetSay(sebetSay + 1)
                                                 setBasket([...basket, item])
                                             }} className='rounded-3xl  text-[.85em] bg-[#FF8300] text-white px-4 py-2 font-semibold mb-3'>
                                         Səbətə at

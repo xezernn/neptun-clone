@@ -4,12 +4,14 @@ import { Cntx } from "../../context/DataContext";
 import { Link } from "react-router-dom";
 
 export const Basket = () => {
-    const { basket, setBasket } = useContext(Cntx)
+    const { basket, setBasket, setSebetSay } = useContext(Cntx)
     console.log(basket);
     function HandleDelete(id) {
         const elem = basket.filter(item => item.id != id)
         setBasket(elem)
+        setSebetSay(elem.length)
     }
+    const umumiMebleg = basket.reduce((acc, item) => acc + item.price, 0)
 
     return (
         <section className='wrapper py-5 px-3'>
@@ -72,11 +74,11 @@ export const Basket = () => {
                 <table className="border">
                     <tr className="text-left text-sm font-semibold border">
                         <th className="p-2">Məbləğ:</th>
-                        <td className="p-2">12.65 azn</td>
+                        <td className="p-2">{umumiMebleg} ₼</td>
                     </tr>
                     <tr className="text-left text-sm font-semibold border">
                         <th className="p-2">Ümumi məbləğ:</th>
-                        <td className="p-2">12.65 azn</td>
+                        <td className="p-2">{umumiMebleg} ₼</td>
                     </tr>
                 </table>
             </div>
