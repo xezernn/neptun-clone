@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { Cntx } from "../../context/DataContext";
 
 function Sidebar({ sideSt }) {
+    const { catalog } = useContext(Cntx);
+
     sideSt
         ? ((document.documentElement.style.overflow = "hidden"),
             (document.body.style.overflow = "hidden"))
@@ -13,178 +16,70 @@ function Sidebar({ sideSt }) {
                 } p-[2vw] fixed bg-white z-[1000] w-[80vw] h-[80vh] bottom-0 transition overflow-auto `}
         >
             <ul>
-                <li>
-                    <Link
-                        to=''
-                        className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
-                    >
-                        <img
-                            src='./src/assets/meyve-ve-terevez.svg'
-                            alt='meyve-terevez'
-                        />
-                        Meyvə, tərəvəz, quru meyvə
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        to=''
-                        className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
-                    >
-                        <img
-                            src='./src/assets/et-ve-toyuq-mehsullari.svg'
-                            alt='et'
-                        />
-                        Ət, toyuq, dəniz məhsulları
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        to=''
-                        className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
-                    >
-                        <img src='./src/assets/Qastronom.svg' alt='qastronom' />
-                        Qastronom
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        to=''
-                        className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
-                    >
-                        <img
-                            src='./src/assets/erzaq-mehsullari.svg'
-                            alt='erzaq mehsullari'
-                        />
-                        Ərzaq məhsulları
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        to=''
-                        className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
-                    >
-                        <img
-                            src='./src/assets/sirniyyat-cay-ve-qehve.svg'
-                            alt='shirniyyat'
-                        />
-                        Şirniyyat, çay, kofe, biabetik
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        to=''
-                        className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
-                    >
-                        <img src='./src/assets/ickiler.svg' alt='ichki' />
-                        İçkilər
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        to=''
-                        className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
-                    >
-                        <img src='./src/assets/sud-mehsullari.svg' alt='sud' />
-                        Süd məhsulları
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        to=''
-                        className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
-                    >
-                        <img
-                            src='./src/assets/usaq-mehsullari.svg'
-                            alt='ushaq'
-                        />
-                        Uşaq məhsulları
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        to=''
-                        className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
-                    >
-                        <img
-                            src='./src/assets/yuyucu-vasiteler.svg'
-                            alt='yuyucu'
-                        />
-                        Yuyucu, təmizləyici vasitələr
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        to=''
-                        className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
-                    >
-                        <img
-                            src='./src/assets/kosmetik-ve-gigiyenik.svg'
-                            alt='kosmetik'
-                        />
-                        Kosmetik və gigiyenik
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        to=''
-                        className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
-                    >
-                        <img
-                            src='./src/assets/meiset-metbex-ve-tekstil.svg'
-                            alt='meiset'
-                        />
-                        Məişət, mətbəx, tekstil
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        to=''
-                        className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
-                    >
-                        <img
-                            src='./src/assets/Konselyariya.svg'
-                            alt='konselyariya'
-                        />
-                        Konselyariya
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        to=''
-                        className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
-                    >
-                        <img
-                            src='./src/assets/heyvan-yemleri.svg'
-                            alt='heyvan'
-                        />
-                        Heyvan yemləri
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        to=''
-                        className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
-                    >
-                        <img
-                            src='./src/assets/neptun-icon.svg'
-                            alt='neptunda'
-                        />
-                        Yalnız Neptunda
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        to=''
-                        className='hover:text-[#FF8300] transition flex items-center gap-[1vw] m-[3vw] px-[1vw]'
-                    >
-                        <img
-                            src='./src/assets/elektronika-ve-mebel.svg'
-                            alt='elektronika'
-                        />
-                        Elektronika & Mebel
-                    </Link>
-                </li>
+                {
+                    catalog && catalog.map((item, i) => {
+                        const { name, submenu, icon, slug } = item;
+                        return <li key={i} className="flex items-center gap-3 border-b p-2">
+                            <div className="hs-accordion-group">
+                                <div className="hs-accordion hs-accordion-active:border-gray-200 bg-white rounded-xl" id="hs-active-bordered-heading-one">
+                                    <button className="hs-accordion-toggle p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex items-center gap-x-3 w-full" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-one">
+                                        <img src={icon} alt={name} />
+                                        <p>{name}</p>
+                                        <svg className="hs-accordion-active:block hidden size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M5 12h14"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="hs-basic-active-bordered-collapse-one" className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-active-bordered-heading-one">
+                                        {
+                                            submenu.length != 0
+                                                ? submenu.map((item,i) => {
+                                                    return <Link to={`/${slug}`} key={i} className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">{item.slug}</Link>
+                                                })
+                                                : ''
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    })
+                }
             </ul>
+            {/* <ul>
+                {
+                    catalog && catalog.map((item, i) => {
+                        const { name, submenu, icon, slug } = item;
+                        return <li key={i} className="flex items-center gap-3 border-b p-2">
+                            <img src={icon} alt={name} />
+                            <p>{name}</p>
+                            {
+                                submenu.length != 0
+                                    ? submenu.map(item => {
+                                        return <div class="hs-accordion-group">
+                                            <div class="hs-accordion hs-accordion-active:border-gray-200 bg-white rounded-xl" id="hs-active-bordered-heading-one">
+                                                <button class="hs-accordion-toggle p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-one">
+                                                    Kariyera
+                                                    <svg class="hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path d="M5 12h14"></path>
+                                                        <path d="M12 5v14"></path>
+                                                    </svg>
+                                                    <svg class="hs-accordion-active:block hidden size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path d="M5 12h14"></path>
+                                                    </svg>
+                                                </button>
+                                                <div id="hs-basic-active-bordered-collapse-one" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-active-bordered-heading-one">
+                                                    <p class="px-4 py-2 text-[.8em] hover:text-[#FF8300]">İşə qəbul proseduru</p>
+                                                    <p class="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Vakansiyalar</p>
+                                                    <p class="px-4 py-2 text-[.8em] hover:text-[#FF8300]">CV yerləşdirin</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    })
+                                    : 'miyau'
+                            }
+                        </li>
+                    })
+                }
+            </ul> */}
         </div>
     );
 }
