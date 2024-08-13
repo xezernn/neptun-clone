@@ -3,7 +3,10 @@ import CardsSlider from "./CardsSlider";
 import Endirim from "./Endirim";
 import Slider from "./Slider";
 import { FaArrowRightLong } from "react-icons/fa6";
-import SubCategory from "./SubCategory";
+import reklam1 from '../../assets/azn-50.png';
+import reklam2 from '../../assets/nes-cake.jpg';
+import reklam3 from '../../assets/heftesonu-banner.png';
+
 
 function Main() {
     return (
@@ -19,7 +22,7 @@ function Main() {
                                     <a href=''>
                                         <img
                                             className='object-cover w-full'
-                                            src='./src/assets/azn-50.png'
+                                            src={reklam1}
                                             alt='50to50'
                                         />
                                     </a>
@@ -36,7 +39,7 @@ function Main() {
                                     <a href=''>
                                         <img
                                             className='object-cover w-full'
-                                            src='./src/assets/nes-cake.jpg'
+                                            src={reklam2}
                                             alt='endirim'
                                         />
                                     </a>
@@ -53,7 +56,7 @@ function Main() {
                                     <a href=''>
                                         <img
                                             className='object-cover w-full'
-                                            src='./src/assets/heftesonu-banner.png'
+                                            src={reklam3}
                                             alt='heftesonuendirim'
                                         />
                                     </a>
