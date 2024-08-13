@@ -5,6 +5,9 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { EffectFade, Navigation, Pagination, Autoplay } from "swiper/modules";
+import banner1 from '../../assets/banner1.webp';
+import banner2 from '../../assets/banner2.webp';
+import banner3 from '../../assets/banner3.webp';
 
 function Slider() {
     return (
@@ -24,7 +27,7 @@ function Slider() {
                     <a href=''>
                         <img
                             className='object-contain h-full w-full'
-                            src='/public/banner1.webp'
+                            src={banner1}
                             alt='banner1'
                         />
                     </a>
@@ -33,7 +36,7 @@ function Slider() {
                     <a href=''>
                         <img
                             className='object-contain h-full w-full'
-                            src='./src/assets/banner2.webp'
+                            src={banner2}
                             alt='banner2'
                         />
                     </a>
@@ -42,7 +45,7 @@ function Slider() {
                     <a href=''>
                         <img
                             className='object-contain h-full w-full'
-                            src='./src/assets/banner3.webp'
+                            src={banner3}
                             alt='banner3'
                         />
                     </a>

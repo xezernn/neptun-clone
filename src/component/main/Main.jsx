@@ -3,7 +3,9 @@ import CardsSlider from "./CardsSlider";
 import Endirim from "./Endirim";
 import Slider from "./Slider";
 import { FaArrowRightLong } from "react-icons/fa6";
-import SubCategory from "./SubCategory";
+import reklam1 from '../../assets/azn-50.png';
+import reklam2 from '../../assets/nes-cake.jpg';
+import reklam3 from '../../assets/heftesonu-banner.png';
 
 function Main() {
     return (
@@ -19,7 +21,7 @@ function Main() {
                                     <a href=''>
                                         <img
                                             className='object-cover w-full'
-                                            src='./src/assets/azn-50.png'
+                                            src={reklam1}
                                             alt='50to50'
                                         />
                                     </a>
@@ -36,7 +38,7 @@ function Main() {
                                     <a href=''>
                                         <img
                                             className='object-cover w-full'
-                                            src='./src/assets/nes-cake.jpg'
+                                            src={reklam2}
                                             alt='endirim'
                                         />
                                     </a>
@@ -53,7 +55,7 @@ function Main() {
                                     <a href=''>
                                         <img
                                             className='object-cover w-full'
-                                            src='./src/assets/heftesonu-banner.png'
+                                            src={reklam3}
                                             alt='heftesonuendirim'
                                         />
                                     </a>
@@ -68,14 +70,14 @@ function Main() {
                         </div>
                     </div>
                 </div>
-                <section className="mb-8">
+                <section className="mb-8 px-2">
                     <div className='flex justify-between items-center py-2'>
                         <h3 className='font-bold'>Endirimli məshullar</h3>
                         <a href='#' className='text-[#FF8300]'>Hamısına bax</a>
                     </div>
                     <Endirim />
                 </section>
-                <section>
+                <section className="px-2">
                     <div className='flex justify-between items-center py-2'>
                         <h3 className='font-bold'>Ən çox satılanlar</h3>
                         <a href='#' className='text-[#FF8300]'>Hamısına bax</a>

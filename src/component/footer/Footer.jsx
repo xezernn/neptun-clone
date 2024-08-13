@@ -2,6 +2,15 @@ import React from "react";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { ImInstagram } from "react-icons/im";
 import { TfiYoutube } from "react-icons/tfi";
+<<<<<<< HEAD
+=======
+import delivery from '../../assets/delivery.svg';
+import cash from '../../assets/cash.svg';
+import gift from '../../assets/gift.svg';
+import mobile from '../../assets/mobile.svg';
+import online from '../../assets/online.svg';
+import amiroff_creative_agency from '../../assets/amiroff_creative_agency.png';
+>>>>>>> 55cdfb618c7cc0c95dad52a3277d331db192813a
 
 function Footer() {
     
@@ -10,7 +19,7 @@ function Footer() {
             <div className='text-[.7em] font-bold flex items-center text-center py-[20px] gap-[4vw]'>
                 <div className='w-[30%] lg:flex gap-[10px] lg:w-[170px] lg:pl-[30px] lg:text-start'>
                     <img
-                        src='./src/assets/delivery.svg'
+                        src={delivery}
                         alt='neptun delivery'
                         className='mx-auto hover:scale-[1.2] transition'
                     />
@@ -20,7 +29,7 @@ function Footer() {
                 </div>
                 <div className='w-[30%] lg:flex gap-[10px] lg:w-[150px] lg:text-start'>
                     <img
-                        src='./src/assets/cash.svg'
+                        src={cash}
                         alt='neptun cash'
                         className=' mx-auto  hover:scale-[1.2] transition'
                     />
@@ -28,7 +37,7 @@ function Footer() {
                 </div>
                 <div className='w-[30%] lg:flex gap-[10px] lg:w-[150px] lg:text-start'>
                     <img
-                        src='./src/assets/gift.svg'
+                        src={gift}
                         alt='neptun gift'
                         className='mx-auto  hover:scale-[1.2] transition'
                     />
@@ -36,7 +45,7 @@ function Footer() {
                 </div>
                 <div className=' hidden lg:flex gap-[10px] w-[150px] text-start'>
                     <img
-                        src='./src/assets/online.svg'
+                        src={online}
                         alt='online gift'
                         className='mx-auto  hover:scale-[1.2] transition'
                     />
@@ -44,7 +53,7 @@ function Footer() {
                 </div>
                 <div className=' hidden lg:flex gap-[10px] w-[150px] text-start'>
                     <img
-                        src='./src/assets/mobile.svg'
+                        src={mobile}
                         alt='neptun gift'
                         className='mx-auto  hover:scale-[1.2] transition'
                     />
@@ -238,7 +247,7 @@ function Footer() {
                     <img
                         id='amiroff-img'
                         className='w-[18vw] brightness-[0] sm:w-[15vw] lg:w-[80px]'
-                        src='./src/assets/amiroff_creative_agency.png'
+                        src={amiroff_creative_agency}
                         alt='amiroff agency'
                     />
                 </div>

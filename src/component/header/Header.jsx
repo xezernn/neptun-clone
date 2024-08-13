@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FaBars } from "react-icons/fa6";
 import { FiBarChart } from "react-icons/fi";
 import { FaLock } from "react-icons/fa";
@@ -9,12 +9,13 @@ import { TiArrowSortedDown } from "react-icons/ti";
 import { HiMiniBars4 } from "react-icons/hi2";
 import Sidebar from "./Sidebar";
 import { Link } from "react-router-dom";
+import { Cntx } from "../../context/DataContext";
+import azneptun from '../../assets/az-neptun.png';
 
 function Header() {
-
     const [sideSt, setSideSt] = useState(false)
     const [isOpen, setIsOpen] = useState(false);
-
+    const { sebetSay } = useContext(Cntx)
     function toggleSideBar() {
         setIsOpen(!isOpen)
     }
@@ -237,7 +238,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                     </button>
                     <div className='hidden lg:flex justify-end w-[40vw]'>
                         <img
-                            src='/src/assets/az-neptun.png'
+                            src={azneptun}
                             alt='az-neptun'
                             className='object-cover'
                         />
@@ -246,9 +247,9 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
             </div>
             <nav className='bg-[#FF8300] text-white py-[10px] flex justify-between items-center lg:p-[0] px-[1.5vw]'>
                 <div className='wrapper flex justify-between items-center w-[100%]'>
-                    <FiBarChart 
-                    onClick={()=> setSideSt(!sideSt)}
-                    className='rotate-90 h-[30px] w-[30px] lg:hidden' />
+                    <FiBarChart
+                        onClick={() => setSideSt(!sideSt)}
+                        className='rotate-90 h-[30px] w-[30px] lg:hidden' />
                     <div className='desktop-nav  flex items-center gap-[30px] justify-between '>
                         <div
                             id='category-button'
@@ -261,13 +262,13 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                         </div>
 
                         <ul className='xl:flex gap-[15px] w-[100%] hidden '>
-                            <li className='text-[.8em] font-medium '>
+                            <li className='text-[.8em] font-medium py-3'>
                                 <Link to='/'>Ana Səhifə</Link>
                             </li>
-                            <li className='text-[.8em] font-medium relative about block'>
+                            <li className='text-[.8em] font-medium relative about py-3 block'>
                                 <Link to='haqqimizda'>Haqqımızda</Link>
                                 <TiArrowSortedDown className='inline' />
-                                <ul className='bg-[#fff] z-10 hidden border-t-[2px] about-open border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black text-[1em] absolute left-0 top-[calc(100%+10px)] w-[12vw]'>
+                                <ul className='bg-[#fff] z-10 hidden border-t-[2px] about-open border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black text-[1em] absolute left-0 top-[calc(100%+0px)] w-[12vw]'>
                                     <li>
                                         <Link to='siyasetimiz'>
                                             Siyasətimiz
@@ -278,10 +279,10 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                     </li>
                                 </ul>
                             </li>
-                            <li className='text-[.8em] font-medium aksia relative'>
+                            <li className='text-[.8em] font-medium aksia py-3 relative'>
                                 <a href=''>Aksiyalar</a>
                                 <TiArrowSortedDown className='inline' />
-                                <ul className='bg-[#fff] z-10 hidden border-t-[2px] aksia-open border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+10px)] w-[12vw]'>
+                                <ul className='bg-[#fff] z-10 hidden border-t-[2px] aksia-open border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+0px)] w-[12vw]'>
                                     <li>
                                         <a href=''>Kampaniyalar</a>
                                     </li>
@@ -293,10 +294,10 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                     </li>
                                 </ul>
                             </li>
-                            <li className='text-[.8em] font-medium relative supermarket'>
+                            <li className='text-[.8em] font-medium relative supermarket py-3'>
                                 <a href=''>Supermarketlər</a>
                                 <TiArrowSortedDown className='inline' />
-                                <ul className='bg-[#fff] z-10 hidden supermarket-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+10px)] w-[12vw]'>
+                                <ul className='bg-[#fff] z-10 hidden supermarket-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+0px)] w-[12vw]'>
                                     <li>
                                         <a href=''>Mağazalarımız</a>
                                     </li>
@@ -317,10 +318,10 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                     </li>
                                 </ul>
                             </li>
-                            <li className='text-[.8em] font-medium relative karyera'>
+                            <li className='text-[.8em] font-medium relative karyera py-3'>
                                 <a href=''>Kariyera</a>
                                 <TiArrowSortedDown className='inline' />
-                                <ul className='bg-[#fff] z-10 hidden karyera-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+10px)] w-[12vw]'>
+                                <ul className='bg-[#fff] z-10 hidden karyera-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+0px)] w-[12vw]'>
                                     <li>
                                         <a href=''>İşə qəbul proseduru</a>
                                     </li>
@@ -332,7 +333,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                     </li>
                                 </ul>
                             </li>
-                            <li className='text-[.8em] font-medium '>
+                            <li className='text-[.8em] font-medium py-3'>
                                 <a href=''>Əlaqə</a>
                             </li>
                         </ul>
@@ -344,24 +345,24 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                 Giriş
                             </span>
                         </div>
-                        <ul className='relative'>
-                            <li className='hidden md:inline text-[.9em] hesab'>
+                        <ul>
+                            <li className=' md:inline text-[.9em] dropdown relative'>
                                 Hesabım
                                 <FaChevronDown className='text-[.7em] inline mx-[2vw] cursor-pointer lg:mx-[1vw]' />
-                                <ul className='bg-[#fff] hesab-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[.9em] absolute left-0 top-[calc(100%+8px)] w-[12vw]'>
-                                    <li className='hover:text-[#FF8300]'>
+                                <ul className='bg-[#fff] hidden dropdown-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[.9em] absolute left-0 top-[calc(100%+1px)] min-w-[10vw]'>
+                                    <li className='hover:text-[#FF8300] m-1'>
                                         <a href=''>Hesabım</a>
                                     </li>
-                                    <li className='hover:text-[#FF8300]'>
+                                    <li className='hover:text-[#FF8300] m-1'>
                                         <a href=''>Ödəniş tarixçəsi</a>
                                     </li>
-                                    <li className='hover:text-[#FF8300]'>
+                                    <li className='hover:text-[#FF8300] m-1'>
                                         <a href=''>Əməliyyatlar</a>
                                     </li>
-                                    <li className='hover:text-[#FF8300]'>
+                                    <li className='hover:text-[#FF8300] m-1'>
                                         <a href=''>Yükləmələr</a>
                                     </li>
-                                    <li className='hover:text-[#FF8300]'>
+                                    <li className='hover:text-[#FF8300] m-1'>
                                         <a href=''>Sifarişi rəsmiləşdir</a>
                                     </li>
                                 </ul>
@@ -375,7 +376,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                         >
                             <SlBasket className='text-[1.3em]' />
                             <span className='bg-[#00FF00] absolute top-0 right-0 rounded-[50%] px-[5px] text-[.7em] text-black '>
-                                0
+                                {sebetSay}
                             </span>
                         </Link>
                     </div>
@@ -417,16 +418,89 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                 <p className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]">Ana Səhifə </p>
                             </li>
                             <li className="border-b cursor-pointer">
-                                <p className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]">Haqqımızda</p>
+                                <div Name="hs-accordion-group">
+                                    <div className="hs-accordion hs-accordion-active:border-gray-200 bg-white rounded-xl" id="hs-active-bordered-heading-one">
+                                        <button className="hs-accordion-toggle p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-one">
+                                            Haqqımızda
+                                            <svg className="hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <path d="M5 12h14"></path>
+                                                <path d="M12 5v14"></path>
+                                            </svg>
+                                            <svg className="hs-accordion-active:block hidden size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <path d="M5 12h14"></path>
+                                            </svg>
+                                        </button>
+                                        <div id="hs-basic-active-bordered-collapse-one" className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-active-bordered-heading-one">
+                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Siyasətimiz</p>
+                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Yeniliklər</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li className="border-b cursor-pointer">
-                                <p className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]">Aksiyalar</p>
+                                <div className="hs-accordion-group">
+                                    <div className="hs-accordion hs-accordion-active:border-gray-200 bg-white rounded-xl" id="hs-active-bordered-heading-one">
+                                        <button className="hs-accordion-toggle p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-one">
+                                            Aksiyalar
+                                            <svg className="hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <path d="M5 12h14"></path>
+                                                <path d="M12 5v14"></path>
+                                            </svg>
+                                            <svg className="hs-accordion-active:block hidden size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <path d="M5 12h14"></path>
+                                            </svg>
+                                        </button>
+                                        <div id="hs-basic-active-bordered-collapse-one" className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-active-bordered-heading-one">
+                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Kampaniyalar</p>
+                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Neptun Bonus Kart</p>
+                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Elektron Kataloq</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li className="border-b cursor-pointer">
-                                <p className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]">Supermarketlər</p>
+                                <div className="hs-accordion-group">
+                                    <div className="hs-accordion hs-accordion-active:border-gray-200 bg-white rounded-xl" id="hs-active-bordered-heading-one">
+                                        <button className="hs-accordion-toggle p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-one">
+                                            Supermarketlər
+                                            <svg className="hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <path d="M5 12h14"></path>
+                                                <path d="M12 5v14"></path>
+                                            </svg>
+                                            <svg className="hs-accordion-active:block hidden size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <path d="M5 12h14"></path>
+                                            </svg>
+                                        </button>
+                                        <div id="hs-basic-active-bordered-collapse-one" className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-active-bordered-heading-one">
+                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Mağazalarımız</p>
+                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">İrad və təkliflər</p>
+                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Partnyorluq</p>
+                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Tərəfdaşlar</p>
+                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Marketdə reklam</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li className="border-b cursor-pointer">
-                                <p className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]">Karyera</p>
+                                <div className="hs-accordion-group">
+                                    <div className="hs-accordion hs-accordion-active:border-gray-200 bg-white rounded-xl" id="hs-active-bordered-heading-one">
+                                        <button className="hs-accordion-toggle p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-one">
+                                            Kariyera
+                                            <svg className="hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <path d="M5 12h14"></path>
+                                                <path d="M12 5v14"></path>
+                                            </svg>
+                                            <svg className="hs-accordion-active:block hidden size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <path d="M5 12h14"></path>
+                                            </svg>
+                                        </button>
+                                        <div id="hs-basic-active-bordered-collapse-one" className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-active-bordered-heading-one">
+                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">İşə qəbul proseduru</p>
+                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Vakansiyalar</p>
+                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">CV yerləşdirin</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li className="border-b cursor-pointer">
                                 <p className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]">Əlaqə</p>

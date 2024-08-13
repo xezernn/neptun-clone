@@ -4,7 +4,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { FreeMode, Navigation } from "swiper/modules";
 import { GoHeart } from "react-icons/go";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Cntx } from "../../context/DataContext";
 import { Link } from "react-router-dom";
 import { spiral } from "ldrs";
@@ -12,9 +12,8 @@ import { counter } from "../../context/Counter";
 spiral.register();
 
 function CardsSlider() {
-    const { data } = useContext(Cntx);
-    const {countProduct, setCountProduct} = useContext(counter)
-    const [count, setCount] = useState(12);
+    const { data, basket, setBasket, setSebetSay, sebetSay } = useContext(Cntx);
+    const { countProduct, setCountProduct } = useContext(counter)
 
     return (
         <div className='flex justify-center items-start'>
@@ -62,25 +61,29 @@ function CardsSlider() {
                                         {price} ₼
                                     </p>
                                     <div className='py-3'>
-                                        <button 
-                                          onClick={(e) => {
-                                            e.preventDefault();
-                                            setCountProduct( countProduct > 0 ? countProduct - 1 : 0);
-                                        }}
-                                        className='font-bold text-[1.2em] text-[#FF8300]'>
+                                        <button
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                setCountProduct(countProduct > 0 ? countProduct - 1 : 0);
+                                            }}
+                                            className='font-bold text-[1.2em] text-[#FF8300]'>
                                             ‒
                                         </button>
                                         <span className='px-2'>{countProduct} ədəd</span>
-                                        <button 
-                                          onClick={(e) => {
-                                            e.preventDefault();
-                                            setCountProduct(  countProduct + 1 );
-                                        }}
-                                        className='font-bold text-[1.2em] text-[#FF8300]'>
+                                        <button
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                setCountProduct(countProduct + 1);
+                                            }}
+                                            className='font-bold text-[1.2em] text-[#FF8300]'>
                                             ＋
                                         </button>
                                     </div>
-                                    <button className='rounded-3xl  text-[.85em] bg-[#FF8300] text-white px-4 py-2 font-semibold mb-3'>
+                                    <button onClick={(e) => {
+                                                e.preventDefault();
+                                                setSebetSay(sebetSay + 1)
+                                                setBasket([...basket, item])
+                                            }} className='rounded-3xl  text-[.85em] bg-[#FF8300] text-white px-4 py-2 font-semibold mb-3'>
                                         Səbətə at
                                     </button>
                                 </Link>

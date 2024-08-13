@@ -1,10 +1,11 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import Main from "./component/main/Main";
-import Layout from "./component/layout/Layout";
 import Error404 from "./component/error/Error404";
 import CardInfo from "./component/main/CardInfo";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import SubCategory from "./component/main/SubCategory";
+import Layout from "./layout/Layout";
+import { Basket } from "./component/header/Basket";
 
 function App() {
     const { pathname } = useLocation();
@@ -20,6 +21,7 @@ function App() {
                     <Route path='/' element={<Main />} />
                     <Route path='/:subcategory' element={<SubCategory />} />
                     <Route path='/product/:id' element={<CardInfo />} />
+                    <Route path="/basket" element={<Basket />} />
                 </Route>
                 <Route path='*' element={<Error404 />} />
             </Routes>
