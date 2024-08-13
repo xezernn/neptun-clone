@@ -73,7 +73,6 @@
     transition: .2s;
 }
 
-
 .hesab:hover .hesab-open {
     transform: translateY(0);
     opacity: 1;

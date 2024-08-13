@@ -261,13 +261,13 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                         </div>
 
                         <ul className='xl:flex gap-[15px] w-[100%] hidden '>
-                            <li className='text-[.8em] font-medium '>
+                            <li className='text-[.8em] font-medium py-3'>
                                 <Link to='/'>Ana Səhifə</Link>
                             </li>
-                            <li className='text-[.8em] font-medium relative about block'>
+                            <li className='text-[.8em] font-medium relative about py-3 block'>
                                 <Link to='haqqimizda'>Haqqımızda</Link>
                                 <TiArrowSortedDown className='inline' />
-                                <ul className='bg-[#fff] z-10 hidden border-t-[2px] about-open border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black text-[1em] absolute left-0 top-[calc(100%+10px)] w-[12vw]'>
+                                <ul className='bg-[#fff] z-10 hidden border-t-[2px] about-open border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black text-[1em] absolute left-0 top-[calc(100%+0px)] w-[12vw]'>
                                     <li>
                                         <Link to='siyasetimiz'>
                                             Siyasətimiz
@@ -278,10 +278,10 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                     </li>
                                 </ul>
                             </li>
-                            <li className='text-[.8em] font-medium aksia relative'>
+                            <li className='text-[.8em] font-medium aksia py-3 relative'>
                                 <a href=''>Aksiyalar</a>
                                 <TiArrowSortedDown className='inline' />
-                                <ul className='bg-[#fff] z-10 hidden border-t-[2px] aksia-open border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+10px)] w-[12vw]'>
+                                <ul className='bg-[#fff] z-10 hidden border-t-[2px] aksia-open border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+0px)] w-[12vw]'>
                                     <li>
                                         <a href=''>Kampaniyalar</a>
                                     </li>
@@ -293,10 +293,10 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                     </li>
                                 </ul>
                             </li>
-                            <li className='text-[.8em] font-medium relative supermarket'>
+                            <li className='text-[.8em] font-medium relative supermarket py-3'>
                                 <a href=''>Supermarketlər</a>
                                 <TiArrowSortedDown className='inline' />
-                                <ul className='bg-[#fff] z-10 hidden supermarket-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+10px)] w-[12vw]'>
+                                <ul className='bg-[#fff] z-10 hidden supermarket-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+0px)] w-[12vw]'>
                                     <li>
                                         <a href=''>Mağazalarımız</a>
                                     </li>
@@ -317,10 +317,10 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                     </li>
                                 </ul>
                             </li>
-                            <li className='text-[.8em] font-medium relative karyera'>
+                            <li className='text-[.8em] font-medium relative karyera py-3'>
                                 <a href=''>Kariyera</a>
                                 <TiArrowSortedDown className='inline' />
-                                <ul className='bg-[#fff] z-10 hidden karyera-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+10px)] w-[12vw]'>
+                                <ul className='bg-[#fff] z-10 hidden karyera-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+0px)] w-[12vw]'>
                                     <li>
                                         <a href=''>İşə qəbul proseduru</a>
                                     </li>
@@ -332,7 +332,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                     </li>
                                 </ul>
                             </li>
-                            <li className='text-[.8em] font-medium '>
+                            <li className='text-[.8em] font-medium py-3'>
                                 <a href=''>Əlaqə</a>
                             </li>
                         </ul>
@@ -344,24 +344,24 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                 Giriş
                             </span>
                         </div>
-                        <ul className='relative'>
-                            <li className='hidden md:inline text-[.9em] hesab'>
+                        <ul>
+                            <li className=' md:inline text-[.9em] dropdown relative'>
                                 Hesabım
                                 <FaChevronDown className='text-[.7em] inline mx-[2vw] cursor-pointer lg:mx-[1vw]' />
-                                <ul className='bg-[#fff] hesab-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[.9em] absolute left-0 top-[calc(100%+8px)] w-[12vw]'>
-                                    <li className='hover:text-[#FF8300]'>
+                                <ul className='bg-[#fff] hidden dropdown-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[.9em] absolute left-0 top-[calc(100%+1px)] min-w-[10vw]'>
+                                    <li className='hover:text-[#FF8300] m-1'>
                                         <a href=''>Hesabım</a>
                                     </li>
-                                    <li className='hover:text-[#FF8300]'>
+                                    <li className='hover:text-[#FF8300] m-1'>
                                         <a href=''>Ödəniş tarixçəsi</a>
                                     </li>
-                                    <li className='hover:text-[#FF8300]'>
+                                    <li className='hover:text-[#FF8300] m-1'>
                                         <a href=''>Əməliyyatlar</a>
                                     </li>
-                                    <li className='hover:text-[#FF8300]'>
+                                    <li className='hover:text-[#FF8300] m-1'>
                                         <a href=''>Yükləmələr</a>
                                     </li>
-                                    <li className='hover:text-[#FF8300]'>
+                                    <li className='hover:text-[#FF8300] m-1'>
                                         <a href=''>Sifarişi rəsmiləşdir</a>
                                     </li>
                                 </ul>
