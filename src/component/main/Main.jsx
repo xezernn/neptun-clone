@@ -68,14 +68,14 @@ function Main() {
                         </div>
                     </div>
                 </div>
-                <section className="mb-8">
+                <section className="mb-8 px-2">
                     <div className='flex justify-between items-center py-2'>
                         <h3 className='font-bold'>Endirimli məshullar</h3>
                         <a href='#' className='text-[#FF8300]'>Hamısına bax</a>
                     </div>
                     <Endirim />
                 </section>
-                <section>
+                <section className="px-2">
                     <div className='flex justify-between items-center py-2'>
                         <h3 className='font-bold'>Ən çox satılanlar</h3>
                         <a href='#' className='text-[#FF8300]'>Hamısına bax</a>

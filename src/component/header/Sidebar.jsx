@@ -10,7 +10,7 @@ function Sidebar({ sideSt }) {
     return (
         <div
             className={`${sideSt ? "translate-x-0" : "translate-x-[-120%]"
-                } p-[2vw] fixed bg-white z-[1000] w-[80vw] h-[80vh] bottom-0 transition `}
+                } p-[2vw] fixed bg-white z-[1000] w-[80vw] h-[80vh] bottom-0 transition overflow-auto `}
         >
             <ul>
                 <li>
