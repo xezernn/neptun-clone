@@ -2,7 +2,9 @@ import React from "react";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { ImInstagram } from "react-icons/im";
 import { TfiYoutube } from "react-icons/tfi";
+
 function Footer() {
+    
     return (
         <footer className='bg-[#FF8300] px-[2vw] text-white h-screen relative overflow-hidden'>
             <div className='text-[.7em] font-bold flex items-center text-center py-[20px] gap-[4vw]'>
