@@ -11,7 +11,7 @@ export const Basket = () => {
         setBasket(elem)
         setSebetSay(elem.length)
     }
-    const umumiMebleg = basket.reduce((acc, item) => acc + item.price, 0)
+    const umumiMebleg = basket.reduce((acc, item) => acc + item.price, 0).toFixed(2)
 
     return (
         <section className='wrapper py-5 px-3'>

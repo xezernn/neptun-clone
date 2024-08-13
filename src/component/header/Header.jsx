@@ -10,6 +10,7 @@ import { HiMiniBars4 } from "react-icons/hi2";
 import Sidebar from "./Sidebar";
 import { Link } from "react-router-dom";
 import { Cntx } from "../../context/DataContext";
+import azneptun from '../../assets/az-neptun.png';
 
 function Header() {
     const [sideSt, setSideSt] = useState(false)
@@ -237,7 +238,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                     </button>
                     <div className='hidden lg:flex justify-end w-[40vw]'>
                         <img
-                            src='/src/assets/az-neptun.png'
+                            src={azneptun}
                             alt='az-neptun'
                             className='object-cover'
                         />

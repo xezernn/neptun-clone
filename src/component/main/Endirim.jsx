@@ -4,7 +4,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { FreeMode, Navigation } from "swiper/modules";
 import { GoHeart } from "react-icons/go";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Cntx } from "../../context/DataContext";
 import { Link } from "react-router-dom";
 import { spiral } from "ldrs";
@@ -12,8 +12,8 @@ import { counter } from "../../context/Counter";
 spiral.register();
 
 function Endirim() {
-    const { data } = useContext(Cntx);
-    const {countProduct, setCountProduct} = useContext(counter)
+    const { data, basket, setBasket,  setSebetSay , sebetSay } = useContext(Cntx);
+    const { countProduct, setCountProduct } = useContext(counter)
     function rand(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
@@ -69,7 +69,7 @@ function Endirim() {
                                         </span>
                                         <div>
                                             <p className='line-through text-gray-400'>
-                                                {price } ₼
+                                                {price} ₼
                                             </p>
                                             <p className='font-bold text-[1.3em]'>
                                                 {endirimliQiymet.toFixed(2)} ₼
@@ -77,25 +77,31 @@ function Endirim() {
                                         </div>
                                     </div>
                                     <div className='py-3'>
-                                        <button 
-                                          onClick={(e) => {
-                                            e.preventDefault();
-                                            setCountProduct( countProduct > 0 ? countProduct - 1 : 0);
-                                        }}
-                                        className='font-bold text-[1.2em] text-[#FF8300]'>
+                                        <button
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                setCountProduct(countProduct > 0 ? countProduct - 1 : 0);
+                                            }}
+                                            className='font-bold text-[1.2em] text-[#FF8300]'>
                                             ‒
                                         </button>
                                         <span className='px-2'>{countProduct} ədəd</span>
-                                        <button 
-                                          onClick={(e) => {
-                                            e.preventDefault();
-                                            setCountProduct(countProduct + 1);
-                                        }}
-                                        className='font-bold text-[1.2em] text-[#FF8300]'>
+                                        <button
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                setCountProduct(countProduct + 1);
+                                            }}
+                                            className='font-bold text-[1.2em] text-[#FF8300]'>
                                             ＋
                                         </button>
                                     </div>
-                                    <button className='rounded-3xl bg-[#FF8300] text-[.85em] text-white px-4 py-2 font-semibold mb-3'>
+                                    <button
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            setSebetSay(sebetSay + 1)
+                                            setBasket([...basket, item])
+                                        }}
+                                        className='rounded-3xl bg-[#FF8300] text-[.85em] text-white px-4 py-2 font-semibold mb-3'>
                                         Səbətə at
                                     </button>
                                 </Link>

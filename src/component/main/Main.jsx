@@ -7,7 +7,6 @@ import reklam1 from '../../assets/azn-50.png';
 import reklam2 from '../../assets/nes-cake.jpg';
 import reklam3 from '../../assets/heftesonu-banner.png';
 
-
 function Main() {
     return (
         <main className='bg-slate-50'>
