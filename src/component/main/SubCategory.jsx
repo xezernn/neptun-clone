@@ -16,14 +16,18 @@ function SubCategory({ catSt, product, setProduct }) {
    
     useEffect(() => {
         getAllProducts(category, subCategory, pageCount).then((res) =>
+        {
             setProduct(res.data)
-        );
-        getAllProducts(category, subCategory, pageCount).then((res) =>
             setPage(res.meta)
+
+        }
         );
     }, [pageCount]);
-
+    console.log(page)
     console.log(pageCount);
+    ;
+    
+
     
     const pagesArr = Array.from({ length: page.pages }, (_, i) => i + 1);
 
@@ -186,7 +190,8 @@ function SubCategory({ catSt, product, setProduct }) {
                 </button>
                 {pagesArr.map((item, i) => (
                     <button
-                        onClick={() => setPageCount(i+1)}
+                        onClick={(e) => setPageCount(e.target.innerText)
+                        }
                         key={i}
                         type='button'
                         title='Page 1'
