@@ -12,8 +12,6 @@ function CardInfo() {
 
     const item = data.find(item => item.id == id)
 
-
-
     return (
         <section className='wrapper'>
             <div className='text-gray-600 font-semibold py-10 px-3'>
@@ -41,7 +39,7 @@ function CardInfo() {
                         Mövcudluq: 🗹 Anbarda
                     </p>
                     <p className='mb-3 text-[2em] font-bold text-[#FF8300]'>
-                        {(item?.price).toFixed(2)} ₼
+                        {(item?.price)} ₼
                     </p>
                     <div className='py-3'>
                         <button

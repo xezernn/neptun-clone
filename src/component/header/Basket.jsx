@@ -11,19 +11,19 @@ export const Basket = () => {
         setBasket(elem)
         setSebetSay(elem.length)
     }
-    const updatedBasket = basket.map(item => ({...item, count: item.count || 1 }))
+    const updatedBasket = basket.map(item => ({ ...item, count: item.count || 1 }))
 
     function HandleIncrement(id) {
-        const newBasket = updatedBasket.map(item => 
+        const newBasket = updatedBasket.map(item =>
             item.id === id ? { ...item, count: item.count + 1 } : item
-        );
+        )
         setBasket(newBasket)
     }
 
     function HandleDecrement(id) {
         const newBasket = updatedBasket.map(item =>
             item.id === id && item.count > 1 ? { ...item, count: item.count - 1 } : item
-        );
+        )
         setBasket(newBasket)
     }
 
@@ -57,19 +57,19 @@ export const Basket = () => {
                                 <td className="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell">{item.title}</td>
                                 <td className="px-3 py-4 w-fit text-sm text-gray-500 sm:table-cell">
                                     <button
-                                        onClick={() =>  HandleDecrement(item.id)}
+                                        onClick={() => HandleDecrement(item.id)}
                                         className='font-bold text-[1.2em] text-[#FF8300] active:text-[#000]'>
                                         ‒
                                     </button>
                                     <span className='px-2'>{item.count}</span>
                                     <button
-                                        onClick={() =>  HandleIncrement(item.id)}
+                                        onClick={() => HandleIncrement(item.id)}
                                         className='font-bold text-[1.2em] text-[#FF8300] active:text-[#000]'>
                                         ＋
                                     </button>
                                 </td>
                                 <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{item.price} ₼</td>
-                                <td className="px-3 py-4 text-sm text-gray-500">{item.price} ₼</td>
+                                <td className="px-3 py-4 text-sm text-gray-500">{(item.price * item.count).toFixed(2)} ₼</td>
                                 <td className="py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
                                     <p className="hover:text-red-600 text-[1.2em] cursor-pointer">
                                         <FaTrashAlt onClick={() => { HandleDelete(item.id) }} />
@@ -82,14 +82,16 @@ export const Basket = () => {
             </div>
             <div className="flex justify-end my-6">
                 <table className="border">
-                    <tr className="text-left text-sm font-semibold border">
-                        <th className="p-2">Məbləğ:</th>
-                        <td className="p-2">{umumiMebleg} ₼</td>
-                    </tr>
-                    <tr className="text-left text-sm font-semibold border">
-                        <th className="p-2">Ümumi məbləğ:</th>
-                        <td className="p-2">{umumiMebleg} ₼</td>
-                    </tr>
+                    <tbody>
+                        <tr className="text-left text-sm font-semibold border">
+                            <th className="p-2">Məbləğ:</th>
+                            <td className="p-2">{umumiMebleg} ₼</td>
+                        </tr>
+                        <tr className="text-left text-sm font-semibold border">
+                            <th className="p-2">Ümumi məbləğ:</th>
+                            <td className="p-2">{umumiMebleg} ₼</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
             <div className="py-4 mt-4 flex justify-between">

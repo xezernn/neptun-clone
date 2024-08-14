@@ -14,9 +14,9 @@ function DataContext({ children }) {
         axios
             .get(`${configObj.base}/products`)
             .then((res) => setData(res.data.data));
-            axios
-                .get(`${configObj.base}/catalog`)
-                .then((res) => setCatalog(res.data));
+        axios
+            .get(`${configObj.base}/catalog`)
+            .then((res) => setCatalog(res.data));
     }, []);
 
 
