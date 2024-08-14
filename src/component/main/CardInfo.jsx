@@ -5,12 +5,12 @@ import { LuRefreshCcw } from "react-icons/lu";
 import { useContext } from "react";
 import { Cntx } from "../../context/DataContext";
 
-function CardInfo() {
+function CardInfo({ product}) {
 
-    const { data, setBasket, basket, setSebetSay, sebetSay } = useContext(Cntx)
+    const { setBasket, basket, setSebetSay, sebetSay } = useContext(Cntx)
     const { id } = useParams()
 
-    const item = data.find(item => item.id == id)
+    const item = product.find(item => item.id == id)
 
     return (
         <section className='wrapper'>

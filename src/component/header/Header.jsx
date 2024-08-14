@@ -25,7 +25,7 @@ function Header({catSt, setCatSt}) {
     }
 
     return (
-        <header>
+        <header className="overflow-x-hidden">
             <Sidebar sideSt={sideSt} setSideSt={setSideSt} />
             <div className='wrapper'>
                 <div className='flex my-[10px] justify-between items-center gap-[3vw] p-[10px] '>

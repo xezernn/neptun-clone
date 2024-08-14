@@ -6,16 +6,26 @@ import getAllProducts from "../../api/api";
 import Aside from "./Aside";
 import { Cntx } from "../../context/DataContext";
 
-function SubCategory({ catSt }) {
-    const { basket, setBasket,setSebetSay,sebetSay } = useContext(Cntx)
-    const [product, setProduct] = useState();
-    const { category, subCategory } = useParams();
+function SubCategory({ catSt, product, setProduct }) {
 
+    const [page, setPage] = useState(1);
+    const [count, setCount] = useState(1);
+    const { basket, setBasket, setSebetSay, sebetSay } = useContext(Cntx);
+    const { category, subCategory } = useParams();
+    const [pageCount, setPageCount] = useState(1);
+   
     useEffect(() => {
-        getAllProducts(category, subCategory).then((res) =>
+        getAllProducts(category, subCategory, pageCount).then((res) =>
             setProduct(res.data)
         );
-    }, []);
+        getAllProducts(category, subCategory, pageCount).then((res) =>
+            setPage(res.meta)
+        );
+    }, [pageCount]);
+
+    console.log(pageCount);
+    
+    const pagesArr = Array.from({ length: page.pages }, (_, i) => i + 1);
 
     return (
         <main className='bg-[#F2F2F2] '>
@@ -24,14 +34,14 @@ function SubCategory({ catSt }) {
                 <div>
                     <div className='text-gray-600 font-semibold py-5 px-3'>
                         <Link to='/'>Ana səhifə /</Link>
-                        <span className="capitalize"> {category} /</span>
-                        <span className="capitalize"> {subCategory}</span>
+                        <span className='capitalize'> {category} /</span>
+                        <span className='capitalize'> {subCategory}</span>
                     </div>
                     <div className='flex justify-between items-start'>
                         {catSt ? (
                             ""
                         ) : (
-                            <div className='filter hidden bg-white rounded-[10px] lg:inline-block  w-[60%] text-[.8em] '>
+                            <div className='filter hidden bg-white rounded-[10px] lg:inline-block p-[1vw]  w-[30vw] text-[.8em] '>
                                 <h3 className='p-[10px] '>Filtr</h3>
                                 <div className='flex justify-between py-[20px] border-b '>
                                     <h5 className='px-[10px]'>
@@ -78,14 +88,14 @@ function SubCategory({ catSt }) {
                                 </div>
                             </div>
                         )}
-                        <div className='flex flex-wrap lg:justify-end justify-center '>
-                            {product
-                                ? product.map((item, i) => {
+                        <div className='flex flex-wrap lg:justify-end justify-center  w-[100%]'>
+                            {product ? (
+                                product.map((item, i) => {
                                     const { img, title, price, id } = item;
                                     return (
                                         <div
                                             key={i}
-                                            className='sm:w-[49%] md:w-[30%] lg:w-[25%] xl:w-[calc(25-1vw)] '
+                                            className='sm:w-[49%] md:w-[30%] lg:w-[23%] xl:w-[calc(20-1vw)] '
                                         >
                                             <Link
                                                 to={`/product/${id}`}
@@ -103,17 +113,23 @@ function SubCategory({ catSt }) {
                                                     <button
                                                         onClick={(e) => {
                                                             e.preventDefault();
+                                                            setCount(
+                                                                count > 0
+                                                                    ? count - 1
+                                                                    : 1
+                                                            );
                                                         }}
                                                         className='font-bold text-[1.2em] text-[#FF8300]'
                                                     >
                                                         ‒
                                                     </button>
                                                     <span className='px-2'>
-                                                        ədəd
+                                                        {count} ədəd
                                                     </span>
                                                     <button
                                                         onClick={(e) => {
                                                             e.preventDefault();
+                                                            setCount(count + 1);
                                                         }}
                                                         className='font-bold text-[1.2em] text-[#FF8300]'
                                                     >
@@ -123,20 +139,79 @@ function SubCategory({ catSt }) {
                                                 <button
                                                     onClick={(e) => {
                                                         e.preventDefault();
-                                                        setBasket([...basket, item])
-                                                        setSebetSay(sebetSay + 1)
+                                                        setBasket([
+                                                            ...basket,
+                                                            item,
+                                                        ]);
+                                                        setSebetSay(
+                                                            sebetSay + 1
+                                                        );
                                                     }}
-                                                    className='rounded-3xl  text-[.85em] bg-[#FF8300] text-white px-4 py-2 font-semibold mb-3'>
+                                                    className='rounded-3xl  text-[.85em] bg-[#FF8300] text-white px-4 py-2 font-semibold mb-3'
+                                                >
                                                     Səbətə at
                                                 </button>
                                             </Link>
                                         </div>
                                     );
                                 })
-                                : ""}
+                            ) : (
+                                <div className='flex items-center justify-center space-x-2 h-screen'>
+                                    <div className='w-4 h-4 rounded-full animate-pulse dark:bg-[#FF8300]'></div>
+                                    <div className='w-4 h-4 rounded-full animate-pulse dark:bg-[#FF8300]'></div>
+                                    <div className='w-4 h-4 rounded-full animate-pulse dark:bg-[#FF8300]'></div>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className='flex justify-center space-x-1 dark:text-gray-800 py-[20px]'>
+                <button
+                    title='previous'
+                    type='button'
+                    className='inline-flex items-center justify-center w-8 h-8 py-0 border rounded-md shadow-md dark:bg-gray-50 dark:border-gray-100'
+                >
+                    <svg
+                        viewBox='0 0 24 24'
+                        stroke='currentColor'
+                        strokeWidth='2'
+                        fill='none'
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        className='w-4'
+                    >
+                        <polyline points='15 18 9 12 15 6'></polyline>
+                    </svg>
+                </button>
+                {pagesArr.map((item, i) => (
+                    <button
+                        onClick={() => setPageCount(i+1)}
+                        key={i}
+                        type='button'
+                        title='Page 1'
+                        className='inline-flex items-center justify-center w-8 h-8 text-sm font-semibold border rounded shadow-md dark:bg-gray-50 focus:bg-[#f1cba2] focus:border-1 focus:border-[#f69733] '
+                    >
+                        {i + 1}
+                    </button>
+                ))}
+                <button
+                    title='next'
+                    type='button'
+                    className='inline-flex items-center justify-center w-8 h-8 py-0 border rounded-md shadow-md dark:bg-gray-50 dark:border-gray-100'
+                >
+                    <svg
+                        viewBox='0 0 24 24'
+                        stroke='currentColor'
+                        strokeWidth='2'
+                        fill='none'
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        className='w-4'
+                    >
+                        <polyline points='9 18 15 12 9 6'></polyline>
+                    </svg>
+                </button>
             </div>
         </main>
     );

@@ -16,7 +16,7 @@ function Main() {
                     <div className='mx-auto mt-0 lg:ml-0 lg:flex flex-col items-end w-[90%]'>
                         <Slider />
                         <div className='flex gap-3 justify-between py-3'>
-                            <div className='lg:w-[18vw]  xl:w-[20vw]'>
+                            <div className='w-[50%] lg:w-[18vw]  xl:w-[20vw]'>
                                 <div className='lg:w-[100%]'>
                                     <a href=''>
                                         <img
@@ -33,7 +33,7 @@ function Main() {
                                     <FaArrowRightLong />
                                 </div>
                             </div>
-                            <div className='lg:w-[18vw]  xl:w-[20vw]'>
+                            <div className='w-[50%] lg:w-[18vw]  xl:w-[20vw]'>
                             <div className='lg:w-[100%]'>
                                     <a href=''>
                                         <img

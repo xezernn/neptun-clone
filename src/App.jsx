@@ -10,6 +10,7 @@ import { Basket } from "./component/header/Basket";
 function App() {
     
     const [catSt, setCatSt] = useState(false)
+    const [product, setProduct] = useState();
     const { pathname } = useLocation();
 
     useEffect(() => {
@@ -21,8 +22,8 @@ function App() {
             <Routes>
                 <Route path='/' element={<Layout catSt={catSt} setCatSt={setCatSt} />}>
                     <Route path='/' element={<Main />} />
-                    <Route path='/:category/:subCategory' element={<SubCategory catSt={catSt} />} />
-                    <Route path='/product/:id' element={<CardInfo />} />
+                    <Route path='/:category/:subCategory' element={<SubCategory catSt={catSt} product={product} setProduct={setProduct} />} />
+                    <Route path='/product/:id' element={<CardInfo product={product}/>} />
                     <Route path="/basket" element={<Basket />} />
                 </Route>
                 <Route path='*' element={<Error404 />} />
