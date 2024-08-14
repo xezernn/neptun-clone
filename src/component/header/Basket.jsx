@@ -1,17 +1,33 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FaTrashAlt } from "react-icons/fa";
 import { Cntx } from "../../context/DataContext";
 import { Link } from "react-router-dom";
 
 export const Basket = () => {
     const { basket, setBasket, setSebetSay } = useContext(Cntx)
-    console.log(basket);
+
     function HandleDelete(id) {
         const elem = basket.filter(item => item.id != id)
         setBasket(elem)
         setSebetSay(elem.length)
     }
-    const umumiMebleg = basket.reduce((acc, item) => acc + item.price, 0).toFixed(2)
+    const updatedBasket = basket.map(item => ({...item, count: item.count || 1 }))
+
+    function HandleIncrement(id) {
+        const newBasket = updatedBasket.map(item => 
+            item.id === id ? { ...item, count: item.count + 1 } : item
+        );
+        setBasket(newBasket)
+    }
+
+    function HandleDecrement(id) {
+        const newBasket = updatedBasket.map(item =>
+            item.id === id && item.count > 1 ? { ...item, count: item.count - 1 } : item
+        );
+        setBasket(newBasket)
+    }
+
+    const umumiMebleg = basket.reduce((acc, item) => acc + item.price * item.count, 0).toFixed(2)
 
     return (
         <section className='wrapper py-5 px-3'>
@@ -41,19 +57,13 @@ export const Basket = () => {
                                 <td className="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell">{item.title}</td>
                                 <td className="px-3 py-4 w-fit text-sm text-gray-500 sm:table-cell">
                                     <button
-                                        // onClick={(e) => {
-                                        //     e.preventDefault();
-                                        //     setCountProduct(countProduct > 0 ? countProduct - 1 : 0);
-                                        // }}
+                                        onClick={() =>  HandleDecrement(item.id)}
                                         className='font-bold text-[1.2em] text-[#FF8300] active:text-[#000]'>
                                         ‒
                                     </button>
-                                    <span className='px-2'>1</span>
+                                    <span className='px-2'>{item.count}</span>
                                     <button
-                                        // onClick={(e) => {
-                                        //     e.preventDefault();
-                                        //     setCountProduct(countProduct + 1);
-                                        // }}
+                                        onClick={() =>  HandleIncrement(item.id)}
                                         className='font-bold text-[1.2em] text-[#FF8300] active:text-[#000]'>
                                         ＋
                                     </button>

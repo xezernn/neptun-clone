@@ -6,13 +6,13 @@ import { useContext } from "react";
 import { Cntx } from "../../context/DataContext";
 
 function CardInfo() {
-    
-    const {data} = useContext(Cntx)
+
+    const { data, setBasket, basket, setSebetSay, sebetSay } = useContext(Cntx)
     const { id } = useParams()
 
     const item = data.find(item => item.id == id)
 
-    
+
 
     return (
         <section className='wrapper'>
@@ -44,24 +44,30 @@ function CardInfo() {
                         {(item?.price).toFixed(2)} ₼
                     </p>
                     <div className='py-3'>
-                        <button 
-                          onClick={(e) => {
-                            e.preventDefault();
-                        }}
-                        className='font-bold text-[1.2em] text-[#FF8300]'>
+                        <button
+                            onClick={(e) => {
+                                e.preventDefault();
+                            }}
+                            className='font-bold text-[1.2em] text-[#FF8300]'>
                             ‒
                         </button>
                         <span className='px-4'> ədəd</span>
-                        <button 
-                          onClick={(e) => {
-                            e.preventDefault();
-                        }}
-                        className='font-bold text-[1.2em] text-[#FF8300]'>
+                        <button
+                            onClick={(e) => {
+                                e.preventDefault();
+                            }}
+                            className='font-bold text-[1.2em] text-[#FF8300]'>
                             ＋
                         </button>
                     </div>
                     <div className='flex items-center gap-4 py-2'>
-                        <button className='rounded-3xl bg-[#FF8300] text-white px-5 py-2  mb-3'>
+                        <button
+                            onClick={(e) => {
+                                e.preventDefault();
+                                setBasket([...basket, item])
+                                setSebetSay(sebetSay + 1)
+                            }}
+                            className='rounded-3xl bg-[#FF8300] text-white px-5 py-2  mb-3'>
                             Səbətə at
                         </button>
                         <FaRegHeart className='text-[1.3em] cursor-pointer text-[#FF8300]' />

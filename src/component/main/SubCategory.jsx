@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { GoHeart } from "react-icons/go";
 import { FaChevronDown } from "react-icons/fa";
 import getAllProducts from "../../api/api";
 import Aside from "./Aside";
+import { Cntx } from "../../context/DataContext";
 
 function SubCategory({ catSt }) {
+    const { basket, setBasket,setSebetSay,sebetSay } = useContext(Cntx)
     const [product, setProduct] = useState();
     const { category, subCategory } = useParams();
 
@@ -22,8 +24,8 @@ function SubCategory({ catSt }) {
                 <div>
                     <div className='text-gray-600 font-semibold py-5 px-3'>
                         <Link to='/'>Ana səhifə /</Link>
-                        <span> Meyvə, tərəvəz, quru meyvə /</span>
-                        <span> Tərəvəz</span>
+                        <span className="capitalize"> {category} /</span>
+                        <span className="capitalize"> {subCategory}</span>
                     </div>
                     <div className='flex justify-between items-start'>
                         {catSt ? (
@@ -79,52 +81,58 @@ function SubCategory({ catSt }) {
                         <div className='flex flex-wrap lg:justify-end justify-center '>
                             {product
                                 ? product.map((item, i) => {
-                                      const { img, title, price, id } = item;
-                                      return (
-                                          <div
-                                              key={i}
-                                              className='sm:w-[49%] md:w-[30%] lg:w-[25%] xl:w-[calc(25-1vw)] '
-                                          >
-                                              <Link
-                                                  to={`/product/${id}`}
-                                                  className='text-center rounded-md p-3 bg-white relative inline-block m-[.5vw] '
-                                              >
-                                                  <GoHeart className='absolute cursor-pointer top-3 right-3 text-[1.3em] text-[#FF8300]' />
-                                                  <img src={img} alt={title} />
-                                                  <h5 className='py-4 hover:text-[#FF8300] h-16 text-[.7em] font-semibold'>
-                                                      {title}
-                                                  </h5>
-                                                  <p className='font-bold text-[1.3em]'>
-                                                      {price} ₼
-                                                  </p>
-                                                  <div className='py-3'>
-                                                      <button
-                                                          onClick={(e) => {
-                                                              e.preventDefault();
-                                                          }}
-                                                          className='font-bold text-[1.2em] text-[#FF8300]'
-                                                      >
-                                                          ‒
-                                                      </button>
-                                                      <span className='px-2'>
-                                                          ədəd
-                                                      </span>
-                                                      <button
-                                                          onClick={(e) => {
-                                                              e.preventDefault();
-                                                          }}
-                                                          className='font-bold text-[1.2em] text-[#FF8300]'
-                                                      >
-                                                          ＋
-                                                      </button>
-                                                  </div>
-                                                  <button className='rounded-3xl  text-[.85em] bg-[#FF8300] text-white px-4 py-2 font-semibold mb-3'>
-                                                      Səbətə at
-                                                  </button>
-                                              </Link>
-                                          </div>
-                                      );
-                                  })
+                                    const { img, title, price, id } = item;
+                                    return (
+                                        <div
+                                            key={i}
+                                            className='sm:w-[49%] md:w-[30%] lg:w-[25%] xl:w-[calc(25-1vw)] '
+                                        >
+                                            <Link
+                                                to={`/product/${id}`}
+                                                className='text-center rounded-md p-3 bg-white relative inline-block m-[.5vw] '
+                                            >
+                                                <GoHeart className='absolute cursor-pointer top-3 right-3 text-[1.3em] text-[#FF8300]' />
+                                                <img src={img} alt={title} />
+                                                <h5 className='py-4 hover:text-[#FF8300] h-16 text-[.7em] font-semibold'>
+                                                    {title}
+                                                </h5>
+                                                <p className='font-bold text-[1.3em]'>
+                                                    {price} ₼
+                                                </p>
+                                                <div className='py-3'>
+                                                    <button
+                                                        onClick={(e) => {
+                                                            e.preventDefault();
+                                                        }}
+                                                        className='font-bold text-[1.2em] text-[#FF8300]'
+                                                    >
+                                                        ‒
+                                                    </button>
+                                                    <span className='px-2'>
+                                                        ədəd
+                                                    </span>
+                                                    <button
+                                                        onClick={(e) => {
+                                                            e.preventDefault();
+                                                        }}
+                                                        className='font-bold text-[1.2em] text-[#FF8300]'
+                                                    >
+                                                        ＋
+                                                    </button>
+                                                </div>
+                                                <button
+                                                    onClick={(e) => {
+                                                        e.preventDefault();
+                                                        setBasket([...basket, item])
+                                                        setSebetSay(sebetSay + 1)
+                                                    }}
+                                                    className='rounded-3xl  text-[.85em] bg-[#FF8300] text-white px-4 py-2 font-semibold mb-3'>
+                                                    Səbətə at
+                                                </button>
+                                            </Link>
+                                        </div>
+                                    );
+                                })
                                 : ""}
                         </div>
                     </div>
