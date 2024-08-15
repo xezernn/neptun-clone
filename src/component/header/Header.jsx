@@ -423,19 +423,16 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                 <p className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]">Ana Səhifə </p>
                             </li>
                             <li className="border-b cursor-pointer">
-                                <div name="hs-accordion-group">
-                                    <div className="hs-accordion hs-accordion-active:border-gray-200 bg-white rounded-xl" id="hs-active-bordered-heading-one">
-                                        <button className="hs-accordion-toggle p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-one">
+                                <div>
+                                    <div className=" bg-white rounded-xl">
+                                        <button className=" p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full">
                                             Haqqımızda
                                             <svg className="hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                                 <path d="M5 12h14"></path>
                                                 <path d="M12 5v14"></path>
                                             </svg>
-                                            <svg className="hs-accordion-active:block hidden size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                                <path d="M5 12h14"></path>
-                                            </svg>
                                         </button>
-                                        <div id="hs-basic-active-bordered-collapse-one" className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-active-bordered-heading-one">
+                                        <div className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-active-bordered-heading-one">
                                             <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Siyasətimiz</p>
                                             <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Yeniliklər</p>
                                         </div>
@@ -443,7 +440,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                 </div>
                             </li>
                             <li className="border-b cursor-pointer">
-                                <div className="hs-accordion-group">
+                                {/* <div className="hs-accordion-group">
                                     <div className="hs-accordion hs-accordion-active:border-gray-200 bg-white rounded-xl" id="hs-active-bordered-heading-one">
                                         <button className="hs-accordion-toggle p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-one">
                                             Aksiyalar
@@ -461,10 +458,10 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                             <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Elektron Kataloq</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </li>
                             <li className="border-b cursor-pointer">
-                                <div className="hs-accordion-group">
+                                {/* <div className="hs-accordion-group">
                                     <div className="hs-accordion hs-accordion-active:border-gray-200 bg-white rounded-xl" id="hs-active-bordered-heading-one">
                                         <button className="hs-accordion-toggle p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-one">
                                             Supermarketlər
@@ -484,10 +481,10 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                             <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Marketdə reklam</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </li>
                             <li className="border-b cursor-pointer">
-                                <div className="hs-accordion-group">
+                                {/* <div className="hs-accordion-group">
                                     <div className="hs-accordion hs-accordion-active:border-gray-200 bg-white rounded-xl" id="hs-active-bordered-heading-one">
                                         <button className="hs-accordion-toggle p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-one">
                                             Kariyera
@@ -505,7 +502,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                             <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">CV yerləşdirin</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </li>
                             <li className="border-b cursor-pointer">
                                 <p className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]">Əlaqə</p>
