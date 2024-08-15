@@ -2,7 +2,6 @@
 export default {
     content: [
         "./index.html", "./src/**/*.{js,ts,jsx,tsx}",
-        './node_modules/preline/preline.js',
     ],
     theme: {
         screens: {
@@ -18,9 +17,5 @@ export default {
             // => @media (min-width: 1536px) { ... }
         },
     },
-    plugins: [
-        require('tailwindcss'),
-        require('autoprefixer'),
-        require('preline/plugin') 
-      ]
+    plugins: []
 };
