@@ -10,13 +10,13 @@ import reklam3 from '../../assets/heftesonu-banner.png';
 function Main() {
     return (
         <main className='bg-slate-50'>
-            <div className='wrapper-md '>
-                <div className='flex gap-1'>
+            <div className='wrapper-md'>
+                <div className='flex gap-1 justify-between'>
                     <Aside />
-                    <div className='w-[76%] mt-0 lg:ml-0 lg:flex flex-col items-end '>
+                    <div className='lg:w-[70%] xl:w-[78%] mt-0 lg:ml-0 lg:flex flex-col items-end'>
                         <Slider />
-                        <div className='flex gap-3 justify-between py-3 w-[93%] '>
-                            <div className='w-[50%] lg:w-[18vw] xl:w-[20vw]'>
+                        <div className='flex gap-3 justify-between py-3 w-[100%] '>
+                            <div className='w-[100%] lg:w-[18vw] xl:w-[20vw]'>
                                 <div className='lg:w-[100%]'>
                                     <a href=''>
                                         <img
@@ -33,7 +33,7 @@ function Main() {
                                     <FaArrowRightLong />
                                 </div>
                             </div>
-                            <div className='w-[50%] lg:w-[18vw]  xl:w-[20vw]'>
+                            <div className='w-[100%] lg:w-[18vw]  xl:w-[20vw]'>
                             <div className='lg:w-[100%]'>
                                     <a href=''>
                                         <img
