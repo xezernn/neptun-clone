@@ -25,7 +25,7 @@ function Aside() {
                                             {name}
                                         </p>
                                         <GoChevronRight className='w-[13px]' />
-                                        <ul className='bg-[#fff] z-20 hidden dropdown-open border-l-[2px] border-l-[#FF8300] rounded-sm py-2 absolute left-[calc(100%+15px)] top-[calc(100%-40px)] w-[10vw]'>
+                                        <ul id="scrollbar" className='bg-[#fff]  z-20 h-[200px] overflow-auto hidden dropdown-open border-l-[2px] border-l-[#FF8300] rounded-sm py-2 absolute left-[calc(100%+13px)] top-[calc(100%-40px)] w-[10vw]'>
                                             {submenu.length != 0
                                                 ? submenu.map((elem, i) => {
                                                     return (
