@@ -254,11 +254,11 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                     <FiBarChart
                         onClick={() => setSideSt(!sideSt)}
                         className='rotate-90 h-[30px] w-[30px] lg:hidden' />
-                    <div className='desktop-nav  flex items-center gap-[30px] justify-between '>
+                    <div className='desktop-nav  lg:flex items-center gap-[30px] justify-between '>
                         <div
                             onClick={() => setCatSt(!catSt)}
                             id='category-button'
-                            className='hidden lg:inline cursor-pointer py-[12px] px-[10px] text-[#FF8300] bg-white w-[22vw]'
+                            className='hidden lg:inline cursor-pointer py-[12px] px-[10px] text-[#FF8300] bg-white w-[250px] xl:w-[360px]'
                         >
                             <HiMiniBars4 className='text-[1.4em] inline mr-[2vw] ' />
                             <span className='text-[.8em] font-bold '>

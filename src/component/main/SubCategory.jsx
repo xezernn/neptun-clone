@@ -22,16 +22,14 @@ function SubCategory({ catSt, product, setProduct }) {
 
         }
         );
-    }, [pageCount]);
+    }, [pageCount,category, subCategory,]);
     ;
-    
-
     
     const pagesArr = Array.from({ length: page.pages }, (_, i) => i + 1);
 
     return (
         <main className='bg-[#F2F2F2] '>
-            <div className='wrapper py-2 flex'>
+            <div className='wrapper flex'>
                 <div className='w-[22vw]'>{catSt ? <Aside /> : ""}</div>
                 <div>
                     <div className='text-gray-600 font-semibold py-5 px-3'>
