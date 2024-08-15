@@ -20,7 +20,7 @@ function Endirim() {
         <div className='flex justify-center items-start'>
             <Swiper
                 slidesPerView={1}
-                spaceBetween={0}
+                spaceBetween={10}
                 freeMode={true}
                 navigation={true}
                 modules={[FreeMode, Navigation]}

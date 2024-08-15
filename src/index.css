@@ -52,7 +52,7 @@
     background: #FF8300;
     border-radius: 10px;
 }
-.hesab:hover .hesab-open {  height: 150px;}
+.hesab:hover .hesab-open {  height: 180px;}
 #category-button {position: relative;}
 #category-button::before {
     content: '';
