@@ -21,7 +21,9 @@ function Sidebar({ sideSt, setSideSt }) {
                 catalog.map((item, i) => {
                     const { name, submenu, icon } = item;
                     return (
-                        <div key={i}
+                        <div 
+                        className="border-b"
+                        key={i}
                             onClick={() => setAccSt(accSt === i ? null : i)}
                             className={`${name == 'Kampaniyalar' ? 'bg-[#FF8300] text-white' : 'bg-white'} border-b`}
                         >
@@ -34,7 +36,7 @@ function Sidebar({ sideSt, setSideSt }) {
                                 <p className="text-sm">{name}</p>
                             </button>
                             {submenu && submenu.length > 0 && (
-                                <div className={`${accSt === i ? 'h-[100%]' : 'h-0'} overflow-hidden pl-[30px] py-[5px] transition-[3000ms]`}>
+                                <div className={`${accSt === i ? 'h-[100%] ' : 'h-0'} overflow-hidden pl-[30px] py-[5px] transition-[3000ms]`}>
                                     {submenu.map((elem, j) => (
                                         <Link
                                             onClick={() => setSideSt(false)}

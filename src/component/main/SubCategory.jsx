@@ -30,14 +30,14 @@ function SubCategory({ catSt, product, setProduct }) {
     return (
         <main className='bg-[#F2F2F2] '>
             <div className='wrapper flex'>
-                {catSt ? <Aside /> : ""}
+                {catSt ? <Aside catSt={catSt} /> : ""}
                 <div>
-                    <div className='text-gray-600 font-semibold py-5 px-3'>
+                    <div className={`text-gray-600 font-semibold py-5 px-3 ${!catSt ? '' :'text-center'} `}>
                         <Link to='/'>Ana səhifə /</Link>
                         <span className='capitalize'> {category} /</span>
                         <span className='capitalize'> {subCategory}</span>
                     </div>
-                    <div className='flex justify-between items-start'>
+                    <div className={`flex ${!catSt ? 'justify-end' : 'justify-center'}  items-start`}>
                         {catSt ? (
                             ""
                         ) : (
@@ -88,14 +88,14 @@ function SubCategory({ catSt, product, setProduct }) {
                                 </div>
                             </div>
                         )}
-                        <div className='flex flex-wrap lg:justify-end justify-center w-[100%]'>
+                        <div className={`flex flex-wrap w-[100%]  ${!catSt ? ' justify-center' : 'justify-end'}`}>
                             {product ? (
                                 product.map((item, i) => {
                                     const { img, title, price, id } = item;
                                     return (
                                         <div
                                             key={i}
-                                            className='sm:w-[49%] md:w-[30%]  xl:w-[calc(26%-1vw)] '
+                                            className={`sm:w-[49%] md:w-[30%] ${!catSt ? ' xl:w-[calc(26%-1vw)]' : ' xl:w-[calc(20%)]' }  `}
                                         >
                                             <Link
                                                 to={`/product/${id}`}
