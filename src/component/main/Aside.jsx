@@ -21,7 +21,7 @@ function Aside() {
                                 >
                                     <img src={icon} alt={name} />
                                     <div className='flex justify-between items-center w-full relative'>
-                                        <p className='font-semibold text-[10px]  lg:text-[.7em]'>
+                                        <p className='font-semibold text-[10px]  lg:text-[.65em]'>
                                             {name}
                                         </p>
                                         <GoChevronRight className='w-[13px]' />
