@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 .shadow {box-shadow: 0 10px 0 10px 20px #2f2e2e;}
-.about:hover .about-open {
-    height: 150%;
-    overflow: initial;
-    z-index: 999;
-}
 .range-input {
     appearance: none;
     width: 80%;
@@ -30,31 +25,20 @@
     border-radius: 50%;
     cursor: pointer;
 }
-.aksia:hover .aksia-open {
-    height: 200%;
+.aksia:hover .aksia-open {height: 100px;}
+.about:hover .about-open {height: 100px;}
+.supermarket:hover .supermarket-open{height: 200px;}
+.dropdown:hover .dropdown-open {height: 150px;}
+.karyera:hover .karyera-open {height: 100px;}
+.hover:hover .hover-menu{
     overflow: initial;
     z-index: 999;
+    padding: 10px;
 }
 .card:hover .endirim {
     background: var(--swiper-theme-color);
     color: #fff;
     transition: .4s;
-}
-.supermarket:hover .supermarket-open{
-    height: 400%;
-    overflow: initial;
-    z-index: 999;
-}
-
-.dropdown:hover .dropdown-open {
-    height: 150px;
-    overflow: initial;
-    z-index: 999;
-}
-.karyera:hover .karyera-open {
-    height: 350%;
-    overflow: initial;
-    z-index: 999;
 }
 #scrollbar::-webkit-scrollbar {
     width: 3px;
@@ -68,16 +52,7 @@
     background: #FF8300;
     border-radius: 10px;
 }
-.hesab-open {
-    transform: translateY(10%);
-    z-index: 999;
-    opacity: 0;
-    transition: .2s;
-}
-.hesab:hover .hesab-open {
-    transform: translateY(0);
-    opacity: 1;
-}
+.hesab:hover .hesab-open {  height: 150px;}
 #category-button {position: relative;}
 #category-button::before {
     content: '';
