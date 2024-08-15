@@ -350,10 +350,10 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                 Giriş
                             </span>
                         </div>
-                        <ul className="flex w-[100%]">
-                            <li className=' md:inline text-[.9em] dropdown relative'>
-                                Hesabım
-                                <FaChevronDown className='text-[.7em] inline mx-[2vw] cursor-pointer lg:mx-[1vw]' />
+                        <ul className="flex">
+                            <li className='flex items-center text-[.9em] dropdown w-full relative'>
+                              <span className="hidden md:inline">Hesabım</span>  
+                                <FaChevronDown className='text-[.7em] mx-[2vw] cursor-pointer lg:mx-[5px]' />
                                 <ul className='bg-[#fff] hidden dropdown-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[.9em] absolute left-0 top-[calc(100%+1px)] min-w-[10vw]'>
                                     <li className='hover:text-[#FF8300] m-1'>
                                         <a href=''>Hesabım</a>
