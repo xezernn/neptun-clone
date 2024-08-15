@@ -26,10 +26,12 @@ function Sidebar({ sideSt, setSideSt }) {
                 catalog.map((item, i) => {
                     const { name, submenu, icon } = item;
                     return (
-                        <div key={i}
+                        <div 
+                        className="border-b"
+                        key={i}
                             onClick={() => setAccSt(accSt === i ? null : i)}
                         >
-                            <button className='flex items-center gap-3 border-b p-2 '>
+                            <button className='flex items-center gap-3  p-2 '>
                                 <img
                                     src={icon}
                                     alt={name}
@@ -39,7 +41,7 @@ function Sidebar({ sideSt, setSideSt }) {
                             </button>
 
                             {submenu && submenu.length > 0 && (
-                                <div className={`${accSt === i ? 'h-[100%]' : 'h-0'} overflow-hidden pl-[30px] py-[5px] transition-[3000ms]`}>
+                                <div className={`${accSt === i ? 'h-[100%] ' : 'h-0'} overflow-hidden pl-[30px] py-[5px] transition-[3000ms]`}>
                                     {submenu.map((elem, j) => (
                                        <Link  
                                        onClick={() => setSideSt(false)}

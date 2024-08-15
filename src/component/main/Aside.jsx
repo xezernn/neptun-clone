@@ -3,12 +3,12 @@ import { GoChevronRight } from "react-icons/go";
 import { Link } from "react-router-dom";
 import { Cntx } from "../../context/DataContext";
 
-function Aside() {
+function Aside({catSt}) {
 
     const { catalog } = useContext(Cntx);
 
     return (
-        <aside className='pt-6 mb-5  bg-white shadow-lg lg:block  hidden  w-[250px]'>
+        <aside className={`pt-6 mb-5 bg-white shadow-lg h-[100%] lg:inline-block ${!catSt ? 'w-[250px]' : 'w-[90%]' } hidden  `}>
             <nav>
                 <ul className='flex flex-col '>
                     {catalog &&
