@@ -432,7 +432,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                                 <path d="M12 5v14"></path>
                                             </svg>
                                         </button>
-                                        <div className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-active-bordered-heading-one">
+                                        <div className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300">
                                             <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Siyasətimiz</p>
                                             <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Yeniliklər</p>
                                         </div>
