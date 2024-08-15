@@ -95,7 +95,7 @@ function SubCategory({ catSt, product, setProduct }) {
                                     return (
                                         <div
                                             key={i}
-                                            className={`sm:w-[49%] md:w-[30%] ${!catSt ? ' xl:w-[calc(26%-1vw)]' : ' xl:w-[calc(20%)]' }  `}
+                                            className='sm:w-[49%] md:w-[30%]  xl:w-[calc(26%-1vw)] '
                                         >
                                             <Link
                                                 to={`/product/${id}`}
