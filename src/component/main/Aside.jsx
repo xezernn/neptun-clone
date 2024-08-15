@@ -8,7 +8,7 @@ function Aside() {
     const { catalog } = useContext(Cntx);
 
     return (
-        <aside className='pt-6 mb-5 sm:w-60 bg-white shadow-lg lg:block lg:w-[100%] hidden xl:w-[17vw]'>
+        <aside className='pt-6 mb-5 sm:w-60 bg-white shadow-lg lg:block lg:w-[30vw] hidden px-[5px] xl:w-[17vw]'>
             <nav>
                 <ul className='flex flex-col space-y-1'>
                     {catalog &&
@@ -21,11 +21,11 @@ function Aside() {
                                 >
                                     <img src={icon} alt={name} />
                                     <div className='flex justify-between items-center w-full relative'>
-                                        <p className='font-semibold text-[10px] text-nowrap lg:text-[.8em]'>
+                                        <p className='font-semibold text-[10px] text-nowrap lg:text-[.7em]'>
                                             {name}
                                         </p>
                                         <GoChevronRight className='w-[13px]' />
-                                        <ul className='bg-[#fff] z-20 hidden dropdown-open border-l-[2px] border-l-[#FF8300] rounded-sm py-2 absolute left-[calc(100%+11px)]  top-[calc(100%-40px)] w-[10vw]'>
+                                        <ul className='bg-[#fff] z-20 hidden dropdown-open border-l-[2px] border-l-[#FF8300] rounded-sm py-2 absolute left-[calc(100%+5px)] xl:left-[100%]  top-[calc(100%-40px)] w-[10vw]'>
                                             {submenu.length != 0
                                                 ? submenu.map((elem, i) => {
                                                     return (

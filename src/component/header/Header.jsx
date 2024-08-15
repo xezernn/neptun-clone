@@ -25,7 +25,7 @@ function Header({catSt, setCatSt}) {
     }
 
     return (
-        <header className="overflow-x-hidden">
+        <header>
             <Sidebar sideSt={sideSt} setSideSt={setSideSt} />
             <div className='wrapper'>
                 <div className='flex my-[10px] justify-between items-center gap-[3vw] p-[10px] '>
@@ -344,13 +344,13 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                         </ul>
                     </div>
                     <div className='flex items-center gap-[4vw] lg:gap-[1vw]'>
-                        <div className='border-r-[1px] border-r-[#fff] px-[2vw]'>
+                        <div className='border-r-[1px] border-r-[#fff] px-[2vw] flex items-center '>
                             <FaLock className='inline text-[.8em] mx-[5px]' />
                             <span className='text-[.8em] hover:text-[#ccc] cursor-pointer'>
                                 Giriş
                             </span>
                         </div>
-                        <ul>
+                        <ul className="flex w-[100%]">
                             <li className=' md:inline text-[.9em] dropdown relative'>
                                 Hesabım
                                 <FaChevronDown className='text-[.7em] inline mx-[2vw] cursor-pointer lg:mx-[1vw]' />

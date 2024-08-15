@@ -23,8 +23,6 @@ function SubCategory({ catSt, product, setProduct }) {
         }
         );
     }, [pageCount]);
-    console.log(page)
-    console.log(pageCount);
     ;
     
 
