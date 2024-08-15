@@ -8,24 +8,24 @@ function Aside() {
     const { catalog } = useContext(Cntx);
 
     return (
-        <aside className='pt-6 mb-5 sm:w-60 bg-white shadow-lg lg:block lg:w-[30vw] hidden px-[5px] xl:w-[17vw]'>
+        <aside className='pt-6 mb-5 sm:w-60 bg-white shadow-lg lg:block lg:w-[30vw] hidden  xl:w-[30vw] 2xl:w-[17vw]'>
             <nav>
-                <ul className='flex flex-col space-y-1'>
+                <ul className='flex flex-col '>
                     {catalog &&
                         catalog.map((item, i) => {
                             const { name, submenu, icon } = item;
                             return (
                                 <li
                                     key={i}
-                                    className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e] relative dropdown'
+                                    className={`flex px-3 ${name === 'Kampaniyalar' ? 'bg-[#FF8300] text-white' : 'bg-white'} gap-3 items-center border-b py-2 hover:bg-[#ff84004e] relative dropdown`}
                                 >
                                     <img src={icon} alt={name} />
                                     <div className='flex justify-between items-center w-full relative'>
-                                        <p className='font-semibold text-[10px]  lg:text-[.65em]'>
+                                        <p className='font-bold text-[10px] lg:text-[.65em]'>
                                             {name}
                                         </p>
                                         <GoChevronRight className='w-[13px]' />
-                                        <ul className='bg-[#fff] z-20 hidden dropdown-open border-l-[2px] border-l-[#FF8300] rounded-sm py-2 absolute left-[calc(100%+5px)] xl:left-[100%]  top-[calc(100%-40px)] w-[10vw]'>
+                                        <ul id="scrollbar" className='bg-[#fff] h-[200px] overflow-auto z-20 hidden dropdown-open border-l-[2px] border-l-[#FF8300] rounded-sm py-2 absolute left-[calc(100%+13px)] top-[calc(100%-40px)] w-[10vw]'>
                                             {submenu.length != 0
                                                 ? submenu.map((elem, i) => {
                                                     return (
