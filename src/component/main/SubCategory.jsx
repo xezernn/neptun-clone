@@ -13,24 +13,24 @@ function SubCategory({ catSt, product, setProduct }) {
     const { basket, setBasket, setSebetSay, sebetSay } = useContext(Cntx);
     const { category, subCategory } = useParams();
     const [pageCount, setPageCount] = useState(1);
+    
    
     useEffect(() => {
         getAllProducts(category, subCategory, pageCount).then((res) =>
         {
             setProduct(res.data)
             setPage(res.meta)
-
         }
         );
     }, [pageCount,category, subCategory,]);
     ;
     
-    const pagesArr = Array.from({ length: page.pages }, (_, i) => i + 1);
+   
 
     return (
         <main className='bg-[#F2F2F2] '>
             <div className='wrapper flex'>
-                <div className='w-[22vw]'>{catSt ? <Aside /> : ""}</div>
+                {catSt ? <Aside /> : ""}
                 <div>
                     <div className='text-gray-600 font-semibold py-5 px-3'>
                         <Link to='/'>Ana səhifə /</Link>
@@ -41,7 +41,7 @@ function SubCategory({ catSt, product, setProduct }) {
                         {catSt ? (
                             ""
                         ) : (
-                            <div className='filter hidden bg-white rounded-[10px] lg:inline-block p-[1vw]  w-[30vw] text-[.8em] '>
+                            <div className='filter hidden bg-white rounded-[10px] lg:inline-block px-[5px] w-[23vw] text-[.8em] '>
                                 <h3 className='p-[10px] '>Filtr</h3>
                                 <div className='flex justify-between py-[20px] border-b '>
                                     <h5 className='px-[10px]'>
@@ -88,14 +88,14 @@ function SubCategory({ catSt, product, setProduct }) {
                                 </div>
                             </div>
                         )}
-                        <div className='flex flex-wrap lg:justify-end justify-center  w-[100%]'>
+                        <div className='flex flex-wrap lg:justify-end justify-center w-[100%]'>
                             {product ? (
                                 product.map((item, i) => {
                                     const { img, title, price, id } = item;
                                     return (
                                         <div
                                             key={i}
-                                            className='sm:w-[49%] md:w-[30%] lg:w-[23%] xl:w-[calc(20-1vw)] '
+                                            className='sm:w-[49%] md:w-[30%]  xl:w-[calc(26%-1vw)] '
                                         >
                                             <Link
                                                 to={`/product/${id}`}
@@ -130,6 +130,7 @@ function SubCategory({ catSt, product, setProduct }) {
                                                         onClick={(e) => {
                                                             e.preventDefault();
                                                             setCount(count + 1);
+                                                          
                                                         }}
                                                         className='font-bold text-[1.2em] text-[#FF8300]'
                                                     >
@@ -167,52 +168,21 @@ function SubCategory({ catSt, product, setProduct }) {
                 </div>
             </div>
             <div className='flex justify-center space-x-1 dark:text-gray-800 py-[20px]'>
-                <button
-                    title='previous'
-                    type='button'
-                    className='inline-flex items-center justify-center w-8 h-8 py-0 border rounded-md shadow-md dark:bg-gray-50 dark:border-gray-100'
-                >
-                    <svg
-                        viewBox='0 0 24 24'
-                        stroke='currentColor'
-                        strokeWidth='2'
-                        fill='none'
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        className='w-4'
-                    >
-                        <polyline points='15 18 9 12 15 6'></polyline>
-                    </svg>
-                </button>
-                {pagesArr.map((item, i) => (
+                {new Array(page.pages).fill("").map((item, i) => (
                     <button
-                        onClick={(e) => setPageCount(e.target.innerText)
+                        onClick={(e) => 
+                        {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                            setPageCount(e.target.innerText)
+                        }
                         }
                         key={i}
                         type='button'
-                        title='Page 1'
-                        className='inline-flex items-center justify-center w-8 h-8 text-sm font-semibold border rounded shadow-md dark:bg-gray-50 focus:bg-[#f1cba2] focus:border-1 focus:border-[#f69733] '
+                        className={` ${pageCount == i + 1  ? 'bg-[red]' : '' } inline-flex items-center justify-center w-8 h-8 text-sm font-semibold border rounded shadow-md dark:bg-gray-50 focus:bg-[#f1cba2] focus:border-1 focus:border-[#f69733] `}
                     >
                         {i + 1}
                     </button>
                 ))}
-                <button
-                    title='next'
-                    type='button'
-                    className='inline-flex items-center justify-center w-8 h-8 py-0 border rounded-md shadow-md dark:bg-gray-50 dark:border-gray-100'
-                >
-                    <svg
-                        viewBox='0 0 24 24'
-                        stroke='currentColor'
-                        strokeWidth='2'
-                        fill='none'
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        className='w-4'
-                    >
-                        <polyline points='9 18 15 12 9 6'></polyline>
-                    </svg>
-                </button>
             </div>
         </main>
     );

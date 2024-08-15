@@ -28,7 +28,7 @@ function Sidebar({ sideSt, setSideSt }) {
         <nav
             className={`${
                 sideSt ? "translate-x-0" : "translate-x-[-120%]"
-            } p-[2vw] fixed bg-white z-[1000] h-[calc(100%-150px)] w-[70vw] md:hidden bottom-0 transition overflow-auto `}
+            } p-[2vw] fixed bg-white z-[1000] h-[calc(100%-150px)] w-[70vw] lg:hidden bottom-0 transition overflow-auto `}
         >
             {catalog &&
                 catalog.map((item, i) => {

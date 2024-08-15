@@ -11,6 +11,7 @@ function App() {
     
     const [catSt, setCatSt] = useState(false)
     const [product, setProduct] = useState();
+    
     const { pathname } = useLocation();
 
     useEffect(() => {
