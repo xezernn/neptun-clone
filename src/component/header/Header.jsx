@@ -17,10 +17,13 @@ function Header({ catSt, setCatSt }) {
     const [sideSt, setSideSt] = useState(false)
     const [isOpen, setIsOpen] = useState(false);
     const { sebetSay } = useContext(Cntx)
-    const [status, setStatus] = useState(false)
+    const [activeAccordion, setActiveAccordion] = useState(null);
 
+    function toggleAccordion(index) {
+        setActiveAccordion(activeAccordion === index ? null : index);
+    }
 
-    function toggleSideBar() {
+    function toggleSideBar() { 
         setIsOpen(!isOpen)
     }
 
@@ -390,7 +393,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                     </button>
                 </div>
             </nav>
-            <div className="sidebar">
+            <div className="sidebar" id="scrollbar">
                 <div
                     id="drawer-navigation"
                     className={`fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform bg-white ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
@@ -403,19 +406,6 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                         aria-controls="drawer-navigation"
                         className="text-black bg-transparent rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center"
                     >
-                        <svg
-                            aria-hidden="true"
-                            className="w-5 h-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                fillRule="evenodd"
-                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                clipRule="evenodd"
-                            ></path>
-                        </svg>
                     </button>
                     <div className="py-4 overflow-y-auto">
                         <ul className="space-y-2 py-8">
@@ -423,86 +413,69 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                 <p className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]">Ana Səhifə </p>
                             </li>
                             <li className="border-b cursor-pointer">
-                                <div>
-                                    <div className=" bg-white rounded-xl">
-                                        <button onClick={() => {setStatus(!status)}} className=" p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full">
-                                            Haqqımızda
-                                            <svg className="hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                                <path d="M5 12h14"></path>
-                                                <path d="M12 5v14"></path>
-                                            </svg>
-                                        </button>
-                                        <div className={`${status ? 'block' : 'hidden'} w-full overflow-hidden transition duration-300`}>
-                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Siyasətimiz</p>
-                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Yeniliklər</p>
-                                        </div>
+                                <div className=" bg-white rounded-xl">
+                                    <button onClick={() => toggleAccordion(0)} className=" p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full">
+                                        Haqqımızda
+                                        <svg className="hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M5 12h14"></path>
+                                            <path d="M12 5v14"></path>
+                                        </svg>
+                                    </button>
+                                    <div className={`${activeAccordion === 0 ? 'block' : 'hidden'} w-full overflow-hidden transition duration-300`}>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Siyasətimiz</p>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Yeniliklər</p>
                                     </div>
                                 </div>
                             </li>
                             <li className="border-b cursor-pointer">
-                                <div>
-                                    <div className="bg-white rounded-xl">
-                                        <button className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-one">
-                                            Aksiyalar
-                                            <svg className="hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                                <path d="M5 12h14"></path>
-                                                <path d="M12 5v14"></path>
-                                            </svg>
-                                            <svg className="hs-accordion-active:block hidden size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                                <path d="M5 12h14"></path>
-                                            </svg>
-                                        </button>
-                                        <div id="hs-basic-active-bordered-collapse-one" className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-active-bordered-heading-one">
-                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Kampaniyalar</p>
-                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Neptun Bonus Kart</p>
-                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Elektron Kataloq</p>
-                                        </div>
+                                <div className="bg-white rounded-xl">
+                                    <button onClick={() => toggleAccordion(1)} className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full">
+                                        Aksiyalar
+                                        <svg className="hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M5 12h14"></path>
+                                            <path d="M12 5v14"></path>
+                                        </svg>
+                                    </button>
+                                    <div className={`${activeAccordion === 1 ? 'block' : 'hidden'} w-full overflow-hidden transition-[height] duration-300`}>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Kampaniyalar</p>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Neptun Bonus Kart</p>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Elektron Kataloq</p>
                                     </div>
                                 </div>
                             </li>
                             <li className="border-b cursor-pointer">
-                                {/* <div className="hs-accordion-group">
-                                    <div className="hs-accordion hs-accordion-active:border-gray-200 bg-white rounded-xl" id="hs-active-bordered-heading-one">
-                                        <button className="hs-accordion-toggle p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-one">
-                                            Supermarketlər
-                                            <svg className="hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                                <path d="M5 12h14"></path>
-                                                <path d="M12 5v14"></path>
-                                            </svg>
-                                            <svg className="hs-accordion-active:block hidden size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                                <path d="M5 12h14"></path>
-                                            </svg>
-                                        </button>
-                                        <div id="hs-basic-active-bordered-collapse-one" className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-active-bordered-heading-one">
-                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Mağazalarımız</p>
-                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">İrad və təkliflər</p>
-                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Partnyorluq</p>
-                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Tərəfdaşlar</p>
-                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Marketdə reklam</p>
-                                        </div>
+                                <div className="bg-white rounded-xl">
+                                    <button onClick={() => toggleAccordion(2)} className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full">
+                                        Supermarketlər
+                                        <svg className="hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M5 12h14"></path>
+                                            <path d="M12 5v14"></path>
+                                        </svg>
+                                    </button>
+                                    <div className={`${activeAccordion === 2 ? 'block' : 'hidden'} w-full overflow-hidden transition-[height] duration-300`}>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Mağazalarımız</p>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">İrad və təkliflər</p>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Alıcıların Nəzərinə</p>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Partnyorluq</p>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Tərəfdaşlar</p>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Marketdə Reklam</p>
                                     </div>
-                                </div> */}
+                                </div>
                             </li>
                             <li className="border-b cursor-pointer">
-                                {/* <div className="hs-accordion-group">
-                                    <div className="hs-accordion hs-accordion-active:border-gray-200 bg-white rounded-xl" id="hs-active-bordered-heading-one">
-                                        <button className="hs-accordion-toggle p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-one">
-                                            Kariyera
-                                            <svg className="hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                                <path d="M5 12h14"></path>
-                                                <path d="M12 5v14"></path>
-                                            </svg>
-                                            <svg className="hs-accordion-active:block hidden size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                                <path d="M5 12h14"></path>
-                                            </svg>
-                                        </button>
-                                        <div id="hs-basic-active-bordered-collapse-one" className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-active-bordered-heading-one">
-                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">İşə qəbul proseduru</p>
-                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Vakansiyalar</p>
-                                            <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">CV yerləşdirin</p>
-                                        </div>
+                                <div className="bg-white rounded-xl">
+                                    <button onClick={() => toggleAccordion(3)} className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full">
+                                        Karyera
+                                        <svg className="hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M5 12h14"></path>
+                                            <path d="M12 5v14"></path>
+                                        </svg>
+                                    </button>
+                                    <div className={`${activeAccordion === 3 ? 'block' : 'hidden'} w-full overflow-hidden transition-[height] duration-300`}>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">İşə qəbul proseduru</p>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Vakansiyalar</p>
                                     </div>
-                                </div> */}
+                                </div>
                             </li>
                             <li className="border-b cursor-pointer">
                                 <p className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]">Əlaqə</p>
