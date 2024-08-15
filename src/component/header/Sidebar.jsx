@@ -22,8 +22,7 @@ function Sidebar({ sideSt, setSideSt }) {
                     const { name, submenu, icon } = item;
                     return (
                         <div 
-                        className="border-b"
-                        key={i}
+                            key={i}
                             onClick={() => setAccSt(accSt === i ? null : i)}
                             className={`${name == 'Kampaniyalar' ? 'bg-[#FF8300] text-white' : 'bg-white'} border-b`}
                         >
