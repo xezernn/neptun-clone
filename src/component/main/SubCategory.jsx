@@ -88,7 +88,7 @@ function SubCategory({ catSt, product, setProduct }) {
                                 </div>
                             </div>
                         )}
-                        <div className={`flex flex-wrap w-[100%]  ${!catSt ? ' justify-center' : 'justify-end'}`}>
+                        <div className={`flex flex-wrap gap-[5px] w-[100%]  ${!catSt ? ' justify-center' : 'justify-end'}`}>
                             {product ? (
                                 product.map((item, i) => {
                                     const { img, title, price, id } = item;
