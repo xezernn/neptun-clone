@@ -1,17 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.shadow {
-    box-shadow: 0 10px 0 10px 20px #2f2e2e;
-}
-
+.shadow {box-shadow: 0 10px 0 10px 20px #2f2e2e;}
 .about:hover .about-open {
-    display: initial;
+    height: 150%;
+    overflow: initial;
     z-index: 999;
-
 }
-
 .range-input {
     appearance: none;
     width: 80%;
@@ -19,50 +14,46 @@
     border-radius: 5px;
     outline: none;
 }
-
 .range-input::-webkit-slider-runnable-track {
-
     width: 80%;
     height: 2px;
     cursor: pointer;
     background: var(--swiper-theme-color);
     border-radius: 5px;
 }
-
 .range-input::-webkit-slider-thumb {
     margin: -4px 0;
     appearance: none;
     width: 10px;
     height: 10px;
     background: var(--swiper-theme-color);
-    /* Thumb üçün rəng */
     border-radius: 50%;
     cursor: pointer;
 }
-
 .aksia:hover .aksia-open {
-    display: initial;
+    height: 200%;
+    overflow: initial;
     z-index: 999;
-
 }
-
-
 .card:hover .endirim {
     background: var(--swiper-theme-color);
     color: #fff;
     transition: .4s;
 }
-
-.supermarket:hover .supermarket-open,
-.dropdown:hover .dropdown-open {
-    display: initial;
-
+.supermarket:hover .supermarket-open{
+    height: 400%;
+    overflow: initial;
     z-index: 999;
-
 }
 
+.dropdown:hover .dropdown-open {
+    height: 150px;
+    overflow: initial;
+    z-index: 999;
+}
 .karyera:hover .karyera-open {
-    display: initial;
+    height: 350%;
+    overflow: initial;
     z-index: 999;
 }
 #scrollbar::-webkit-scrollbar {
@@ -77,23 +68,17 @@
     background: #FF8300;
     border-radius: 10px;
 }
-
 .hesab-open {
     transform: translateY(10%);
     z-index: 999;
     opacity: 0;
     transition: .2s;
 }
-
 .hesab:hover .hesab-open {
     transform: translateY(0);
     opacity: 1;
 }
-
-#category-button {
-    position: relative;
-}
-
+#category-button {position: relative;}
 #category-button::before {
     content: '';
     display: block;
@@ -105,23 +90,17 @@
     border-radius: 10px 10px 0 0;
     left: 0;
 }
-
 .swiper-pagination-bullet-active {
     background-color: #FF8300 !important;
     width: 20px !important;
     border-radius: 5px !important;
     transition: .8s;
 }
-
 :root {
     --swiper-theme-color: #FF8300 !important;
     --swiper-navigation-size: 20px !important;
 }
-
-#amiroff-img {
-    filter: brightness(0) invert(1)
-}
-
+#amiroff-img {   filter: brightness(0) invert(1)}
 .swiper-button-prev,
 .swiper-button-next,
 .swiper-button-disabled {
@@ -129,39 +108,23 @@
     border-radius: 50%;
     padding: 20px;
 }
-
 :root {
     --swiper-theme-color: #FF8300 !important;
     --swiper-navigation-size: 20px !important;
 }
-
-
 @media only screen and (min-width: 768px) {
     .wrapper-md {
         width: 80%;
         margin: auto;
     }
 }
-
 @media only screen and (min-width: 500px) {
     .wrapper {
         width: 80%;
         margin: auto;
     }
-
-    #footer-logo {
-        transition: .5s;
-    }
-
-    footer:hover #footer-logo {
-        left: 81%;
-    }
-
-    .footer-list ul {
-        list-style: ">";
-    }
-
-    .footer-list ul li {
-        padding: 0 5px;
-    }
+    #footer-logo {   transition: .5s;}
+    footer:hover #footer-logo {left: 81%;}
+    .footer-list ul {list-style: ">"}
+    .footer-list ul li {padding: 0 5px;}
 }

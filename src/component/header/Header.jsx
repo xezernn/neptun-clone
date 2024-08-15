@@ -276,13 +276,13 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                             <li className='text-[.8em] font-medium relative about py-3 block'>
                                 <Link to='haqqimizda'>Haqqımızda</Link>
                                 <TiArrowSortedDown className='inline' />
-                                <ul className='bg-[#fff] z-10 hidden border-t-[2px] about-open border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black text-[1em] absolute left-0 top-[calc(100%+0px)] w-[12vw]'>
-                                    <li>
+                                <ul className='bg-[#fff] z-10 h-0 hover:py-[15px] px-[10px] transition-[1s] overflow-hidden border-t-[2px] about-open border-t-[#FF8300]  rounded-b-[10px] shadow text-black text-[1em] absolute left-0 top-[calc(100%+0px)] w-[12vw]'>
+                                    <li className="py-[3px]">
                                         <Link to='siyasetimiz'>
                                             Siyasətimiz
                                         </Link>
                                     </li>
-                                    <li>
+                                    <li className="py-[3px]">
                                         <Link to=''>Yeniliklər</Link>
                                     </li>
                                 </ul>
@@ -290,14 +290,14 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                             <li className='text-[.8em] font-medium aksia py-3 relative'>
                                 <a href=''>Aksiyalar</a>
                                 <TiArrowSortedDown className='inline' />
-                                <ul className='bg-[#fff] z-10 hidden border-t-[2px] aksia-open border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+0px)] w-[12vw]'>
-                                    <li>
+                                <ul className='bg-[#fff] z-10 h-0 overflow-hidden transition-all border-t-[2px] aksia-open border-t-[#FF8300] px-[15px] hover:py-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+0px)] w-[12vw]'>
+                                    <li className="py-[3px]">
                                         <a href=''>Kampaniyalar</a>
                                     </li>
-                                    <li>
+                                    <li className="py-[3px]">
                                         <a href=''>Neptun Bonus Kart</a>
                                     </li>
-                                    <li>
+                                    <li className="py-[3px]">
                                         <a href=''>Elektron Kataloq</a>
                                     </li>
                                 </ul>
@@ -305,23 +305,23 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                             <li className='text-[.8em] font-medium relative supermarket py-3'>
                                 <a href=''>Supermarketlər</a>
                                 <TiArrowSortedDown className='inline' />
-                                <ul className='bg-[#fff] z-10 hidden supermarket-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+0px)] w-[12vw]'>
-                                    <li>
+                                <ul className='bg-[#fff] z-10 h-0 overflow-hidden hover:py-[15px] supermarket-open border-t-[2px]  transition-all border-t-[#FF8300] px-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+0px)] w-[12vw]'>
+                                    <li className="py-[3px]">
                                         <a href=''>Mağazalarımız</a>
                                     </li>
-                                    <li>
+                                    <li className="py-[3px]">
                                         <a href=''>İrad və təkliflər</a>
                                     </li>
-                                    <li>
+                                    <li className="py-[3px]">
                                         <a href=''>Alıcıların Nəzərinə</a>
                                     </li>
-                                    <li>
+                                    <li className="py-[3px]">
                                         <a href=''>Partnyorluq</a>
                                     </li>
-                                    <li>
+                                    <li className="py-[3px]">
                                         <a href=''>Tərəfdaşlar</a>
                                     </li>
-                                    <li>
+                                    <li className="py-[3px]">
                                         <a href=''>Marketdə Reklam</a>
                                     </li>
                                 </ul>
@@ -329,14 +329,14 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                             <li className='text-[.8em] font-medium relative karyera py-3'>
                                 <a href=''>Kariyera</a>
                                 <TiArrowSortedDown className='inline' />
-                                <ul className='bg-[#fff] z-10 hidden karyera-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+0px)] w-[12vw]'>
-                                    <li>
+                                <ul className='bg-[#fff] z-10 h-0 overflow-hidden transition-all karyera-open border-t-[2px]  border-t-[#FF8300] hover:py-[10px] px-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+0px)] w-[12vw]'>
+                                    <li className="py-[10px]">
                                         <a href=''>İşə qəbul proseduru</a>
                                     </li>
-                                    <li>
+                                    <li className="py-[10px]">
                                         <a href=''>Vakansiyalar</a>
                                     </li>
-                                    <li>
+                                    <li className="py-[10px]">
                                         <a href=''>CV yerləşdirin</a>
                                     </li>
                                 </ul>
@@ -357,7 +357,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                             <li className='flex items-center text-[.9em] dropdown w-full relative'>
                                 <span className="hidden md:inline">Hesabım</span>
                                 <FaChevronDown className='text-[.7em] mx-[2vw] cursor-pointer lg:mx-[5px]' />
-                                <ul className='bg-[#fff] hidden dropdown-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[.9em] absolute left-0 top-[calc(100%+1px)] min-w-[10vw]'>
+                                <ul className='bg-[#fff] h-0 overflow-hidden dropdown-open border-t-[2px]  border-t-[#FF8300] transition-all px-[15px] rounded-b-[10px] shadow text-black  text-[.9em] absolute left-0 top-[calc(100%+1px)] min-w-[10vw]'>
                                     <li className='hover:text-[#FF8300] m-1'>
                                         <a href=''>Hesabım</a>
                                     </li>
