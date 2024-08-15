@@ -4,7 +4,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { FreeMode, Navigation } from "swiper/modules";
 import { GoHeart } from "react-icons/go";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Cntx } from "../../context/DataContext";
 import { Link } from "react-router-dom";
 import { spiral } from "ldrs";
@@ -12,6 +12,7 @@ spiral.register();
 
 function CardsSlider() {
     const { data, basket, setBasket, setSebetSay, sebetSay } = useContext(Cntx);
+    const [count, setCount] = useState(1)
 
     return (
         <div className='flex justify-center items-start'>
@@ -62,14 +63,16 @@ function CardsSlider() {
                                         <button
                                             onClick={(e) => {
                                                 e.preventDefault();
+                                                setCount(count - 1)
                                             }}
                                             className='font-bold text-[1.2em] text-[#FF8300]'>
                                             ‒
                                         </button>
-                                        <span className='px-2'>ədəd</span>
+                                        <span className='px-2'>{count} ədəd</span>
                                         <button
                                             onClick={(e) => {
                                                 e.preventDefault();
+                                                setCount(count + 1)
                                             }}
                                             className='font-bold text-[1.2em] text-[#FF8300]'>
                                             ＋
