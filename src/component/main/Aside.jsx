@@ -17,28 +17,28 @@ function Aside() {
                             return (
                                 <li
                                     key={i}
-                                    className='flex px-3 gap-3 items-center border-b py-2 hover:bg-[#ff84004e] relative dropdown'
+                                    className={`${name == 'Kampaniyalar' ? 'bg-[#FF8300] text-[#fff]' : 'bg-[#fff]'} flex px-3 gap-3 items-center border-b py-[7px] hover:bg-[#ff84004e] relative dropdown`}
                                 >
                                     <img src={icon} alt={name} />
                                     <div className='flex justify-between items-center w-full relative'>
-                                        <p className='font-semibold text-[10px] text-nowrap lg:text-[.7em]'>
+                                        <p className='font-bold text-[10px] lg:text-[.65em]'>
                                             {name}
                                         </p>
                                         <GoChevronRight className='w-[13px]' />
-                                        <ul className='bg-[#fff] z-20 hidden dropdown-open border-l-[2px] border-l-[#FF8300] rounded-sm py-2 absolute left-[calc(100%+5px)] xl:left-[100%]  top-[calc(100%-40px)] w-[10vw]'>
+                                        <ul className='bg-[#fff] z-20 hidden dropdown-open border-l-[2px] border-l-[#FF8300] rounded-sm py-2 absolute left-[calc(100%+15px)] top-[calc(100%-40px)] w-[10vw]'>
                                             {submenu.length != 0
                                                 ? submenu.map((elem, i) => {
                                                     return (
 
-                                                      <Link to={`/${elem.slug}`} key={i}>
-                                                          <li
-                                                              key={i}
-                                                              className='text-[.8em] py-2 px-3 hover:bg-[#ff84001c]'
-                                                          >
-                                                                  {elem.name}
-                                                              
-                                                          </li>
-                                                      </Link>
+                                                        <Link to={`/${elem.slug}`} key={i}>
+                                                            <li
+                                                                key={i}
+                                                                className='text-[.8em] py-2 px-3 hover:bg-[#ff84001c]'
+                                                            >
+                                                                {elem.name}
+
+                                                            </li>
+                                                        </Link>
                                                     );
                                                 })
                                                 : null}

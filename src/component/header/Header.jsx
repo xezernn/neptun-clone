@@ -12,13 +12,13 @@ import { Link } from "react-router-dom";
 import { Cntx } from "../../context/DataContext";
 import azneptun from '../../assets/az-neptun.png';
 
-function Header({catSt, setCatSt}) {
+function Header({ catSt, setCatSt }) {
 
     const [sideSt, setSideSt] = useState(false)
     const [isOpen, setIsOpen] = useState(false);
     const { sebetSay } = useContext(Cntx)
-   
-    
+
+
 
     function toggleSideBar() {
         setIsOpen(!isOpen)
@@ -256,7 +256,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                         className='rotate-90 h-[30px] w-[30px] lg:hidden' />
                     <div className='desktop-nav  flex items-center gap-[30px] justify-between '>
                         <div
-                            onClick={() => setCatSt(!catSt) }
+                            onClick={() => setCatSt(!catSt)}
                             id='category-button'
                             className='hidden lg:inline cursor-pointer py-[12px] px-[10px] text-[#FF8300] bg-white w-[22vw]'
                         >
@@ -352,7 +352,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                         </div>
                         <ul className="flex">
                             <li className='flex items-center text-[.9em] dropdown w-full relative'>
-                              <span className="hidden md:inline">Hesabım</span>  
+                                <span className="hidden md:inline">Hesabım</span>
                                 <FaChevronDown className='text-[.7em] mx-[2vw] cursor-pointer lg:mx-[5px]' />
                                 <ul className='bg-[#fff] hidden dropdown-open border-t-[2px]  border-t-[#FF8300] p-[15px] rounded-b-[10px] shadow text-black  text-[.9em] absolute left-0 top-[calc(100%+1px)] min-w-[10vw]'>
                                     <li className='hover:text-[#FF8300] m-1'>
