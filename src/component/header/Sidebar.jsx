@@ -1,29 +1,21 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { Cntx } from "../../context/DataContext";
 
 function Sidebar({ sideSt, setSideSt }) {
 
     const { catalog } = useContext(Cntx);
-    let acc = document.getElementsByClassName("accordion");
-
-    for (let i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "block";
-            }
-        });
-    }
+    const [accSt, setAccSt] = useState(null)
+   
+    
+    
 
     sideSt
         ? ((document.documentElement.style.overflow = "hidden"),
           (document.body.style.overflow = "hidden"))
         : ((document.documentElement.style.overflow = ""),
           (document.body.style.overflow = ""));
+
     return (
         <nav
             className={`${
@@ -32,10 +24,12 @@ function Sidebar({ sideSt, setSideSt }) {
         >
             {catalog &&
                 catalog.map((item, i) => {
-                    const { name, submenu, icon, slug } = item;
+                    const { name, submenu, icon } = item;
                     return (
-                        <div key={i}>
-                            <button className='flex items-center gap-3 border-b p-2 accordion'>
+                        <div key={i}
+                            onClick={() => setAccSt(accSt === i ? null : i)}
+                        >
+                            <button className='flex items-center gap-3 border-b p-2 '>
                                 <img
                                     src={icon}
                                     alt={name}
@@ -45,12 +39,12 @@ function Sidebar({ sideSt, setSideSt }) {
                             </button>
 
                             {submenu && submenu.length > 0 && (
-                                <div className='panel'>
+                                <div className={`${accSt === i ? 'h-[100%]' : 'h-0'} overflow-hidden pl-[30px] py-[5px] transition-[3000ms]`}>
                                     {submenu.map((elem, j) => (
                                        <Link  
                                        onClick={() => setSideSt(false)}
                                        key={j} to={`/${elem.slug}`}>
-                                       <p>{elem.name}</p>
+                                       <p className="py-[3px]">{elem.name}</p>
                                        </Link> 
                                     ))}
                                 </div>
