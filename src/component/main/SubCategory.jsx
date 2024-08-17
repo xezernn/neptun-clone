@@ -27,7 +27,7 @@ function SubCategory({ catSt, product, setProduct }) {
             setBasket(
                 basket.map((basketItem) =>
                     basketItem.id === item.id
-                        ? { ...basketItem, count: basketItem.count + item.count } : basketItem 
+                        ? { ...basketItem, count: basketItem.count + item.count } : basketItem
                 )
             )
         } else setBasket([...basket, item])
@@ -45,7 +45,9 @@ function SubCategory({ catSt, product, setProduct }) {
     return (
         <main className='bg-[#F2F2F2] '>
             <div className='wrapper flex'>
-                {catSt ? <Aside catSt={catSt} /> : ""}
+                <div>
+                    {catSt ? <Aside catSt={catSt} /> : ""}
+                </div>
                 <div>
                     <div className={`text-gray-600 font-semibold py-5 px-3 ${!catSt ? '' : 'text-center'} `}>
                         <Link to='/'>Ana səhifə /</Link>
@@ -103,7 +105,7 @@ function SubCategory({ catSt, product, setProduct }) {
                                 </div>
                             </div>
                         )}
-                        <div className='flex flex-wrap gap-[5px] w-[100%] justify-start'>
+                        <div className='flex flex-wrap gap-[5px] w-[100%] justify-end'>
                             {product ? (
                                 product.map((item, i) => {
                                     const { img, title, price, id, count } = item;
