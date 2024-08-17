@@ -6,10 +6,8 @@ import { useContext } from "react";
 import { Cntx } from "../../context/DataContext";
 
 function CardInfo({ product}) {
-
-    const { setBasket, basket, setSebetSay, sebetSay } = useContext(Cntx)
+    const { setSebetSay, sebetSay } = useContext(Cntx)
     const { id } = useParams()
-
     const item = product.find(item => item.id == id)
 
     return (
@@ -45,6 +43,7 @@ function CardInfo({ product}) {
                         <button
                             onClick={(e) => {
                                 e.preventDefault();
+                                updateCount(id, -1)
                             }}
                             className='font-bold text-[1.2em] text-[#FF8300]'>
                             ‒
@@ -53,6 +52,7 @@ function CardInfo({ product}) {
                         <button
                             onClick={(e) => {
                                 e.preventDefault();
+                                updateCount(id, 1)
                             }}
                             className='font-bold text-[1.2em] text-[#FF8300]'>
                             ＋
@@ -62,7 +62,7 @@ function CardInfo({ product}) {
                         <button
                             onClick={(e) => {
                                 e.preventDefault();
-                                setBasket([...basket, item])
+                                addToBasket(item.id, item.title, item.price, item.img)
                                 setSebetSay(sebetSay + 1)
                             }}
                             className='rounded-3xl bg-[#FF8300] text-white px-5 py-2  mb-3'>

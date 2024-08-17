@@ -19,20 +19,6 @@ function DataContext({ children }) {
             .then((res) => setCatalog(res.data));
     }, []);
 
-    // andirlar
-    // function addToBasket(id, quant) {
-    //     let elem = basket.findIndex(item => item.id === id )
-    //     if ( elem !== -1 ) updateBasket(elem, basket[elem].quant + quant)
-    //     else setBasket( [...basket, {id}] )
-    // }
-
-    // function updateBasket(ind, quant) {
-    //     setBasket(basket.map((item, i) => 
-    //         i === ind ? {id: item.id, size: item.size, quant: quant} : item )
-    //     )
-    // }
-
-
     return (
         <Cntx.Provider value={{ data, catalog, setCatalog, basket, setBasket, sebetSay, setSebetSay }}>
             {children}

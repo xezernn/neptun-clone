@@ -11,8 +11,7 @@ import { spiral } from "ldrs";
 spiral.register();
 
 function CardsSlider() {
-    const { data, basket, setBasket, setSebetSay, sebetSay } = useContext(Cntx);
-    const [count, setCount] = useState(1)
+    const { data, addToBasket, setSebetSay, sebetSay } = useContext(Cntx);
 
     return (
         <div className='flex justify-center items-start'>
@@ -63,16 +62,14 @@ function CardsSlider() {
                                         <button
                                             onClick={(e) => {
                                                 e.preventDefault();
-                                                setCount(count - 1)
                                             }}
                                             className='font-bold text-[1.2em] text-[#FF8300]'>
                                             ‒
                                         </button>
-                                        <span className='px-2'>{count} ədəd</span>
+                                        <span className='px-2'> ədəd</span>
                                         <button
                                             onClick={(e) => {
                                                 e.preventDefault();
-                                                setCount(count + 1)
                                             }}
                                             className='font-bold text-[1.2em] text-[#FF8300]'>
                                             ＋
@@ -81,7 +78,7 @@ function CardsSlider() {
                                     <button onClick={(e) => {
                                                 e.preventDefault();
                                                 setSebetSay(sebetSay + 1)
-                                                setBasket([...basket, item])
+                                                addToBasket(item)
                                             }} className='rounded-3xl  text-[.85em] bg-[#FF8300] text-white px-4 py-2 font-semibold mb-3'>
                                         Səbətə at
                                     </button>

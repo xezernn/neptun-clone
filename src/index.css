@@ -28,7 +28,7 @@
 .aksia:hover .aksia-open {height: 100px;}
 .about:hover .about-open {height: 100px;}
 .supermarket:hover .supermarket-open{height: 200px;}
-.dropdown:hover .dropdown-open {height: 150px;}
+.dropdown:hover .dropdown-open {display: initial;}
 .karyera:hover .karyera-open {height: 100px;}
 .hover:hover .hover-menu{
     overflow: initial;

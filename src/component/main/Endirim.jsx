@@ -11,7 +11,7 @@ import { spiral } from "ldrs";
 spiral.register();
 
 function Endirim() {
-    const { data, basket, setBasket,  setSebetSay , sebetSay } = useContext(Cntx);
+    const { data, addToBasket,  setSebetSay , sebetSay } = useContext(Cntx);
     function rand(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
@@ -95,7 +95,7 @@ function Endirim() {
                                         onClick={(e) => {
                                             e.preventDefault();
                                             setSebetSay(sebetSay + 1)
-                                            setBasket([...basket, item])
+                                            addToBasket(item)
                                         }}
                                         className='rounded-3xl bg-[#FF8300] text-[.85em] text-white px-4 py-2 font-semibold mb-3'>
                                         Səbətə at
