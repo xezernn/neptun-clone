@@ -21,6 +21,12 @@ function SubCategory({ catSt, product, setProduct }) {
         );
     }, [pageCount, category, subCategory,]);
 
+    // useEffect(() => {
+    //     product && product.forEach(item => {
+    //         updateCount(item.id)
+    //     })
+    // }, [product])
+    
     function addToBasket(item) {
         const mehsul = basket.find(item => item.id == item.id)
         if (mehsul) {
@@ -33,14 +39,12 @@ function SubCategory({ catSt, product, setProduct }) {
         } else setBasket([...basket, item])
     }
 
-    //baxarsan buna limonbas
-
-    // function updateCount(id, increment) {
-    //     setProduct((prevProduct) => prevProduct.map((item) => 
-    //         item.id === id ? { ...item, count: item.count + increment || 1 } : item
-    //         )
-    //     )
-    // }
+    function updateCount(id, increment) {
+        setProduct((prevProduct) => prevProduct.map((item) =>
+            item.id === id ? { ...item, count: item.count + increment || 1 } : { ...item, count: 1 }
+        )
+        )
+    }
 
     return (
         <main className='bg-[#F2F2F2] '>
