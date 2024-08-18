@@ -7,58 +7,70 @@ import Aside from "./Aside";
 import { Cntx } from "../../context/DataContext";
 
 function SubCategory({ catSt, product, setProduct }) {
-
     const [page, setPage] = useState(1);
     const { basket, setBasket, setSebetSay, sebetSay } = useContext(Cntx);
     const { category, subCategory } = useParams();
     const [pageCount, setPageCount] = useState(1);
+    const [data, setData] = useState([]);
 
     useEffect(() => {
         getAllProducts(category, subCategory, pageCount).then((res) => {
-            setProduct(res.data)
-            setPage(res.meta)
-        }
-        );
-    }, [pageCount, category, subCategory,]);
+            setProduct(res.data.map((item) => ({ ...item, count: 1 })));
+            setPage(res.meta);
+        });
+    }, [pageCount, category, subCategory]);
 
-    // useEffect(() => {
-    //     product && product.forEach(item => {
-    //         updateCount(item.id)
-    //     })
-    // }, [product])
-    
     function addToBasket(item) {
-        const mehsul = basket.find(item => item.id == item.id)
-        if (mehsul) {
+        const existingProduct = basket.find(
+            (basketItem) => basketItem.id === item.id
+        );
+        if (existingProduct) {
             setBasket(
                 basket.map((basketItem) =>
                     basketItem.id === item.id
-                        ? { ...basketItem, count: basketItem.count + item.count } : basketItem
+                        ? {
+                              ...basketItem,
+                              count: basketItem.count + item.count,
+                          }
+                        : basketItem
                 )
-            )
-        } else setBasket([...basket, item])
+            );
+        } else {
+            setBasket([...basket, item]);
+        }
     }
 
     function updateCount(id, increment) {
-        setProduct((prevProduct) => prevProduct.map((item) =>
-            item.id === id ? { ...item, count: item.count + increment || 1 } : { ...item, count: 1 }
-        )
-        )
+        const updatedProducts = product.map(item => {
+            if (item.id === id) {
+                return { ...item, count: item.count + increment > 0 ? item.count + increment : 1 };
+            }
+            return item;
+        });
+    
+        setProduct(updatedProducts);
     }
+    
 
     return (
         <main className='bg-[#F2F2F2] '>
             <div className='wrapper flex'>
+                <div>{catSt ? <Aside catSt={catSt} /> : ""}</div>
                 <div>
-                    {catSt ? <Aside catSt={catSt} /> : ""}
-                </div>
-                <div>
-                    <div className={`text-gray-600 font-semibold py-5 px-3 ${!catSt ? '' : 'text-center'} `}>
+                    <div
+                        className={`text-gray-600 font-semibold py-5 px-3 ${
+                            !catSt ? "" : "text-center"
+                        } `}
+                    >
                         <Link to='/'>Ana səhifə /</Link>
                         <span className='capitalize'> {category} /</span>
                         <span className='capitalize'> {subCategory}</span>
                     </div>
-                    <div className={`flex ${!catSt ? 'justify-end' : 'justify-center'}  items-start`}>
+                    <div
+                        className={`flex ${
+                            !catSt ? "justify-end" : "justify-center"
+                        }  items-start`}
+                    >
                         {catSt ? (
                             ""
                         ) : (
@@ -80,7 +92,6 @@ function SubCategory({ catSt, product, setProduct }) {
                                             <span className='inline-block w-[12px] h-[12px] bg-[#FF8300] mx-[4px] '></span>
                                             NEPTUN-MEYVETEREVEZ
                                         </div>
-
                                         <span className='text-[#FF8300] inline-block text-end'>
                                             13
                                         </span>
@@ -112,6 +123,7 @@ function SubCategory({ catSt, product, setProduct }) {
                         <div className='flex flex-wrap gap-[5px] w-[100%] justify-end'>
                             {product ? (
                                 product.map((item, i) => {
+                                    
                                     const { img, title, price, id, count } = item;
                                     return (
                                         <div
@@ -128,13 +140,13 @@ function SubCategory({ catSt, product, setProduct }) {
                                                     {title}
                                                 </h5>
                                                 <p className='font-bold text-[1.3em]'>
-                                                    {price} ₼
+                                                    {price * count} ₼
                                                 </p>
                                                 <div className='py-3'>
                                                     <button
                                                         onClick={(e) => {
                                                             e.preventDefault();
-                                                            updateCount(id, -1)
+                                                            updateCount(id, -1);
                                                         }}
                                                         className='font-bold text-[1.2em] text-[#FF8300]'
                                                     >
@@ -146,7 +158,7 @@ function SubCategory({ catSt, product, setProduct }) {
                                                     <button
                                                         onClick={(e) => {
                                                             e.preventDefault();
-                                                            updateCount(id, 1)
+                                                            updateCount(id, 1);
                                                         }}
                                                         className='font-bold text-[1.2em] text-[#FF8300]'
                                                     >
@@ -156,7 +168,7 @@ function SubCategory({ catSt, product, setProduct }) {
                                                 <button
                                                     onClick={(e) => {
                                                         e.preventDefault();
-                                                        addToBasket(item)
+                                                        addToBasket(item);
                                                         setSebetSay(
                                                             sebetSay + 1
                                                         );
@@ -181,16 +193,17 @@ function SubCategory({ catSt, product, setProduct }) {
                 </div>
             </div>
             <div className='flex justify-center space-x-1 dark:text-gray-800 py-[20px]'>
-                {new Array(page.pages).fill("").map((item, i) => (
+                {new Array(page.pages).fill("").map((_, i) => (
                     <button
                         onClick={(e) => {
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                            setPageCount(e.target.innerText)
-                        }
-                        }
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                            setPageCount(e.target.innerText);
+                        }}
                         key={i}
                         type='button'
-                        className={` ${pageCount == i + 1 ? 'bg-[red]' : ''} inline-flex items-center justify-center w-8 h-8 text-sm font-semibold border rounded shadow-md dark:bg-gray-50 focus:bg-[#f1cba2] focus:border-1 focus:border-[#f69733] `}
+                        className={` ${
+                            pageCount == i + 1 ? "bg-[red]" : ""
+                        } inline-flex items-center justify-center w-8 h-8 text-sm font-semibold border rounded shadow-md dark:bg-gray-50 focus:bg-[#f1cba2] focus:border-1 focus:border-[#f69733] `}
                     >
                         {i + 1}
                     </button>
