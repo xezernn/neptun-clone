@@ -6,12 +6,13 @@ import getAllProducts from "../../api/api";
 import Aside from "./Aside";
 import { Cntx } from "../../context/DataContext";
 
-function SubCategory({ catSt, product, setProduct }) {
+function SubCategory({ catSt, product, setProduct, updateCount }) {
+    
     const [page, setPage] = useState(1);
     const { basket, setBasket, setSebetSay, sebetSay } = useContext(Cntx);
     const { category, subCategory } = useParams();
     const [pageCount, setPageCount] = useState(1);
-    const [data, setData] = useState([]);
+   
 
     useEffect(() => {
         getAllProducts(category, subCategory, pageCount).then((res) => {
@@ -40,16 +41,7 @@ function SubCategory({ catSt, product, setProduct }) {
         }
     }
 
-    function updateCount(id, increment) {
-        const updatedProducts = product.map(item => {
-            if (item.id === id) {
-                return { ...item, count: item.count + increment > 0 ? item.count + increment : 1 };
-            }
-            return item;
-        });
-    
-        setProduct(updatedProducts);
-    }
+ 
     
 
     return (
@@ -120,8 +112,8 @@ function SubCategory({ catSt, product, setProduct }) {
                                 </div>
                             </div>
                         )}
-                        <div className='flex flex-wrap gap-[5px] w-[100%] justify-end'>
-                            {product ? (
+                        <div className='flex flex-wrap gap-[5px] w-[100%] justify-start'>
+                            {product && (product.length > 0)? (
                                 product.map((item, i) => {
                                     
                                     const { img, title, price, id, count } = item;
@@ -182,11 +174,7 @@ function SubCategory({ catSt, product, setProduct }) {
                                     );
                                 })
                             ) : (
-                                <div className='flex items-center justify-center space-x-2 h-screen'>
-                                    <div className='w-4 h-4 rounded-full animate-pulse dark:bg-[#FF8300]'></div>
-                                    <div className='w-4 h-4 rounded-full animate-pulse dark:bg-[#FF8300]'></div>
-                                    <div className='w-4 h-4 rounded-full animate-pulse dark:bg-[#FF8300]'></div>
-                                </div>
+                                <div className="p-[40px] text-[3.5em]">Elə bilki aldında</div>
                             )}
                         </div>
                     </div>

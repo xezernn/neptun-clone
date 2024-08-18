@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom"
 
 function Haqqimizda() {
+    
     return (
-        <section className="wrapper px-3">
+        <section className="wrapper px-3" >
             <div className='text-gray-600 font-semibold text-sm py-6'>
                 <Link to='/'>Ana səhifə /</Link>
                 <span className='capitalize'> Haqqımızda</span>

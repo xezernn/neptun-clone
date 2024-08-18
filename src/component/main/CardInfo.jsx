@@ -5,11 +5,13 @@ import { LuRefreshCcw } from "react-icons/lu";
 import { useContext } from "react";
 import { Cntx } from "../../context/DataContext";
 
-function CardInfo({ product}) {
+function CardInfo({ product, updateCount}) {
+
     const { setSebetSay, sebetSay } = useContext(Cntx)
     const { id } = useParams()
-    const item = product.find(item => item.id == id)
-
+    const item = product && product.find(item => item.id == id)
+      
+    
     return (
         <section className='wrapper'>
             <div className='text-gray-600 font-semibold py-10 px-3'>
@@ -48,7 +50,7 @@ function CardInfo({ product}) {
                             className='font-bold text-[1.2em] text-[#FF8300]'>
                             ‒
                         </button>
-                        <span className='px-4'> ədəd</span>
+                        <span className='px-4'>{item?.count} ədəd</span>
                         <button
                             onClick={(e) => {
                                 e.preventDefault();
