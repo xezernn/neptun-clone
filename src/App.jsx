@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import SubCategory from "./component/main/SubCategory";
 import Layout from "./layout/Layout";
 import { Basket } from "./component/header/Basket";
+import Haqqimizda from "./component/pages/Haqqimizda";
+import Elaqe from "./component/pages/Elaqe";
 
 function App() {
     
@@ -26,6 +28,8 @@ function App() {
                     <Route path='/:category/:subCategory' element={<SubCategory catSt={catSt} product={product} setProduct={setProduct} />} />
                     <Route path='/product/:id' element={<CardInfo product={product}/>} />
                     <Route path="/basket" element={<Basket />} />
+                    <Route path="/haqqimizda" element={<Haqqimizda />} />
+                    <Route path="/elaqe" element={<Elaqe />} />
                 </Route>
                 <Route path='*' element={<Error404 />} />
             </Routes>
