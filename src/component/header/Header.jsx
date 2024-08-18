@@ -274,7 +274,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                 <Link to='/'>Ana Səhifə</Link>
                             </li>
                             <li className='text-[.8em] font-medium relative hover about py-3 block'>
-                                <Link to='haqqimizda'>Haqqımızda</Link>
+                                <Link to='/haqqimizda'>Haqqımızda</Link>
                                 <TiArrowSortedDown className='inline' />
                                 <ul className='bg-[#fff] z-10 hover-menu h-0 hover:py-[15px] px-[10px] transition-[1s] overflow-hidden border-t-[2px] about-open border-t-[#FF8300]  rounded-b-[10px] shadow text-black text-[1em] absolute left-0 top-[calc(100%+0px)] w-[12vw]'>
                                     <li className="py-[3px]">
@@ -342,7 +342,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                 </ul>
                             </li>
                             <li className='text-[.8em] font-medium py-3'>
-                                <a href=''>Əlaqə</a>
+                                <Link to='/elaqe'>Əlaqə</Link>
                             </li>
                         </ul>
                     </div>
@@ -427,13 +427,13 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                             </li>
                             <li className="border-b cursor-pointer">
                                 <div className=" bg-white rounded-xl">
-                                    <button onClick={() => toggleAccordion(0)} className=" p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full">
+                                    <Link to='/haqqimizda' onClick={() => toggleAccordion(0)} className=" p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full">
                                         Haqqımızda
                                         <svg className="hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                             <path d="M5 12h14"></path>
                                             <path d="M12 5v14"></path>
                                         </svg>
-                                    </button>
+                                    </Link>
                                     <div className={`${activeAccordion === 0 ? 'block' : 'hidden'} w-full overflow-hidden transition duration-300`}>
                                         <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Siyasətimiz</p>
                                         <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Yeniliklər</p>
@@ -491,7 +491,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                 </div>
                             </li>
                             <li className="border-b cursor-pointer">
-                                <p className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]">Əlaqə</p>
+                                <Link to='/elaqe' className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]">Əlaqə</Link>
                             </li>
                         </ul>
                     </div>
