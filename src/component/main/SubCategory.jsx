@@ -39,8 +39,7 @@ function SubCategory({ catSt, product, setProduct, updateCount }) {
         } else {
             setBasket([...basket, item]);
         }
-    }
-
+    }  
  
     
 
@@ -117,6 +116,7 @@ function SubCategory({ catSt, product, setProduct, updateCount }) {
                                 product.map((item, i) => {
                                     
                                     const { img, title, price, id, count } = item;
+                                    
                                     return (
                                         <div
                                             key={i}
@@ -132,7 +132,7 @@ function SubCategory({ catSt, product, setProduct, updateCount }) {
                                                     {title}
                                                 </h5>
                                                 <p className='font-bold text-[1.3em]'>
-                                                    {price * count} ₼
+                                                    {(price * count).toFixed(2)} ₼
                                                 </p>
                                                 <div className='py-3'>
                                                     <button

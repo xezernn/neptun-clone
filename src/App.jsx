@@ -25,8 +25,9 @@ function App() {
             }
             return item;
         });
-    
         setProduct(updatedProducts);
+        console.log(updatedProducts);
+        
     }
     
     useEffect(() => {
