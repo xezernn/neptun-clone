@@ -8,6 +8,8 @@ import Layout from "./layout/Layout";
 import { Basket } from "./component/header/Basket";
 import Haqqimizda from "./component/pages/Haqqimizda";
 import Elaqe from "./component/pages/Elaqe";
+import Login from "./component/Login";
+import Admin from "./component/Admin";
 
 function App() {
     
@@ -42,6 +44,8 @@ function App() {
                     <Route path="/haqqimizda" element={<Haqqimizda />} />
                     <Route path="/elaqe" element={<Elaqe />} />
                 </Route>
+                <Route path="/login" element={<Login />} />
+                <Route path="/admin" element={<Admin />} />
                 <Route path='*' element={<Error404 />} />
             </Routes>
         </>
