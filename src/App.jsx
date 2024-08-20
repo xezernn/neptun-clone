@@ -15,32 +15,14 @@ function App() {
     
     const [catSt, setCatSt] = useState(false)
     const [product, setProduct] = useState();
-    
-    const { pathname } = useLocation();
-
-    function updateCount(id, increment) {
-        const updatedProducts = product.map(item => {
-            if (item.id === id) {
-                return { ...item, count: item.count + increment > 0 ? item.count + increment : 1 };
-            }
-            return item;
-        });
-        setProduct(updatedProducts);
-        console.log(updatedProducts);
-        
-    }
-    
-    useEffect(() => {
-        window.scroll(0, 0);
-    }, [pathname]);
 
     return (
         <>
             <Routes>
                 <Route path='/' element={<Layout catSt={catSt} setCatSt={setCatSt} />}>
                     <Route path='/' element={<Main />} />
-                    <Route path='/:category/:subCategory' element={<SubCategory updateCount={updateCount} catSt={catSt} product={product} setProduct={setProduct} />} />
-                    <Route path='/product/:id' element={<CardInfo updateCount={updateCount} product={product}/>} />
+                    <Route path='/:category/:subCategory' element={<SubCategory catSt={catSt} product={product} setProduct={setProduct} />} />
+                    <Route path='/product/:id' element={<CardInfo  product={product}/>} />
                     <Route path="/basket" element={<Basket />} />
                     <Route path="/haqqimizda" element={<Haqqimizda />} />
                     <Route path="/elaqe" element={<Elaqe />} />
