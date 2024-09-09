@@ -23,7 +23,8 @@ const cook = new Cookies()
 function App() {
     const [catSt, setCatSt] = useState(false)
     const [product, setProduct] = useState();
-    
+    const [auth, setAuth] = useState(false)
+
     const { pathname } = useLocation();
 
     function updateCount(id, increment) {
@@ -33,13 +34,24 @@ function App() {
             }
             return item;
         });
+
         setProduct(updatedProducts);
-        console.log(updatedProducts);
-        
     }
-    
+
+
     useEffect(() => {
         window.scroll(0, 0);
+
+        if (pathname.split('/')[1] === 'admin') {
+
+            if (pathname.startsWith('/admin')) {
+                const yoxla = verifyToken()
+                yoxla.then(res => {
+                    setAuth(res.status)
+                    cook.set("user", res.user_login)
+                })
+            } else setAuth(false);
+        }
     }, [pathname]);
 
     return (
@@ -49,26 +61,26 @@ function App() {
                 reverseOrder={false}
             />
             <Routes>
-            {
-                auth ? 
-                <Route path="/admin" element={<LayoutAdmin />} >
-                    <Route path="/admin" element={<Home />}/>
-                    <Route path="products" element={<Products   />}/>
-                    <Route path="categories" element={<Category   />}/>
-                    <Route path="subcategory" element={<Subcategory   />}/>
-                </Route>
-             : <Route path="/admin" element={<Login />} />
-               }
+                {
+                    auth ?
+                        <Route path="/admin" element={<LayoutAdmin />} >
+                            <Route path="/admin" element={<Home />} />
+                            <Route path="products" element={<Products />} />
+                            <Route path="categories" element={<Category />} />
+                            <Route path="subcategory" element={<Subcategory />} />
+                        </Route>
+                        : <Route path="/admin" element={<Login />} />
+                }
                 <Route path='/' element={<Layout catSt={catSt} setCatSt={setCatSt} />}>
                     <Route path='/' element={<Main />} />
                     <Route path='/:category/:subCategory' element={<SubCategory updateCount={updateCount} catSt={catSt} product={product} setProduct={setProduct} />} />
-                    <Route path='/product/:id' element={<CardInfo updateCount={updateCount} product={product}/>} />
+                    <Route path='/product/:id' element={<CardInfo updateCount={updateCount} product={product} />} />
                     <Route path="/basket" element={<Basket />} />
                     <Route path="/haqqimizda" element={<Haqqimizda />} />
                     <Route path="/elaqe" element={<Elaqe />} />
                 </Route>
                 <Route path="/login" element={<Login />} />
-                <Route path="register" element={<Register/>} />
+                <Route path="register" element={<Register />} />
                 {/* <Route path='*' element={<Error404 />} /> */}
             </Routes>
         </>
