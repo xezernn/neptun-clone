@@ -32,7 +32,7 @@ function Aside() {
                                         <GoChevronRight className={`w-[13px] ${submenu.length == 0 ? 'hidden' : 'block'}`} />
                                         <ul
                                             id='scrollbar'
-                                            className={`bg-[#fff] ${(name == 'Kampaniyalar' || name == 'Yalnız Neptunda') ? 'border-0 border-none bg-[#F8FAFC]' : 'border-l-[#FF8300]'} max-h-[200px] overflow-auto z-20 hidden dropdown-open border-l-[2px]  rounded-sm py-2 absolute left-[calc(100%+13px)] top-[calc(100%-40px)] min-w-[12vw]`}
+                                            className={`bg-[#fff]  max-h-[200px] overflow-auto z-20 hidden dropdown-open border-l-[2px] border-l-[#FF8300] rounded-sm py-2 absolute left-[calc(100%+13px)] top-[calc(100%-40px)] min-w-[12vw]`}
                                         >
                                             {                                                                
                                              submenu.map((elem, i) => (

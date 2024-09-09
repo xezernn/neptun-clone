@@ -10,12 +10,13 @@ import { HiMiniBars4 } from "react-icons/hi2";
 import Sidebar from "./Sidebar";
 import { Link } from "react-router-dom";
 import { Cntx } from "../../context/DataContext";
-import azneptun from "../../assets/az-neptun.png";
+import azneptun from '../../assets/az-neptun.png';
 
 function Header({ catSt, setCatSt }) {
-    const [sideSt, setSideSt] = useState(false);
+
+    const [sideSt, setSideSt] = useState(false)
     const [isOpen, setIsOpen] = useState(false);
-    const { sebetSay } = useContext(Cntx);
+    const { sebetSay } = useContext(Cntx)
     const [activeAccordion, setActiveAccordion] = useState(null);
 
     function toggleAccordion(index) {
@@ -23,7 +24,7 @@ function Header({ catSt, setCatSt }) {
     }
 
     function toggleSideBar() {
-        setIsOpen(!isOpen);
+        setIsOpen(!isOpen)
     }
 
     return (
@@ -239,10 +240,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                             Axtar
                         </button>
                     </div>
-                    <button
-                        onClick={toggleSideBar}
-                        className='hidden md:block lg:hidden p-[10px] bg-[#FF8300] text-white rounded-[5px] text-[1.4em] '
-                    >
+                    <button onClick={toggleSideBar} className='hidden md:block lg:hidden p-[10px] bg-[#FF8300] text-white rounded-[5px] text-[1.4em] '>
                         <FaBars />
                     </button>
                     <div className='hidden lg:flex justify-end w-[40vw]'>
@@ -258,8 +256,7 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                 <div className='wrapper flex justify-between items-center w-[100%]'>
                     <FiBarChart
                         onClick={() => setSideSt(!sideSt)}
-                        className='rotate-90 h-[30px] w-[30px] lg:hidden'
-                    />
+                        className='rotate-90 h-[30px] w-[30px] lg:hidden' />
                     <div className='desktop-nav  lg:flex items-center gap-[30px] justify-between '>
                         <div
                             onClick={() => setCatSt(!catSt)}
@@ -280,12 +277,12 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                 <Link to='/haqqimizda'>Haqqımızda</Link>
                                 <TiArrowSortedDown className='inline' />
                                 <ul className='bg-[#fff] z-10 hover-menu h-0 hover:py-[15px] px-[10px] transition-[1s] overflow-hidden border-t-[2px] about-open border-t-[#FF8300]  rounded-b-[10px] shadow text-black text-[1em] absolute left-0 top-[calc(100%+0px)] w-[12vw]'>
-                                    <li className='py-[3px]'>
+                                    <li className="py-[3px]">
                                         <Link to='siyasetimiz'>
                                             Siyasətimiz
                                         </Link>
                                     </li>
-                                    <li className='py-[3px]'>
+                                    <li className="py-[3px]">
                                         <Link to=''>Yeniliklər</Link>
                                     </li>
                                 </ul>
@@ -294,13 +291,13 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                 <a href=''>Aksiyalar</a>
                                 <TiArrowSortedDown className='inline' />
                                 <ul className='bg-[#fff] z-10 h-0 hover-menu overflow-hidden transition-all border-t-[2px] aksia-open border-t-[#FF8300] px-[15px] hover:py-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+0px)] w-[12vw]'>
-                                    <li className='py-[3px]'>
+                                    <li className="py-[3px]">
                                         <a href=''>Kampaniyalar</a>
                                     </li>
-                                    <li className='py-[3px]'>
+                                    <li className="py-[3px]">
                                         <a href=''>Neptun Bonus Kart</a>
                                     </li>
-                                    <li className='py-[3px]'>
+                                    <li className="py-[3px]">
                                         <a href=''>Elektron Kataloq</a>
                                     </li>
                                 </ul>
@@ -309,22 +306,22 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                 <a href=''>Supermarketlər</a>
                                 <TiArrowSortedDown className='inline' />
                                 <ul className='bg-[#fff] z-10 h-0 hover-menu overflow-hidden hover:py-[15px] supermarket-open border-t-[2px]  transition-all border-t-[#FF8300] px-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+0px)] w-[12vw]'>
-                                    <li className='py-[3px]'>
+                                    <li className="py-[3px]">
                                         <a href=''>Mağazalarımız</a>
                                     </li>
-                                    <li className='py-[3px]'>
+                                    <li className="py-[3px]">
                                         <a href=''>İrad və təkliflər</a>
                                     </li>
-                                    <li className='py-[3px]'>
+                                    <li className="py-[3px]">
                                         <a href=''>Alıcıların Nəzərinə</a>
                                     </li>
-                                    <li className='py-[3px]'>
+                                    <li className="py-[3px]">
                                         <a href=''>Partnyorluq</a>
                                     </li>
-                                    <li className='py-[3px]'>
+                                    <li className="py-[3px]">
                                         <a href=''>Tərəfdaşlar</a>
                                     </li>
-                                    <li className='py-[3px]'>
+                                    <li className="py-[3px]">
                                         <a href=''>Marketdə Reklam</a>
                                     </li>
                                 </ul>
@@ -333,13 +330,13 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                                 <a href=''>Kariyera</a>
                                 <TiArrowSortedDown className='inline' />
                                 <ul className='bg-[#fff] z-10 h-0 overflow-hidden hover-menu transition-all karyera-open border-t-[2px]  border-t-[#FF8300] hover:py-[10px] px-[15px] rounded-b-[10px] shadow text-black  text-[1em] absolute left-0 top-[calc(100%+0px)] w-[12vw]'>
-                                    <li className='py-[3px]'>
+                                    <li className="py-[3px]">
                                         <a href=''>İşə qəbul proseduru</a>
                                     </li>
-                                    <li className='py-[3px]'>
+                                    <li className="py-[3px]">
                                         <a href=''>Vakansiyalar</a>
                                     </li>
-                                    <li className='py-[3px]'>
+                                    <li className="py-[3px]">
                                         <a href=''>CV yerləşdirin</a>
                                     </li>
                                 </ul>
@@ -351,18 +348,14 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                     </div>
                     <div className='flex items-center gap-[4vw] lg:gap-[1vw]'>
                         <div className='border-r-[1px] border-r-[#fff] px-[2vw] flex items-center '>
-                            <Link to='/login'>
-                                <FaLock className='inline text-[.8em] mx-[5px]' />
-                                <span className='text-[.8em] hover:text-[#ccc] cursor-pointer'>
-                                    Giriş
-                                </span>
+                            <FaLock className='inline text-[.8em] mx-[5px]' />
+                            <Link to='login' className='text-[.8em] hover:text-[#ccc] cursor-pointer'>
+                                Giriş
                             </Link>
                         </div>
-                        <ul className='flex'>
+                        <ul className="flex">
                             <li className='flex items-center text-[.9em] hesab hover w-full relative'>
-                                <span className='hidden md:inline'>
-                                    Hesabım
-                                </span>
+                                <span className="hidden md:inline">Hesabım</span>
                                 <FaChevronDown className='text-[.7em] mx-[2vw] cursor-pointer lg:mx-[5px]' />
                                 <ul className='bg-[#fff] h-0 overflow-hidden hesab-open hover-menu   transition-all px-[15px] rounded-b-[10px] shadow text-black  text-[.9em] absolute left-0 top-[calc(100%+1px)] min-w-[10vw]'>
                                     <li className='hover:text-[#FF8300] m-1'>
@@ -395,229 +388,110 @@ c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.3,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H554.7z'
                             </span>
                         </Link>
                     </div>
-                    <button
-                        onClick={toggleSideBar}
-                        className='md:hidden  p-[1.7vw] text-[#FF8300] bg-white rounded-[5px] text-[1.4em] '
-                    >
+                    <button onClick={toggleSideBar} className='md:hidden  p-[1.7vw] text-[#FF8300] bg-white rounded-[5px] text-[1.4em] '>
                         <FaBars />
                     </button>
                 </div>
             </nav>
-            <div className='sidebar' id='scrollbar'>
+            <div className="sidebar" id="scrollbar">
                 <div
-                    id='drawer-navigation'
-                    className={`fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform bg-white ${
-                        isOpen ? "translate-x-0" : "-translate-x-full"
-                    }`}
-                    tabIndex='-1'
-                    aria-labelledby='drawer-navigation-label'
+                    id="drawer-navigation"
+                    className={`fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform bg-white ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
+                    tabIndex="-1"
+                    aria-labelledby="drawer-navigation-label"
                 >
                     <button
-                        type='button'
+                        type="button"
                         onClick={toggleSideBar}
-                        aria-controls='drawer-navigation'
-                        className='text-black bg-transparent rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center'
+                        aria-controls="drawer-navigation"
+                        className="text-black bg-transparent rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center"
                     >
                         <svg
-                            aria-hidden='true'
-                            className='w-5 h-5'
-                            fill='currentColor'
-                            viewBox='0 0 20 20'
-                            xmlns='http://www.w3.org/2000/svg'
+                            aria-hidden="true"
+                            className="w-5 h-5"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
                         >
                             <path
-                                fillRule='evenodd'
-                                d='M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z'
-                                clipRule='evenodd'
+                                fillRule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clipRule="evenodd"
                             ></path>
                         </svg>
                     </button>
-                    <div className='py-4 overflow-y-auto'>
-                        <ul className='space-y-2 py-8'>
-                            <li className='border-b cursor-pointer'>
-                                <p className='p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]'>
-                                    Ana Səhifə{" "}
-                                </p>
+                    <div className="py-4 overflow-y-auto">
+                        <ul className="space-y-2 py-8">
+                            <li className="border-b cursor-pointer">
+                                <p className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]">Ana Səhifə </p>
                             </li>
-                            <li className='border-b cursor-pointer'>
-                                <div className=' bg-white rounded-xl'>
-                                    <Link
-                                        to='/haqqimizda'
-                                        onClick={() => toggleAccordion(0)}
-                                        className=' p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full'
-                                    >
+                            <li className="border-b cursor-pointer">
+                                <div className=" bg-white rounded-xl">
+                                    <Link to='/haqqimizda' onClick={() => toggleAccordion(0)} className=" p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full">
                                         Haqqımızda
-                                        <svg
-                                            className='hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white'
-                                            xmlns='http://www.w3.org/2000/svg'
-                                            width='24'
-                                            height='24'
-                                            viewBox='0 0 24 24'
-                                            fill='none'
-                                            stroke='currentColor'
-                                            strokeWidth='2'
-                                            strokeLinecap='round'
-                                            strokeLinejoin='round'
-                                        >
-                                            <path d='M5 12h14'></path>
-                                            <path d='M12 5v14'></path>
+                                        <svg className="hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M5 12h14"></path>
+                                            <path d="M12 5v14"></path>
                                         </svg>
                                     </Link>
-                                    <div
-                                        className={`${
-                                            activeAccordion === 0
-                                                ? "block"
-                                                : "hidden"
-                                        } w-full overflow-hidden transition duration-300`}
-                                    >
-                                        <p className='px-4 py-2 text-[.8em] hover:text-[#FF8300]'>
-                                            Siyasətimiz
-                                        </p>
-                                        <p className='px-4 py-2 text-[.8em] hover:text-[#FF8300]'>
-                                            Yeniliklər
-                                        </p>
+                                    <div className={`${activeAccordion === 0 ? 'block' : 'hidden'} w-full overflow-hidden transition duration-300`}>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Siyasətimiz</p>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Yeniliklər</p>
                                     </div>
                                 </div>
                             </li>
-                            <li className='border-b cursor-pointer'>
-                                <div className='bg-white rounded-xl'>
-                                    <button
-                                        onClick={() => toggleAccordion(1)}
-                                        className='p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full'
-                                    >
+                            <li className="border-b cursor-pointer">
+                                <div className="bg-white rounded-xl">
+                                    <button onClick={() => toggleAccordion(1)} className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full">
                                         Aksiyalar
-                                        <svg
-                                            className='hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white'
-                                            xmlns='http://www.w3.org/2000/svg'
-                                            width='24'
-                                            height='24'
-                                            viewBox='0 0 24 24'
-                                            fill='none'
-                                            stroke='currentColor'
-                                            strokeWidth='2'
-                                            strokeLinecap='round'
-                                            strokeLinejoin='round'
-                                        >
-                                            <path d='M5 12h14'></path>
-                                            <path d='M12 5v14'></path>
+                                        <svg className="hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M5 12h14"></path>
+                                            <path d="M12 5v14"></path>
                                         </svg>
                                     </button>
-                                    <div
-                                        className={`${
-                                            activeAccordion === 1
-                                                ? "block"
-                                                : "hidden"
-                                        } w-full overflow-hidden transition-[height] duration-300`}
-                                    >
-                                        <p className='px-4 py-2 text-[.8em] hover:text-[#FF8300]'>
-                                            Kampaniyalar
-                                        </p>
-                                        <p className='px-4 py-2 text-[.8em] hover:text-[#FF8300]'>
-                                            Neptun Bonus Kart
-                                        </p>
-                                        <p className='px-4 py-2 text-[.8em] hover:text-[#FF8300]'>
-                                            Elektron Kataloq
-                                        </p>
+                                    <div className={`${activeAccordion === 1 ? 'block' : 'hidden'} w-full overflow-hidden transition-[height] duration-300`}>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Kampaniyalar</p>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Neptun Bonus Kart</p>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Elektron Kataloq</p>
                                     </div>
                                 </div>
                             </li>
-                            <li className='border-b cursor-pointer'>
-                                <div className='bg-white rounded-xl'>
-                                    <button
-                                        onClick={() => toggleAccordion(2)}
-                                        className='p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full'
-                                    >
+                            <li className="border-b cursor-pointer">
+                                <div className="bg-white rounded-xl">
+                                    <button onClick={() => toggleAccordion(2)} className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full">
                                         Supermarketlər
-                                        <svg
-                                            className='hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white'
-                                            xmlns='http://www.w3.org/2000/svg'
-                                            width='24'
-                                            height='24'
-                                            viewBox='0 0 24 24'
-                                            fill='none'
-                                            stroke='currentColor'
-                                            strokeWidth='2'
-                                            strokeLinecap='round'
-                                            strokeLinejoin='round'
-                                        >
-                                            <path d='M5 12h14'></path>
-                                            <path d='M12 5v14'></path>
+                                        <svg className="hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M5 12h14"></path>
+                                            <path d="M12 5v14"></path>
                                         </svg>
                                     </button>
-                                    <div
-                                        className={`${
-                                            activeAccordion === 2
-                                                ? "block"
-                                                : "hidden"
-                                        } w-full overflow-hidden transition-[height] duration-300`}
-                                    >
-                                        <p className='px-4 py-2 text-[.8em] hover:text-[#FF8300]'>
-                                            Mağazalarımız
-                                        </p>
-                                        <p className='px-4 py-2 text-[.8em] hover:text-[#FF8300]'>
-                                            İrad və təkliflər
-                                        </p>
-                                        <p className='px-4 py-2 text-[.8em] hover:text-[#FF8300]'>
-                                            Alıcıların Nəzərinə
-                                        </p>
-                                        <p className='px-4 py-2 text-[.8em] hover:text-[#FF8300]'>
-                                            Partnyorluq
-                                        </p>
-                                        <p className='px-4 py-2 text-[.8em] hover:text-[#FF8300]'>
-                                            Tərəfdaşlar
-                                        </p>
-                                        <p className='px-4 py-2 text-[.8em] hover:text-[#FF8300]'>
-                                            Marketdə Reklam
-                                        </p>
+                                    <div className={`${activeAccordion === 2 ? 'block' : 'hidden'} w-full overflow-hidden transition-[height] duration-300`}>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Mağazalarımız</p>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">İrad və təkliflər</p>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Alıcıların Nəzərinə</p>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Partnyorluq</p>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Tərəfdaşlar</p>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Marketdə Reklam</p>
                                     </div>
                                 </div>
                             </li>
-                            <li className='border-b cursor-pointer'>
-                                <div className='bg-white rounded-xl'>
-                                    <button
-                                        onClick={() => toggleAccordion(3)}
-                                        className='p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full'
-                                    >
+                            <li className="border-b cursor-pointer">
+                                <div className="bg-white rounded-xl">
+                                    <button onClick={() => toggleAccordion(3)} className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300] inline-flex justify-between items-center gap-x-3 w-full">
                                         Karyera
-                                        <svg
-                                            className='hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white'
-                                            xmlns='http://www.w3.org/2000/svg'
-                                            width='24'
-                                            height='24'
-                                            viewBox='0 0 24 24'
-                                            fill='none'
-                                            stroke='currentColor'
-                                            strokeWidth='2'
-                                            strokeLinecap='round'
-                                            strokeLinejoin='round'
-                                        >
-                                            <path d='M5 12h14'></path>
-                                            <path d='M12 5v14'></path>
+                                        <svg className="hs-accordion-active:hidden block size-4 bg-[#FF8300] text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M5 12h14"></path>
+                                            <path d="M12 5v14"></path>
                                         </svg>
                                     </button>
-                                    <div
-                                        className={`${
-                                            activeAccordion === 3
-                                                ? "block"
-                                                : "hidden"
-                                        } w-full overflow-hidden transition-[height] duration-300`}
-                                    >
-                                        <p className='px-4 py-2 text-[.8em] hover:text-[#FF8300]'>
-                                            İşə qəbul proseduru
-                                        </p>
-                                        <p className='px-4 py-2 text-[.8em] hover:text-[#FF8300]'>
-                                            Vakansiyalar
-                                        </p>
+                                    <div className={`${activeAccordion === 3 ? 'block' : 'hidden'} w-full overflow-hidden transition-[height] duration-300`}>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">İşə qəbul proseduru</p>
+                                        <p className="px-4 py-2 text-[.8em] hover:text-[#FF8300]">Vakansiyalar</p>
                                     </div>
                                 </div>
                             </li>
-                            <li className='border-b cursor-pointer'>
-                                <Link
-                                    to='/elaqe'
-                                    className='p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]'
-                                >
-                                    Əlaqə
-                                </Link>
+                            <li className="border-b cursor-pointer">
+                                <Link to='/elaqe' className="p-2 text-gray-900 text-[.85em] hover:text-[#FF8300]">Əlaqə</Link>
                             </li>
                         </ul>
                     </div>

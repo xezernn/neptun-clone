@@ -54,7 +54,7 @@ function CardInfo({ product, updateCount}) {
                         <button
                             onClick={(e) => {
                                 e.preventDefault();
-                                updateCount(id, 1)                                
+                                updateCount(id, 1)
                             }}
                             className='font-bold text-[1.2em] text-[#FF8300]'>
                             ＋
